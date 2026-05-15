@@ -576,41 +576,65 @@
         }
         .photo-trust-pill svg { width: 14px; height: 14px; }
 
-        /* ═══════════ STATS STRIP ═══════════ */
+        /* ═══════════ STATS STRIP (card-style, matches treatment card) ═══════════ */
         .stats {
-            background: var(--color-surface);
+            background: var(--color-muted);
             border-top: 1px solid var(--color-border);
             border-bottom: 1px solid var(--color-border);
-            padding: var(--s-10) var(--s-6);
+            padding: var(--s-12) var(--s-6);
         }
         .stats-grid {
             max-width: 1100px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 0;
+            gap: var(--s-4);
         }
         .stat {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--s-6) var(--s-4);
+            box-shadow: var(--shadow-sm);
             text-align: center;
-            padding: var(--s-2) var(--s-6);
-            border-right: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--s-3);
+            transition: all var(--transition);
         }
-        .stat:last-child { border-right: none; }
+        .stat:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-primary);
+        }
+        .stat-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--color-muted);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            flex-shrink: 0;
+        }
+        .stat-icon svg { width: 22px; height: 22px; }
         .stat-number {
             font-size: var(--fs-3xl);
             font-weight: 800;
             line-height: 1;
             color: var(--color-primary);
             letter-spacing: -1.5px;
-            margin-bottom: var(--s-2);
         }
         .stat-label {
             font-size: var(--fs-xs);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             color: var(--color-muted-foreground);
         }
+        .stat:nth-child(3) .stat-icon { background: var(--color-accent-soft); color: var(--color-accent); }
         .stat:nth-child(3) .stat-number { color: var(--color-accent); }
 
         /* ═══════════ CHAPTER 2 — MOTHER'S QUOTE (Problem) ═══════════ */
@@ -1173,12 +1197,8 @@
             .hero-photo img { object-position: center 25%; }
             .treatment-card { max-width: 100%; }
 
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-6); }
-            .stat { border-right: none; padding: var(--s-3); }
-            .stat:nth-child(1), .stat:nth-child(2) {
-                border-bottom: 1px solid var(--color-border);
-                padding-bottom: var(--s-6);
-            }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-3); }
+            .stat { padding: var(--s-5) var(--s-3); }
 
             .mother-quote-card { padding: var(--s-8) var(--s-6); }
             .mother-quote-mark { font-size: 64px; top: var(--s-4); right: var(--s-4); }
@@ -1307,18 +1327,38 @@
         <section class="stats" aria-label="Statistika">
             <div class="stats-grid">
                 <div class="stat">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
                     <div class="stat-number" data-i18n="stat1Num">3 il</div>
                     <div class="stat-label" data-i18n="stat1Label">Mübarizə</div>
                 </div>
                 <div class="stat">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                    </div>
                     <div class="stat-number" data-i18n="stat2Num">16</div>
                     <div class="stat-label" data-i18n="stat2Label">İnadın yaşı</div>
                 </div>
                 <div class="stat">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
                     <div class="stat-number" data-i18n="stat3Num">68.000$</div>
                     <div class="stat-label" data-i18n="stat3Label">Təcili lazım</div>
                 </div>
                 <div class="stat">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
                     <div class="stat-number" data-i18n="stat4Num">2</div>
                     <div class="stat-label" data-i18n="stat4Label">Şəhid qardaş</div>
                 </div>
