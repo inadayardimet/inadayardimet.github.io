@@ -912,6 +912,20 @@
         .share-btn.facebook { background: var(--color-facebook); }
         .share-btn.instagram { background: linear-gradient(135deg, #E1306C, #C13584); }
 
+        /* ═══════════ PORTRAIT SECTION (final emotional touch) ═══════════ */
+        .portrait-section {
+            padding: var(--s-16) var(--s-10);
+            background: var(--color-background);
+            border-top: 1px solid var(--color-border);
+        }
+        .portrait-inner {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .portrait-section { padding: var(--s-12) var(--s-5); }
+        }
+
         /* ═══════════ FOOTER ═══════════ */
         footer {
             background: var(--color-foreground);
@@ -1216,26 +1230,6 @@
                     </div>
                 </div>
 
-                <div class="hero-right">
-                    <figure class="hero-photo">
-                        <div class="photo-trust-pill">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
-                            </svg>
-                            <span data-i18n="verified">Doğrulanıb</span>
-                        </div>
-                        <img src="inad-main.jpg" alt="İnad Abbasov, 16 yaş, Medical Park Antalya xəstəxanasında müalicə aldığı dövrdə" loading="eager" fetchpriority="high">
-                        <figcaption class="hero-photo-caption">
-                            <div class="caption-name">İnad Abbasov</div>
-                            <div class="caption-meta">
-                                <span data-i18n="captionAge">16 yaş</span>
-                                <span class="caption-divider" aria-hidden="true"></span>
-                                <span data-i18n="captionFamily">Şəhid ailəsindən</span>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
             </div>
         </section>
 
@@ -1436,6 +1430,29 @@
                         <span>Instagram</span>
                     </a>
                 </div>
+            </div>
+        </section>
+        <!-- ═══════════ PORTRAIT SECTION (final emotional touch) ═══════════ -->
+        <section class="portrait-section" aria-label="İnadın şəkli">
+            <div class="portrait-inner">
+                <figure class="hero-photo">
+                    <div class="photo-trust-pill">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
+                        </svg>
+                        <span data-i18n="verified">Doğrulanıb</span>
+                    </div>
+                    <img src="inad-main.jpg" alt="İnad Abbasov, 16 yaş, Medical Park Antalya xəstəxanasında müalicə aldığı dövrdə" loading="lazy">
+                    <figcaption class="hero-photo-caption">
+                        <div class="caption-name">İnad Abbasov</div>
+                        <div class="caption-meta">
+                            <span data-i18n="captionAge">16 yaş</span>
+                            <span class="caption-divider" aria-hidden="true"></span>
+                            <span data-i18n="captionFamily">Şəhid ailəsindən</span>
+                        </div>
+                    </figcaption>
+                </figure>
             </div>
         </section>
     </main>
