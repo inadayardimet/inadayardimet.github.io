@@ -175,53 +175,10 @@
             }
         }
 
-        /* ─── STORY PROGRESS BAR (sticky top) ─── */
-        .story-progress {
-            position: sticky;
-            top: 0;
-            z-index: 99;
-            background: var(--color-surface);
-            border-bottom: 1px solid var(--color-border);
-            padding: var(--s-3) var(--s-6);
-            display: flex;
-            align-items: center;
-            gap: var(--s-4);
-            font-size: var(--fs-xs);
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--color-muted-foreground);
-        }
-        .story-progress-label { white-space: nowrap; }
-        .story-progress-label strong { color: var(--color-foreground); font-weight: 700; }
-        .story-progress-track {
-            flex: 1;
-            height: 3px;
-            background: var(--color-border);
-            border-radius: 2px;
-            overflow: hidden;
-            max-width: 360px;
-        }
-        .story-progress-fill {
-            display: block;
-            height: 100%;
-            background: linear-gradient(to right, var(--color-primary), var(--color-accent));
-            border-radius: 2px;
-            width: 20%;
-            transition: width 400ms ease;
-        }
-        .story-progress-chapters {
-            display: flex;
-            gap: var(--s-3);
-            color: var(--color-muted-foreground);
-            opacity: 0.6;
-            font-size: 10px;
-        }
-
         /* ─── NAV ─── */
         .nav {
             position: sticky;
-            top: 45px;
+            top: 0;
             z-index: 98;
             background: var(--color-surface);
             border-bottom: 1px solid var(--color-border);
@@ -1132,10 +1089,6 @@
         }
 
         @media (max-width: 768px) {
-            .story-progress { padding: var(--s-2) var(--s-4); gap: var(--s-2); }
-            .story-progress-chapters { display: none; }
-            .nav { top: 36px; }
-
             .hero { padding: var(--s-10) var(--s-5) var(--s-12); }
             .hero-grid { grid-template-columns: 1fr; gap: var(--s-10); }
             .hero-right { max-width: 460px; margin: 0 auto; width: 100%; }
@@ -1200,15 +1153,6 @@
 </head>
 <body>
     <a href="#main" class="skip-link" data-i18n="skipLink">İçəriyə keç</a>
-
-    <!-- ═══════════ STORY PROGRESS BAR ═══════════ -->
-    <div class="story-progress" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" id="storyProgress">
-        <span class="story-progress-label"><strong id="chapterNum">1 / 5</strong> · <span id="chapterName" data-i18n="chapter1">Giriş</span></span>
-        <div class="story-progress-track">
-            <span class="story-progress-fill" id="progressFill"></span>
-        </div>
-        <span class="story-progress-chapters" data-i18n="chaptersList">Problem · Yol · Sənədlər · Kömək</span>
-    </div>
 
     <!-- ═══════════ NAV ═══════════ -->
     <header class="nav" role="navigation" aria-label="Əsas naviqasiya">
@@ -1903,39 +1847,6 @@
             window.open('https://www.instagram.com/', '_blank');
         }
     });
-
-    // ═══════════ STORY PROGRESS BAR ═══════════
-    const chapters = document.querySelectorAll('[data-chapter]');
-    const totalChapters = 5;
-    const progressFill = document.getElementById('progressFill');
-    const chapterNum = document.getElementById('chapterNum');
-    const chapterName = document.getElementById('chapterName');
-    const chapterNames = {
-        1: 'chapter1',
-        2: 'chapter2Label',
-        3: 'chapter3Label',
-        4: 'chapter4Label',
-        5: 'climaxLabel'
-    };
-
-    if ('IntersectionObserver' in window) {
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
-                    const ch = parseInt(entry.target.dataset.chapter);
-                    progressFill.style.width = (ch / totalChapters * 100) + '%';
-                    chapterNum.textContent = `${ch} / ${totalChapters}`;
-                    const key = chapterNames[ch];
-                    const t = TRANSLATIONS[currentLang];
-                    if (t[key]) {
-                        const txt = t[key];
-                        chapterName.textContent = txt.includes('·') ? txt.split('·').pop().trim() : txt;
-                    }
-                }
-            });
-        }, { threshold: [0.3, 0.5] });
-        chapters.forEach(c => obs.observe(c));
-    }
 
     // ═══════════ INIT ═══════════
     (function init() {
