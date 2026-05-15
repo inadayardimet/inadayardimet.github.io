@@ -291,15 +291,18 @@
             background: var(--color-primary);
         }
 
-        /* ═══════════ CHAPTER 1 — HERO (Intro Hook) ═══════════ */
+        /* ═══════════ CHAPTER 1 — HERO (Photo background + text overlay) ═══════════ */
         .hero {
             position: relative;
-            padding: var(--s-16) var(--s-10) var(--s-20);
+            padding: var(--s-20) var(--s-10) var(--s-24);
             overflow: hidden;
-            background:
-                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(8, 145, 178, 0.06), transparent 70%),
-                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(234, 88, 12, 0.04), transparent 70%),
-                var(--color-background);
+            color: white;
+            background-image:
+                linear-gradient(to bottom, rgba(22, 78, 99, 0.55) 0%, rgba(22, 78, 99, 0.7) 100%),
+                url('inad-main.jpg');
+            background-size: cover;
+            background-position: center 18%;
+            background-repeat: no-repeat;
         }
         .hero-grid {
             max-width: 720px;
@@ -310,7 +313,58 @@
             align-items: center;
         }
         .hero-left { max-width: 100%; }
-        .hero-right { max-width: 520px; margin: 0 auto; width: 100%; }
+
+        /* Hero text — white on photo */
+        .hero .hero-title { color: white; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4); }
+        .hero .hero-subtitle { color: rgba(255, 255, 255, 0.92); text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4); }
+
+        /* Status chip — glass on dark */
+        .hero .status-chip {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Treatment card — glass on dark */
+        .hero .treatment-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+        .hero .treatment-card-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .hero .treatment-card-label { color: rgba(255, 255, 255, 0.75); }
+        .hero .treatment-card-value { color: white; }
+        .hero .treatment-card-counter { color: #FED7AA; }
+        .hero .treatment-card-counter-label { color: rgba(255, 255, 255, 0.75); }
+        .hero .treatment-card-right { border-left-color: rgba(255, 255, 255, 0.2); }
+
+        /* Secondary button — white outline on dark */
+        .hero .btn-secondary {
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .hero .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.22);
+            border-color: white;
+            color: white;
+        }
+
+        /* Trust pill at top-right of hero */
+        .hero > .photo-trust-pill {
+            top: var(--s-5);
+            right: var(--s-5);
+        }
 
         .status-chip {
             display: inline-flex;
@@ -912,20 +966,6 @@
         .share-btn.facebook { background: var(--color-facebook); }
         .share-btn.instagram { background: linear-gradient(135deg, #E1306C, #C13584); }
 
-        /* ═══════════ PORTRAIT SECTION (final emotional touch) ═══════════ */
-        .portrait-section {
-            padding: var(--s-16) var(--s-10);
-            background: var(--color-background);
-            border-top: 1px solid var(--color-border);
-        }
-        .portrait-inner {
-            max-width: 480px;
-            margin: 0 auto;
-        }
-        @media (max-width: 768px) {
-            .portrait-section { padding: var(--s-12) var(--s-5); }
-        }
-
         /* ═══════════ FOOTER ═══════════ */
         footer {
             background: var(--color-foreground);
@@ -1188,8 +1228,15 @@
     </header>
 
     <main id="main">
-        <!-- ═══════════ CHAPTER 1 — HERO (Intro Hook) ═══════════ -->
+        <!-- ═══════════ CHAPTER 1 — HERO (Photo background + text overlay) ═══════════ -->
         <section class="hero" data-chapter="1" aria-labelledby="hero-title">
+            <div class="photo-trust-pill">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                        d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
+                </svg>
+                <span data-i18n="verified">Doğrulanıb</span>
+            </div>
             <div class="hero-grid">
                 <div class="hero-left">
                     <div class="status-chip" role="status">
@@ -1430,29 +1477,6 @@
                         <span>Instagram</span>
                     </a>
                 </div>
-            </div>
-        </section>
-        <!-- ═══════════ PORTRAIT SECTION (final emotional touch) ═══════════ -->
-        <section class="portrait-section" aria-label="İnadın şəkli">
-            <div class="portrait-inner">
-                <figure class="hero-photo">
-                    <div class="photo-trust-pill">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
-                        </svg>
-                        <span data-i18n="verified">Doğrulanıb</span>
-                    </div>
-                    <img src="inad-main.jpg" alt="İnad Abbasov, 16 yaş, Medical Park Antalya xəstəxanasında müalicə aldığı dövrdə" loading="lazy">
-                    <figcaption class="hero-photo-caption">
-                        <div class="caption-name">İnad Abbasov</div>
-                        <div class="caption-meta">
-                            <span data-i18n="captionAge">16 yaş</span>
-                            <span class="caption-divider" aria-hidden="true"></span>
-                            <span data-i18n="captionFamily">Şəhid ailəsindən</span>
-                        </div>
-                    </figcaption>
-                </figure>
             </div>
         </section>
     </main>
