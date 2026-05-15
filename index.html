@@ -302,14 +302,15 @@
                 var(--color-background);
         }
         .hero-grid {
-            max-width: 1280px;
+            max-width: 720px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: var(--s-16);
+            grid-template-columns: 1fr;
+            gap: var(--s-12);
             align-items: center;
         }
-        .hero-left { max-width: 640px; }
+        .hero-left { max-width: 100%; }
+        .hero-right { max-width: 520px; margin: 0 auto; width: 100%; }
 
         .status-chip {
             display: inline-flex;
@@ -1090,8 +1091,7 @@
 
         @media (max-width: 768px) {
             .hero { padding: var(--s-10) var(--s-5) var(--s-12); }
-            .hero-grid { grid-template-columns: 1fr; gap: var(--s-10); }
-            .hero-right { max-width: 460px; margin: 0 auto; width: 100%; }
+            .hero-grid { gap: var(--s-10); }
             .hero-photo { aspect-ratio: 16 / 11; }
             .hero-photo img { object-position: center 25%; }
             .treatment-card { max-width: 100%; }
