@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1a1a1a">
+    <meta name="theme-color" content="#0891B2">
     <title>İnada Kömək Et — Qan Xərçəngi ilə Mübarizə | Şəhid Ailəsinin Övladı</title>
     <meta name="description" content="16 yaşlı İnad Abbasov 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 şəhid verib. Türkiyədə ilik transplantasiyası üçün təcili 68.000 USD lazımdır.">
     <meta name="keywords" content="İnad Abbasov, qan xərçəngi, leykoz, ilik transplantasiyası, yardım, kömək, şəhid ailəsi, Medical Park, Ağstafa">
     <meta name="author" content="İnad Abbasov Ailəsi">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://inadayardimet.github.io/">
     <meta property="og:title" content="İnada Kömək Et — Qan Xərçəngi ilə Mübarizə">
@@ -28,15 +28,15 @@
     <meta name="twitter:image" content="https://inadayardimet.github.io/inad-main.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%231a1a1a'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='55' font-style='italic' fill='%23C62828' text-anchor='middle'%3Eİ%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%23ECFEFF'/%3E%3Ctext x='50' y='72' font-family='Inter,sans-serif' font-weight='800' font-size='62' fill='%230891B2' text-anchor='middle'%3Eİ%3C/text%3E%3C/svg%3E">
 
     <!-- Preload hero image -->
     <link rel="preload" as="image" href="inad-main.jpg">
 
-    <!-- Google Fonts: Lora (serif), IBM Plex Sans (UI), Bebas Neue (stats) -->
+    <!-- Google Fonts: Inter only (per UI UX Pro Max recommendation) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -56,953 +56,116 @@
     </noscript>
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ════════════════════════════════════════════════════════════
+           UI UX Pro Max Design System — Accessible & Ethical (WCAG AAA)
+           Pattern: Scroll-Triggered Storytelling (5 chapters)
+           Colors: Compassion Blue + Action Orange
+           Typography: Inter (single family)
+           ════════════════════════════════════════════════════════════ */
 
         :root {
-            --bg-white: #FFFFFF;
-            --bg-dark: #1a1a1a;
-            --bg-cream: #F8F5F0;
-            --accent-red: #C62828;
-            --accent-red-dark: #B71C1C;
-            --text-dark: #2c2c2c;
-            --text-light: #666666;
-            --text-white: #FFFFFF;
-            --border-subtle: rgba(0, 0, 0, 0.08);
-            --border-dark: rgba(255, 255, 255, 0.12);
-            --whatsapp: #25D366;
-            --facebook: #1877F2;
+            /* Colors */
+            --color-primary: #0891B2;
+            --color-primary-hover: #0E7490;
+            --color-primary-soft: rgba(8, 145, 178, 0.08);
+            --color-on-primary: #FFFFFF;
+            --color-secondary: #22D3EE;
+            --color-accent: #EA580C;
+            --color-accent-hover: #C2410C;
+            --color-accent-soft: rgba(234, 88, 12, 0.1);
+            --color-background: #ECFEFF;
+            --color-surface: #FFFFFF;
+            --color-surface-warm: #FEF9F0;
+            --color-surface-urgent: #FFF7ED;
+            --color-foreground: #164E63;
+            --color-foreground-soft: #1E6F8B;
+            --color-muted: #F0F9FB;
+            --color-muted-foreground: #475569;
+            --color-border: #A5F3FC;
+            --color-border-strong: #67E8F9;
+            --color-border-warm: #FED7AA;
+            --color-success: #2E7D32;
+            --color-destructive: #DC2626;
+            --color-whatsapp: #25D366;
+            --color-whatsapp-hover: #1FAE5C;
+            --color-facebook: #1877F2;
+
+            /* Spacing scale (4px base) */
+            --s-1: 4px;  --s-2: 8px;   --s-3: 12px; --s-4: 16px;
+            --s-5: 20px; --s-6: 24px;  --s-8: 32px; --s-10: 40px;
+            --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-24: 96px;
+
+            /* Typography */
+            --font: 'Inter', system-ui, -apple-system, sans-serif;
+            --fs-xs: 12px;
+            --fs-sm: 14px;
+            --fs-base: 16px;
+            --fs-md: 18px;
+            --fs-lg: 20px;
+            --fs-xl: 24px;
+            --fs-2xl: 32px;
+            --fs-3xl: 40px;
+            --fs-4xl: 48px;
+            --fs-5xl: 56px;
+
+            /* Accessibility tokens */
+            --focus-ring: 3px;
+            --touch-min: 44px;
+            --radius: 6px;
+            --radius-lg: 10px;
+            --radius-xl: 16px;
+            --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px rgba(22, 78, 99, 0.06);
+            --shadow-md: 0 4px 12px rgba(22, 78, 99, 0.08);
+            --shadow-lg: 0 16px 40px rgba(22, 78, 99, 0.12);
+            --shadow-xl: 0 24px 60px rgba(22, 78, 99, 0.18);
         }
 
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'IBM Plex Sans', -apple-system, sans-serif;
-            background: var(--bg-white);
-            color: var(--text-dark);
-            line-height: 1.7;
-            overflow-x: hidden;
+            font-family: var(--font);
+            font-size: var(--fs-base);
+            line-height: 1.6;
+            color: var(--color-foreground);
+            background: var(--color-background);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-        }
-
-        img { max-width: 100%; display: block; }
-
-        /* ═══════════════════════════════════════ */
-        /* NAVIGATION                              */
-        /* ═══════════════════════════════════════ */
-        .nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: var(--bg-dark);
-            color: var(--text-white);
-            padding: 14px 24px;
-            border-bottom: 1px solid var(--border-dark);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Lora', serif;
-            font-size: 22px;
-            font-weight: 600;
-            font-style: italic;
-            letter-spacing: -0.3px;
-            color: var(--text-white);
-            text-decoration: none;
-        }
-
-        .nav-logo span { color: var(--accent-red); }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .lang-switcher {
-            display: flex;
-            gap: 4px;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            color: rgba(255, 255, 255, 0.5);
-            padding: 6px 10px;
-            cursor: pointer;
-            transition: color 0.2s ease;
-            font-family: inherit;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-
-        .lang-btn:hover { color: var(--text-white); }
-        .lang-btn.active { color: var(--text-white); border-bottom: 1px solid var(--accent-red); }
-
-        .nav-cta {
-            background: var(--accent-red);
-            color: var(--text-white);
-            border: none;
-            padding: 10px 20px;
-            font-family: inherit;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 2px;
-            transition: background 0.2s ease;
-            letter-spacing: 0.3px;
-        }
-
-        .nav-cta:hover { background: var(--accent-red-dark); }
-
-        .nav-hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-white);
-            font-size: 24px;
-            cursor: pointer;
-            padding: 4px 8px;
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* HERO                                    */
-        /* ═══════════════════════════════════════ */
-        .hero {
-            background: var(--bg-dark);
-            color: var(--text-white);
-            padding: 60px 40px;
-        }
-
-        .hero-grid {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-left { max-width: 620px; }
-
-        .hero-badge {
-            display: inline-block;
-            border: 1px solid var(--accent-red);
-            color: var(--accent-red);
-            padding: 6px 14px;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 32px;
-        }
-
-        .hero-quote {
-            font-family: 'Lora', serif;
-            font-size: 38px;
-            font-style: italic;
-            font-weight: 500;
-            line-height: 1.3;
-            margin-bottom: 24px;
-            color: var(--text-white);
-            letter-spacing: -0.5px;
-        }
-
-        .hero-subtitle {
-            font-size: 16px;
-            line-height: 1.75;
-            color: rgba(255, 255, 255, 0.75);
-            margin-bottom: 36px;
-            font-weight: 300;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: var(--accent-red);
-            color: var(--text-white);
-            border: 1px solid var(--accent-red);
-            padding: 14px 28px;
-            font-family: inherit;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 2px;
-            transition: all 0.2s ease;
-            display: inline-block;
-            letter-spacing: 0.3px;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-red-dark);
-            border-color: var(--accent-red-dark);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-white);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 14px 28px;
-            font-family: inherit;
-            font-weight: 500;
-            font-size: 15px;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 2px;
-            transition: all 0.2s ease;
-            display: inline-block;
-            letter-spacing: 0.3px;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--text-white);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .hero-right {
-            position: relative;
-        }
-
-        .hero-photo {
-            position: relative;
-            aspect-ratio: 3 / 4;
-            overflow: hidden;
-            border-radius: 4px;
-            border: 1px solid var(--border-dark);
-            background: #2a2a2a;
-        }
-
-        .hero-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-        }
-
-        .hero-photo-caption {
-            position: absolute;
-            bottom: 16px;
-            left: 16px;
-            background: rgba(0, 0, 0, 0.7);
-            color: var(--text-white);
-            padding: 6px 12px;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            border-radius: 2px;
-            backdrop-filter: blur(4px);
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* STATS STRIP                             */
-        /* ═══════════════════════════════════════ */
-        .stats {
-            background: var(--accent-red);
-            color: var(--text-white);
-            padding: 40px 24px;
-        }
-
-        .stats-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 0 20px;
-            border-right: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .stat:last-child { border-right: none; }
-
-        .stat-number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 48px;
-            line-height: 1;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
-
-        .stat-label {
-            font-size: 11px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            opacity: 0.9;
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* MOTHER QUOTE                            */
-        /* ═══════════════════════════════════════ */
-        .mother-quote {
-            background: var(--bg-white);
-            padding: 80px 40px;
-            text-align: center;
-        }
-
-        .mother-quote-inner {
-            max-width: 760px;
-            margin: 0 auto;
-            border-left: 3px solid var(--accent-red);
-            padding: 12px 0 12px 32px;
-            text-align: left;
-        }
-
-        .mother-quote-label {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--accent-red);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .mother-quote-text {
-            font-family: 'Lora', serif;
-            font-size: 26px;
-            font-style: italic;
-            font-weight: 500;
-            line-height: 1.5;
-            color: var(--text-dark);
-            margin-bottom: 24px;
-            letter-spacing: -0.3px;
-        }
-
-        .mother-quote-author {
-            font-size: 14px;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* STORY                                   */
-        /* ═══════════════════════════════════════ */
-        .story {
-            background: var(--bg-cream);
-            padding: 80px 40px;
-        }
-
-        .story-inner {
-            max-width: 880px;
-            margin: 0 auto;
-        }
-
-        .story-title {
-            font-family: 'Lora', serif;
-            font-size: 36px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 12px;
-            color: var(--text-dark);
-            letter-spacing: -0.5px;
-        }
-
-        .story-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--accent-red);
-            margin: 16px auto 48px;
-        }
-
-        .story-text {
-            column-count: 2;
-            column-gap: 40px;
-            font-size: 15px;
-            line-height: 1.85;
-            color: var(--text-dark);
-        }
-
-        .story-text p {
-            margin-bottom: 18px;
-            break-inside: avoid;
-        }
-
-        .story-text p:first-child::first-letter {
-            font-family: 'Lora', serif;
-            font-size: 56px;
-            font-weight: 700;
-            float: left;
-            line-height: 1;
-            margin: 4px 8px 0 0;
-            color: var(--accent-red);
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* GALLERY                                 */
-        /* ═══════════════════════════════════════ */
-        .gallery {
-            background: var(--bg-white);
-            padding: 80px 40px;
-        }
-
-        .gallery-inner { max-width: 1200px; margin: 0 auto; }
-
-        .section-title {
-            font-family: 'Lora', serif;
-            font-size: 36px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 12px;
-            color: var(--text-dark);
-            letter-spacing: -0.5px;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--accent-red);
-            margin: 16px auto 48px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .gallery-item {
-            position: relative;
-            aspect-ratio: 3 / 4;
-            overflow: hidden;
-            cursor: pointer;
-            border-radius: 4px;
-            background: #f0f0f0;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease, filter 0.4s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-            filter: brightness(0.85);
-        }
-
-        .gallery-item::after {
-            content: '⊕';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--text-white);
-            font-size: 32px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .gallery-item:hover::after { opacity: 1; }
-
-        /* ═══════════════════════════════════════ */
-        /* TRANSPARENCY / DOCUMENTS                */
-        /* ═══════════════════════════════════════ */
-        .transparency {
-            background: var(--bg-white);
-            padding: 80px 40px;
-            border-top: 1px solid var(--border-subtle);
-        }
-
-        .transparency-inner { max-width: 1200px; margin: 0 auto; }
-
-        .docs-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 48px;
-        }
-
-        .doc-card {
-            background: var(--bg-cream);
-            border: 1px solid var(--border-subtle);
-            padding: 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border-radius: 4px;
-        }
-
-        .doc-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-color: var(--accent-red);
-        }
-
-        .doc-thumb {
-            aspect-ratio: 3 / 4;
-            overflow: hidden;
-            margin-bottom: 12px;
-            background: #fff;
-            border: 1px solid var(--border-subtle);
-        }
-
-        .doc-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .doc-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-dark);
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        .badges-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .badge {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--bg-cream);
-            padding: 14px 18px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-dark);
-            border-radius: 4px;
-            border-left: 3px solid var(--accent-red);
-        }
-
-        .badge-check {
-            color: var(--accent-red);
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* DONATION                                */
-        /* ═══════════════════════════════════════ */
-        .donation {
-            background: var(--bg-dark);
-            color: var(--text-white);
-            padding: 80px 40px;
-        }
-
-        .donation-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
-
-        .donation-label {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--accent-red);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .donation-title {
-            font-family: 'Lora', serif;
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 48px;
-            color: var(--text-white);
-            letter-spacing: -0.5px;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 32px;
-        }
-
-        .bank-card {
-            background: #2a2a2a;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 28px 24px;
-            border-radius: 4px;
-            text-align: left;
-            transition: all 0.2s ease;
-        }
-
-        .bank-card:hover {
-            border-color: var(--accent-red);
-            transform: translateY(-2px);
-        }
-
-        .bank-name {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--accent-red);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 16px;
-        }
-
-        .card-number {
-            font-family: 'IBM Plex Mono', 'Courier New', monospace;
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--text-white);
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            word-break: break-all;
-        }
-
-        .copy-btn {
-            background: var(--accent-red);
-            color: var(--text-white);
-            border: none;
-            padding: 10px 18px;
-            font-family: inherit;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 2px;
-            transition: all 0.2s ease;
-            width: 100%;
-            letter-spacing: 0.3px;
-        }
-
-        .copy-btn:hover { background: var(--accent-red-dark); }
-        .copy-btn.copied { background: #2E7D32; }
-
-        .card-holder {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.6);
-            margin-top: 12px;
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* SHARE                                   */
-        /* ═══════════════════════════════════════ */
-        .share {
-            background: var(--bg-white);
-            padding: 80px 40px;
-            text-align: center;
-        }
-
-        .share-inner { max-width: 760px; margin: 0 auto; }
-
-        .share-title {
-            font-family: 'Lora', serif;
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--text-dark);
-            letter-spacing: -0.5px;
-        }
-
-        .share-subtitle {
-            font-size: 16px;
-            color: var(--text-light);
-            margin-bottom: 36px;
-        }
-
-        .share-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .share-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 26px;
-            color: var(--text-white);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            border-radius: 2px;
-            transition: all 0.2s ease;
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        .share-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .share-btn.whatsapp { background: var(--whatsapp); }
-        .share-btn.facebook { background: var(--facebook); }
-        .share-btn.instagram { background: linear-gradient(135deg, #E1306C, #C13584); }
-
-        /* ═══════════════════════════════════════ */
-        /* FOOTER                                  */
-        /* ═══════════════════════════════════════ */
-        footer {
-            background: var(--bg-dark);
-            color: var(--text-white);
-            padding: 60px 40px 40px;
-            text-align: center;
-        }
-
-        .footer-quote {
-            font-family: 'Lora', serif;
-            font-size: 22px;
-            font-style: italic;
-            font-weight: 400;
-            margin-bottom: 32px;
-            color: rgba(255, 255, 255, 0.9);
-            letter-spacing: -0.3px;
-        }
-
-        .footer-contacts {
-            display: flex;
-            gap: 32px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 32px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .footer-contact a {
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .footer-contact a:hover { color: var(--accent-red); }
-
-        .footer-bottom {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
-            border-top: 1px solid var(--border-dark);
-            padding-top: 24px;
-            letter-spacing: 0.5px;
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* FLOATING ELEMENTS                       */
-        /* ═══════════════════════════════════════ */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 56px;
-            height: 56px;
-            background: var(--whatsapp);
-            color: var(--text-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 28px;
-            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
-            z-index: 90;
-            transition: all 0.2s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.08);
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
-        }
-
-        .mobile-cta-bar {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--accent-red);
-            color: var(--text-white);
-            padding: 14px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            z-index: 95;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
-            letter-spacing: 0.3px;
-        }
-
-        .mobile-cta-bar:hover { background: var(--accent-red-dark); }
-
-        /* ═══════════════════════════════════════ */
-        /* TOAST                                   */
-        /* ═══════════════════════════════════════ */
-        .toast {
-            position: fixed;
-            top: 24px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-100px);
-            background: #2E7D32;
-            color: var(--text-white);
-            padding: 14px 24px;
-            border-radius: 2px;
-            font-size: 14px;
-            font-weight: 500;
-            z-index: 200;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transition: all 0.3s ease;
-            pointer-events: none;
-        }
-
-        .toast.show {
-            transform: translateX(-50%) translateY(0);
-            opacity: 1;
-        }
-
-        /* ═══════════════════════════════════════ */
-        /* LIGHTBOX                                */
-        /* ═══════════════════════════════════════ */
-        .lightbox {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.92);
-            z-index: 1000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-            cursor: zoom-out;
-        }
-
-        .lightbox.active { display: flex; }
-
-        .lightbox-img {
-            max-width: 92vw;
-            max-height: 90vh;
-            object-fit: contain;
-            cursor: default;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            background: none;
-            border: none;
-            color: var(--text-white);
-            font-size: 36px;
-            cursor: pointer;
-            line-height: 1;
-            padding: 8px;
-        }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: var(--text-white);
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.2s ease;
-        }
-
-        .lightbox-nav:hover { background: rgba(255, 255, 255, 0.2); }
-        .lightbox-prev { left: 24px; }
-        .lightbox-next { right: 24px; }
-
-        /* ═══════════════════════════════════════ */
-        /* RESPONSIVE                              */
-        /* ═══════════════════════════════════════ */
-        @media (max-width: 968px) {
-            .hero { padding: 50px 24px; }
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .hero-quote { font-size: 30px; }
-            .hero-right { max-width: 480px; margin: 0 auto; width: 100%; }
-
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .stat { border-right: none; padding: 16px; }
-            .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-
-            .mother-quote, .story, .gallery, .transparency, .donation, .share {
-                padding: 60px 24px;
-            }
-
-            .story-text { column-count: 1; }
-
-            .gallery-grid, .docs-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .badges-grid { grid-template-columns: 1fr; }
-
-            .section-title, .story-title, .donation-title { font-size: 28px; }
-            .mother-quote-text { font-size: 22px; }
-            .share-title { font-size: 26px; }
-        }
-
-        @media (max-width: 640px) {
-            .nav { padding: 12px 16px; }
-            .nav-logo { font-size: 20px; }
-            .nav-right { gap: 8px; }
-            .lang-switcher { font-size: 11px; }
-            .lang-btn { padding: 4px 6px; font-size: 11px; }
-            .nav-cta { padding: 8px 14px; font-size: 13px; }
-
-            .hero { padding: 40px 20px; }
-            .hero-quote { font-size: 26px; }
-            .hero-subtitle { font-size: 15px; }
-            .hero-buttons { flex-direction: column; }
-            .hero-buttons .btn-primary,
-            .hero-buttons .btn-secondary {
-                width: 100%;
-                text-align: center;
-            }
-
-            .stat-number { font-size: 36px; }
-
-            .gallery-grid { grid-template-columns: 1fr; gap: 12px; }
-            .docs-grid { grid-template-columns: 1fr; }
-
-            .mother-quote-inner { padding-left: 20px; }
-            .mother-quote-text { font-size: 20px; }
-
-            .footer-contacts { flex-direction: column; gap: 12px; }
-
-            .mobile-cta-bar { display: block; }
-            body { padding-bottom: 60px; }
-            .whatsapp-float { bottom: 80px; }
-        }
-
-        /* Accessibility */
+            text-rendering: optimizeLegibility;
+            font-feature-settings: 'cv01', 'cv11', 'ss01';
+            overflow-x: hidden;
+        }
+
+        img { display: block; max-width: 100%; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+        a { color: inherit; text-decoration: none; }
+        h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -0.5px; color: var(--color-foreground); }
+        p { line-height: 1.7; }
+
+        /* ─── ACCESSIBILITY ─── */
+        :focus { outline: none; }
         :focus-visible {
-            outline: 2px solid var(--accent-red);
+            outline: var(--focus-ring) solid var(--color-primary);
             outline-offset: 2px;
+            border-radius: var(--radius);
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--color-foreground);
+            color: var(--color-on-primary);
+            padding: var(--s-3) var(--s-4);
+            border-radius: var(--radius);
+            z-index: 9999;
+            font-weight: 600;
+            font-size: var(--fs-sm);
+        }
+        .skip-link:focus, .skip-link:focus-visible {
+            left: var(--s-4);
+            top: var(--s-4);
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -1011,204 +174,1386 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
+        /* ─── STORY PROGRESS BAR (sticky top) ─── */
+        .story-progress {
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--s-3) var(--s-6);
+            display: flex;
+            align-items: center;
+            gap: var(--s-4);
+            font-size: var(--fs-xs);
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--color-muted-foreground);
+        }
+        .story-progress-label { white-space: nowrap; }
+        .story-progress-label strong { color: var(--color-foreground); font-weight: 700; }
+        .story-progress-track {
+            flex: 1;
+            height: 3px;
+            background: var(--color-border);
+            border-radius: 2px;
+            overflow: hidden;
+            max-width: 360px;
+        }
+        .story-progress-fill {
+            display: block;
+            height: 100%;
+            background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+            border-radius: 2px;
+            width: 20%;
+            transition: width 400ms ease;
+        }
+        .story-progress-chapters {
+            display: flex;
+            gap: var(--s-3);
+            color: var(--color-muted-foreground);
+            opacity: 0.6;
+            font-size: 10px;
+        }
+
+        /* ─── NAV ─── */
+        .nav {
+            position: sticky;
+            top: 45px;
+            z-index: 98;
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--s-3) var(--s-6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 64px;
+        }
+        .logo {
+            font-size: var(--fs-xl);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--color-foreground);
+        }
+        .logo span { color: var(--color-primary); }
+
+        .nav-actions { display: flex; align-items: center; gap: var(--s-3); }
+
+        .lang-switcher {
+            display: flex;
+            background: var(--color-muted);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 2px;
+        }
+        .lang-btn {
+            min-height: 36px;
+            min-width: 36px;
+            padding: var(--s-2) var(--s-3);
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--color-muted-foreground);
+            border-radius: 4px;
+            transition: all var(--transition);
+        }
+        .lang-btn:hover { color: var(--color-foreground); }
+        .lang-btn.active {
+            background: var(--color-surface);
+            color: var(--color-foreground);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-cta {
+            min-height: var(--touch-min);
+            background: var(--color-accent);
+            color: var(--color-on-primary);
+            padding: 0 var(--s-5);
+            font-size: var(--fs-sm);
+            font-weight: 600;
+            border-radius: var(--radius);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--s-2);
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .nav-cta:hover {
+            background: var(--color-accent-hover);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        .nav-cta svg { width: 16px; height: 16px; }
+
+        /* ─── BUTTON SYSTEM ─── */
+        .btn {
+            min-height: var(--touch-min);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--s-2);
+            padding: var(--s-4) var(--s-6);
+            font-size: var(--fs-base);
+            font-weight: 600;
+            border-radius: var(--radius);
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+            white-space: nowrap;
+        }
+        .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+        .btn-primary { background: var(--color-accent); color: var(--color-on-primary); }
+        .btn-primary:hover { background: var(--color-accent-hover); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+        .btn-whatsapp { background: var(--color-whatsapp); color: var(--color-on-primary); }
+        .btn-whatsapp:hover { background: var(--color-whatsapp-hover); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+        .btn-secondary {
+            background: var(--color-surface);
+            color: var(--color-foreground);
+            border: 1px solid var(--color-border-strong);
+        }
+        .btn-secondary:hover { background: var(--color-muted); border-color: var(--color-primary); color: var(--color-primary); }
+
+        /* ─── CHAPTER LABEL ─── */
+        .chapter-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--s-2);
+            font-size: var(--fs-xs);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: var(--s-4);
+        }
+        .chapter-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--color-primary);
+        }
+
+        /* ═══════════ CHAPTER 1 — HERO (Intro Hook) ═══════════ */
+        .hero {
+            position: relative;
+            padding: var(--s-16) var(--s-10) var(--s-20);
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(8, 145, 178, 0.06), transparent 70%),
+                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(234, 88, 12, 0.04), transparent 70%),
+                var(--color-background);
+        }
+        .hero-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: var(--s-16);
+            align-items: center;
+        }
+        .hero-left { max-width: 640px; }
+
+        .status-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--s-2);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            color: var(--color-foreground);
+            padding: var(--s-2) var(--s-4);
+            border-radius: 100px;
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: var(--s-8);
+            box-shadow: var(--shadow-sm);
+        }
+        .live-dot {
+            position: relative;
+            width: 8px;
+            height: 8px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .live-dot::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: ping 1.8s ease-out infinite;
+        }
+        @keyframes ping {
+            0% { transform: scale(0.6); opacity: 0.6; }
+            80%, 100% { transform: scale(2.5); opacity: 0; }
+        }
+
+        .hero-title {
+            font-size: clamp(var(--fs-2xl), 5vw, var(--fs-5xl));
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            margin-bottom: var(--s-6);
+        }
+        .hero-title .accent {
+            color: var(--color-accent);
+            position: relative;
+            white-space: nowrap;
+        }
+        .hero-title .accent::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: -4px;
+            height: 4px;
+            background: var(--color-accent);
+            opacity: 0.2;
+            border-radius: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: var(--fs-md);
+            line-height: 1.7;
+            color: var(--color-muted-foreground);
+            margin-bottom: var(--s-10);
+            max-width: 580px;
+        }
+
+        .treatment-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--s-5) var(--s-6);
+            margin-bottom: var(--s-8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--s-6);
+            box-shadow: var(--shadow-sm);
+            max-width: 560px;
+        }
+        .treatment-card-left { display: flex; align-items: center; gap: var(--s-4); }
+        .treatment-card-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--color-muted);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            flex-shrink: 0;
+        }
+        .treatment-card-icon svg { width: 22px; height: 22px; }
+        .treatment-card-label {
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--color-muted-foreground);
+            margin-bottom: 2px;
+        }
+        .treatment-card-value {
+            font-size: var(--fs-base);
+            font-weight: 600;
+            color: var(--color-foreground);
+        }
+        .treatment-card-right {
+            text-align: right;
+            border-left: 1px solid var(--color-border);
+            padding-left: var(--s-6);
+        }
+        .treatment-card-counter {
+            font-size: var(--fs-3xl);
+            font-weight: 800;
+            line-height: 1;
+            color: var(--color-primary);
+            letter-spacing: -1px;
+        }
+        .treatment-card-counter-label {
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--color-muted-foreground);
+            margin-top: var(--s-1);
+        }
+
+        .hero-ctas { display: flex; gap: var(--s-3); flex-wrap: wrap; }
+
+        .hero-right { position: relative; }
+        .hero-photo {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--color-muted);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--color-border);
+        }
+        .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+        .hero-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(22, 78, 99, 0.75) 0%, rgba(22, 78, 99, 0.0) 35%);
+            pointer-events: none;
+        }
+        .hero-photo-caption {
+            position: absolute;
+            left: var(--s-5);
+            right: var(--s-5);
+            bottom: var(--s-5);
+            z-index: 2;
+            color: var(--color-on-primary);
+        }
+        .caption-name { font-size: var(--fs-lg); font-weight: 700; margin-bottom: var(--s-1); }
+        .caption-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--s-2);
+            font-size: var(--fs-xs);
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        .caption-divider { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.6; }
+        .photo-trust-pill {
+            position: absolute;
+            top: var(--s-4);
+            right: var(--s-4);
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--color-primary);
+            padding: var(--s-2) var(--s-3);
+            border-radius: 100px;
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--s-1);
+            box-shadow: var(--shadow-md);
+        }
+        .photo-trust-pill svg { width: 14px; height: 14px; }
+
+        /* ═══════════ STATS STRIP ═══════════ */
+        .stats {
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--s-10) var(--s-6);
+        }
+        .stats-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+        .stat {
+            text-align: center;
+            padding: var(--s-2) var(--s-6);
+            border-right: 1px solid var(--color-border);
+        }
+        .stat:last-child { border-right: none; }
+        .stat-number {
+            font-size: var(--fs-3xl);
+            font-weight: 800;
+            line-height: 1;
+            color: var(--color-primary);
+            letter-spacing: -1.5px;
+            margin-bottom: var(--s-2);
+        }
+        .stat-label {
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-muted-foreground);
+        }
+        .stat:nth-child(3) .stat-number { color: var(--color-accent); }
+
+        /* ═══════════ CHAPTER 2 — MOTHER'S QUOTE (Problem) ═══════════ */
+        .mother-quote {
+            padding: var(--s-20) var(--s-10);
+            background: var(--color-surface);
+        }
+        .mother-quote-inner {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .mother-quote-card {
+            background: var(--color-muted);
+            border-radius: var(--radius-xl);
+            padding: var(--s-12) var(--s-10);
+            border-left: 4px solid var(--color-accent);
+            position: relative;
+        }
+        .mother-quote-mark {
+            position: absolute;
+            top: var(--s-6);
+            right: var(--s-8);
+            font-size: 96px;
+            line-height: 1;
+            color: var(--color-primary);
+            opacity: 0.15;
+            font-weight: 800;
+        }
+        .mother-quote-text {
+            font-size: clamp(var(--fs-lg), 3vw, var(--fs-2xl));
+            font-weight: 500;
+            line-height: 1.5;
+            color: var(--color-foreground);
+            margin-bottom: var(--s-6);
+            letter-spacing: -0.3px;
+        }
+        .mother-quote-author {
+            display: flex;
+            align-items: center;
+            gap: var(--s-3);
+        }
+        .author-avatar {
+            width: 44px;
+            height: 44px;
+            background: var(--color-primary);
+            color: var(--color-on-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: var(--fs-md);
+        }
+        .author-info { display: flex; flex-direction: column; }
+        .author-name { font-size: var(--fs-base); font-weight: 600; color: var(--color-foreground); }
+        .author-role { font-size: var(--fs-sm); color: var(--color-muted-foreground); }
+
+        /* ═══════════ CHAPTER 3 — STORY (Journey) ═══════════ */
+        .story {
+            padding: var(--s-20) var(--s-10);
+            background: var(--color-surface-warm);
+        }
+        .story-inner { max-width: 880px; margin: 0 auto; }
+        .section-title {
+            font-size: clamp(var(--fs-2xl), 4vw, var(--fs-3xl));
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: var(--s-4);
+            letter-spacing: -1px;
+        }
+        .section-title-underline {
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--color-accent);
+            margin: 0 auto var(--s-12);
+            border-radius: 2px;
+        }
+        .story-text {
+            column-count: 2;
+            column-gap: var(--s-12);
+            font-size: var(--fs-md);
+            line-height: 1.85;
+            color: var(--color-foreground);
+        }
+        .story-text p {
+            margin-bottom: var(--s-5);
+            break-inside: avoid;
+        }
+        .story-text p:first-child::first-letter {
+            font-size: 64px;
+            font-weight: 800;
+            float: left;
+            line-height: 1;
+            margin: 4px 10px 0 0;
+            color: var(--color-accent);
+            letter-spacing: -2px;
+        }
+
+        /* ═══════════ GALLERY ═══════════ */
+        .gallery {
+            padding: var(--s-20) var(--s-10);
+            background: var(--color-surface);
+        }
+        .gallery-inner { max-width: 1200px; margin: 0 auto; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--s-4);
+        }
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: var(--radius-lg);
+            background: var(--color-muted);
+            border: 1px solid var(--color-border);
+            transition: all var(--transition);
+        }
+        .gallery-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms ease;
+        }
+        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-item-zoom {
+            position: absolute;
+            top: var(--s-3);
+            right: var(--s-3);
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            opacity: 0;
+            transition: opacity var(--transition);
+            box-shadow: var(--shadow-md);
+        }
+        .gallery-item-zoom svg { width: 18px; height: 18px; }
+        .gallery-item:hover .gallery-item-zoom { opacity: 1; }
+
+        /* ═══════════ CHAPTER 4 — TRANSPARENCY (Solution) ═══════════ */
+        .transparency {
+            padding: var(--s-20) var(--s-10);
+            background: var(--color-muted);
+            border-top: 1px solid var(--color-border);
+        }
+        .transparency-inner { max-width: 1200px; margin: 0 auto; }
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--s-5);
+            margin-bottom: var(--s-12);
+        }
+        .doc-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--s-4);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+        .doc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary);
+        }
+        .doc-thumb {
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            margin-bottom: var(--s-3);
+            background: var(--color-muted);
+            border-radius: var(--radius);
+            border: 1px solid var(--color-border);
+        }
+        .doc-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .doc-title {
+            font-size: var(--fs-sm);
+            font-weight: 600;
+            color: var(--color-foreground);
+            text-align: center;
+            line-height: 1.4;
+            padding: 0 var(--s-2);
+        }
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--s-3);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: var(--s-3);
+            background: var(--color-surface);
+            padding: var(--s-4) var(--s-5);
+            font-size: var(--fs-sm);
+            font-weight: 500;
+            color: var(--color-foreground);
+            border-radius: var(--radius);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+        }
+        .badge-check {
+            width: 32px;
+            height: 32px;
+            background: var(--color-primary-soft);
+            color: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .badge-check svg { width: 16px; height: 16px; }
+
+        /* ═══════════ CHAPTER 5 — DONATION (Climax CTA) ═══════════ */
+        .donation {
+            padding: var(--s-20) var(--s-10);
+            background: var(--color-surface-urgent);
+            border-top: 1px solid var(--color-border-warm);
+        }
+        .donation-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+
+        .climax-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--s-2);
+            background: var(--color-accent-soft);
+            color: var(--color-accent-hover);
+            padding: var(--s-2) var(--s-4);
+            border-radius: 100px;
+            font-size: var(--fs-xs);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: var(--s-5);
+        }
+        .donation-title {
+            font-size: clamp(var(--fs-2xl), 5vw, var(--fs-4xl));
+            font-weight: 800;
+            margin-bottom: var(--s-4);
+            letter-spacing: -1.5px;
+        }
+        .donation-subtitle {
+            font-size: var(--fs-md);
+            color: var(--color-muted-foreground);
+            margin-bottom: var(--s-12);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--s-4);
+            margin-bottom: var(--s-8);
+        }
+        .bank-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border-warm);
+            border-radius: var(--radius-lg);
+            padding: var(--s-6) var(--s-5);
+            text-align: left;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .bank-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-accent);
+        }
+        .bank-name {
+            font-size: var(--fs-xs);
+            font-weight: 700;
+            color: var(--color-accent-hover);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: var(--s-4);
+        }
+        .card-number {
+            font-family: 'Inter', monospace;
+            font-feature-settings: 'tnum';
+            font-size: var(--fs-md);
+            font-weight: 700;
+            color: var(--color-foreground);
+            letter-spacing: 1px;
+            margin-bottom: var(--s-5);
+            word-break: break-all;
+        }
+        .copy-btn {
+            min-height: var(--touch-min);
+            width: 100%;
+            background: var(--color-foreground);
+            color: var(--color-on-primary);
+            padding: var(--s-3) var(--s-4);
+            font-size: var(--fs-sm);
+            font-weight: 600;
+            border-radius: var(--radius);
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--s-2);
+        }
+        .copy-btn:hover { background: var(--color-foreground-soft); }
+        .copy-btn.copied { background: var(--color-success); }
+        .copy-btn svg { width: 16px; height: 16px; }
+
+        .card-holder {
+            font-size: var(--fs-sm);
+            color: var(--color-muted-foreground);
+            margin-bottom: var(--s-8);
+        }
+        .card-holder strong { color: var(--color-foreground); font-weight: 600; }
+
+        .donation-actions {
+            display: flex;
+            gap: var(--s-3);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ═══════════ SHARE ═══════════ */
+        .share {
+            padding: var(--s-20) var(--s-10);
+            background: var(--color-surface);
+            text-align: center;
+        }
+        .share-inner { max-width: 760px; margin: 0 auto; }
+        .share-title {
+            font-size: clamp(var(--fs-xl), 4vw, var(--fs-2xl));
+            font-weight: 800;
+            margin-bottom: var(--s-3);
+            letter-spacing: -0.5px;
+        }
+        .share-subtitle {
+            font-size: var(--fs-md);
+            color: var(--color-muted-foreground);
+            margin-bottom: var(--s-10);
+        }
+        .share-buttons {
+            display: flex;
+            gap: var(--s-3);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            min-height: var(--touch-min);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--s-2);
+            padding: var(--s-3) var(--s-6);
+            color: var(--color-on-primary);
+            font-weight: 600;
+            font-size: var(--fs-sm);
+            border-radius: var(--radius);
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .share-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .share-btn svg { width: 18px; height: 18px; }
+        .share-btn.whatsapp { background: var(--color-whatsapp); }
+        .share-btn.facebook { background: var(--color-facebook); }
+        .share-btn.instagram { background: linear-gradient(135deg, #E1306C, #C13584); }
+
+        /* ═══════════ FOOTER ═══════════ */
+        footer {
+            background: var(--color-foreground);
+            color: var(--color-on-primary);
+            padding: var(--s-16) var(--s-10) var(--s-10);
+            text-align: center;
+        }
+        .footer-quote {
+            font-size: var(--fs-xl);
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: var(--s-10);
+            opacity: 0.9;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-contacts {
+            display: flex;
+            gap: var(--s-10);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--s-10);
+        }
+        .footer-contact {
+            display: flex;
+            align-items: center;
+            gap: var(--s-2);
+            font-size: var(--fs-sm);
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .footer-contact svg { width: 16px; height: 16px; color: var(--color-secondary); }
+        .footer-contact a { color: inherit; transition: color var(--transition); }
+        .footer-contact a:hover { color: var(--color-secondary); }
+        .footer-bottom {
+            font-size: var(--fs-xs);
+            color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--s-6);
+            letter-spacing: 0.5px;
+        }
+
+        /* ─── FLOATING ELEMENTS ─── */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: var(--color-whatsapp);
+            color: var(--color-on-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            z-index: 90;
+            transition: all var(--transition);
+        }
+        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5); }
+        .whatsapp-float svg { width: 28px; height: 28px; }
+
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--color-accent);
+            color: var(--color-on-primary);
+            padding: var(--s-4) var(--s-5);
+            text-align: center;
+            font-weight: 700;
+            font-size: var(--fs-base);
+            z-index: 95;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+            min-height: var(--touch-min);
+            align-items: center;
+            justify-content: center;
+            gap: var(--s-2);
+        }
+        .mobile-cta-bar:hover { background: var(--color-accent-hover); }
+        .mobile-cta-bar svg { width: 18px; height: 18px; }
+
+        /* ─── TOAST ─── */
+        .toast {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-30px);
+            background: var(--color-success);
+            color: var(--color-on-primary);
+            padding: var(--s-4) var(--s-6);
+            border-radius: var(--radius);
+            font-size: var(--fs-sm);
+            font-weight: 600;
+            z-index: 200;
+            box-shadow: var(--shadow-xl);
+            opacity: 0;
+            transition: all var(--transition);
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: var(--s-2);
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        .toast svg { width: 18px; height: 18px; }
+
+        /* ─── LIGHTBOX ─── */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(22, 78, 99, 0.95);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: var(--s-10);
+            cursor: zoom-out;
+            backdrop-filter: blur(6px);
+        }
+        .lightbox.active { display: flex; }
+        .lightbox-img {
+            max-width: 92vw;
+            max-height: 90vh;
+            object-fit: contain;
+            cursor: default;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-xl);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: var(--s-5);
+            right: var(--s-5);
+            min-width: var(--touch-min);
+            min-height: var(--touch-min);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--color-on-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--transition);
+        }
+        .lightbox-close:hover { background: rgba(255, 255, 255, 0.2); }
+        .lightbox-close svg { width: 24px; height: 24px; }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--color-on-primary);
+            min-width: 52px;
+            min-height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--transition);
+        }
+        .lightbox-nav:hover { background: rgba(255, 255, 255, 0.2); }
+        .lightbox-nav svg { width: 24px; height: 24px; }
+        .lightbox-prev { left: var(--s-5); }
+        .lightbox-next { right: var(--s-5); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 1024px) {
+            .hero { padding: var(--s-12) var(--s-8) var(--s-16); }
+            .hero-grid { gap: var(--s-12); }
+            .mother-quote, .story, .gallery, .transparency, .donation, .share {
+                padding: var(--s-16) var(--s-8);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .story-progress { padding: var(--s-2) var(--s-4); gap: var(--s-2); }
+            .story-progress-chapters { display: none; }
+            .nav { top: 36px; }
+
+            .hero { padding: var(--s-10) var(--s-5) var(--s-12); }
+            .hero-grid { grid-template-columns: 1fr; gap: var(--s-10); }
+            .hero-right { max-width: 460px; margin: 0 auto; width: 100%; }
+            .hero-photo { aspect-ratio: 16 / 11; }
+            .hero-photo img { object-position: center 25%; }
+            .treatment-card { max-width: 100%; }
+
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-6); }
+            .stat { border-right: none; padding: var(--s-3); }
+            .stat:nth-child(1), .stat:nth-child(2) {
+                border-bottom: 1px solid var(--color-border);
+                padding-bottom: var(--s-6);
+            }
+
+            .mother-quote-card { padding: var(--s-8) var(--s-6); }
+            .mother-quote-mark { font-size: 64px; top: var(--s-4); right: var(--s-4); }
+
+            .story-text { column-count: 1; }
+            .story-text p:first-child::first-letter { font-size: 48px; }
+
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .docs-grid { grid-template-columns: repeat(2, 1fr); }
+            .cards-grid { grid-template-columns: 1fr; gap: var(--s-4); }
+            .badges-grid { grid-template-columns: 1fr; }
+
+            .footer-contacts { gap: var(--s-5); }
+        }
+
+        @media (max-width: 480px) {
+            .nav { padding: var(--s-3) var(--s-4); }
+            .nav-cta span { display: none; }
+            .nav-actions { gap: var(--s-2); }
+
+            .hero { padding: var(--s-8) var(--s-4) var(--s-10); }
+            .hero-subtitle { font-size: var(--fs-base); margin-bottom: var(--s-6); }
+
+            .treatment-card { flex-direction: column; align-items: stretch; gap: var(--s-3); }
+            .treatment-card-right {
+                border-left: none;
+                border-top: 1px solid var(--color-border);
+                padding-left: 0;
+                padding-top: var(--s-3);
+                text-align: left;
+                display: flex;
+                align-items: baseline;
+                gap: var(--s-3);
+            }
+            .treatment-card-counter { font-size: var(--fs-2xl); }
+
+            .hero-ctas { flex-direction: column; width: 100%; }
+            .hero-ctas .btn { width: 100%; }
+            .donation-actions { flex-direction: column; width: 100%; }
+            .donation-actions .btn { width: 100%; }
+
+            .gallery-grid, .docs-grid { grid-template-columns: 1fr; }
+
+            .mobile-cta-bar { display: inline-flex; }
+            body { padding-bottom: 64px; }
+            .whatsapp-float { bottom: 84px; }
+        }
     </style>
 </head>
 <body>
-    <!-- ═══════════════ NAVIGATION ═══════════════ -->
-    <nav class="nav" role="navigation" aria-label="Əsas navigasiya">
-        <a href="#" class="nav-logo">İ<span>nad</span></a>
-        <div class="nav-right">
+    <a href="#main" class="skip-link" data-i18n="skipLink">İçəriyə keç</a>
+
+    <!-- ═══════════ STORY PROGRESS BAR ═══════════ -->
+    <div class="story-progress" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" id="storyProgress">
+        <span class="story-progress-label"><strong id="chapterNum">1 / 5</strong> · <span id="chapterName" data-i18n="chapter1">Giriş</span></span>
+        <div class="story-progress-track">
+            <span class="story-progress-fill" id="progressFill"></span>
+        </div>
+        <span class="story-progress-chapters" data-i18n="chaptersList">Problem · Yol · Sənədlər · Kömək</span>
+    </div>
+
+    <!-- ═══════════ NAV ═══════════ -->
+    <header class="nav" role="navigation" aria-label="Əsas naviqasiya">
+        <a href="#" class="logo">İ<span>nad</span></a>
+        <div class="nav-actions">
             <div class="lang-switcher" role="group" aria-label="Dil seçimi">
-                <button class="lang-btn active" data-lang="az" aria-label="Azərbaycan">AZ</button>
-                <button class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
-                <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+                <button class="lang-btn active" data-lang="az">AZ</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
             </div>
-            <a href="#donation" class="nav-cta" data-i18n="navCta">Kömək Et</a>
+            <a href="#donation" class="nav-cta">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"/>
+                </svg>
+                <span data-i18n="navCta">Kömək Et</span>
+            </a>
         </div>
-    </nav>
+    </header>
 
-    <!-- ═══════════════ HERO ═══════════════ -->
-    <section class="hero" id="hero">
-        <div class="hero-grid">
-            <div class="hero-left">
-                <span class="hero-badge" data-i18n="heroBadge">⏰ TƏCİLİ KÖMƏK LAZIMDIR</span>
-                <h1 class="hero-quote" data-i18n="heroQuote">Bir düşün... Əgər o uşaq sənin övladın olsaydı?</h1>
-                <p class="hero-subtitle" data-i18n="heroSubtitle">İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.</p>
-                <div class="hero-buttons">
-                    <a href="#donation" class="btn-primary" data-i18n="heroCtaPrimary">→ İnada Kömək Et</a>
-                    <a href="#story" class="btn-secondary" data-i18n="heroCtaSecondary">Hekayəni Oxu</a>
-                </div>
-            </div>
-            <div class="hero-right">
-                <div class="hero-photo">
-                    <img src="inad-main.jpg" alt="İnad Abbasov, 16 yaş" loading="eager" fetchpriority="high">
-                    <div class="hero-photo-caption" data-i18n="heroCaption">İnad — 16 yaş</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main id="main">
+        <!-- ═══════════ CHAPTER 1 — HERO (Intro Hook) ═══════════ -->
+        <section class="hero" data-chapter="1" aria-labelledby="hero-title">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <div class="status-chip" role="status">
+                        <span class="live-dot" aria-hidden="true"></span>
+                        <span data-i18n="statusChip">Müalicə davam edir · Medical Park · Antalya</span>
+                    </div>
+                    <h1 id="hero-title" class="hero-title" data-i18n="heroTitle">
+                        Bir düşün.<br>Əgər o uşaq <span class="accent">sənin övladın</span> olsaydı?
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="heroSubtitle">
+                        İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır.
+                        Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.
+                    </p>
 
-    <!-- ═══════════════ STATS ═══════════════ -->
-    <section class="stats" aria-label="Statistika">
-        <div class="stats-grid">
-            <div class="stat">
-                <div class="stat-number" data-i18n="stat1Num">3 il</div>
-                <div class="stat-label" data-i18n="stat1Label">mübarizə</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" data-i18n="stat2Num">16</div>
-                <div class="stat-label" data-i18n="stat2Label">İnadın yaşı</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" data-i18n="stat3Num">68.000$</div>
-                <div class="stat-label" data-i18n="stat3Label">təcili lazım</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number" data-i18n="stat4Num">2 şəhid</div>
-                <div class="stat-label" data-i18n="stat4Label">qardaş</div>
-            </div>
-        </div>
-    </section>
+                    <div class="treatment-card">
+                        <div class="treatment-card-left">
+                            <div class="treatment-card-icon" aria-hidden="true">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="treatment-card-label" data-i18n="treatmentLabel">Hazırki status</div>
+                                <div class="treatment-card-value">Medical Park · Antalya</div>
+                            </div>
+                        </div>
+                        <div class="treatment-card-right">
+                            <div class="treatment-card-counter">75</div>
+                            <div class="treatment-card-counter-label" data-i18n="counterLabel">Gündür müalicədə</div>
+                        </div>
+                    </div>
 
-    <!-- ═══════════════ MOTHER QUOTE ═══════════════ -->
-    <section class="mother-quote">
-        <div class="mother-quote-inner">
-            <span class="mother-quote-label" data-i18n="motherLabel">— ANASININ SÖZLƏRİ</span>
-            <p class="mother-quote-text" data-i18n="motherQuote">Bu ailə Vətən üçün 2 can verib. İndi övladımızı yaşatmaq üçün insanların mərhəmətinə sığınırıq...</p>
-            <div class="mother-quote-author" data-i18n="motherAuthor">Abbasova Əfsanə — İnadın anası</div>
-        </div>
-    </section>
+                    <div class="hero-ctas">
+                        <a href="#donation" class="btn btn-primary">
+                            <span data-i18n="heroCtaPrimary">İnada Kömək Et</span>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/994773059565?text=Salam%2C%20%C4%B0nada%20k%C3%B6m%C9%99k%20etm%C9%99k%20ist%C9%99yir%C9%99m" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            <span data-i18n="heroCtaWhatsapp">Anaya Yaz</span>
+                        </a>
+                        <a href="#story-section" class="btn btn-secondary">
+                            <span data-i18n="heroCtaSecondary">Hekayəni Oxu</span>
+                        </a>
+                    </div>
+                </div>
 
-    <!-- ═══════════════ STORY ═══════════════ -->
-    <section class="story" id="story">
-        <div class="story-inner">
-            <h2 class="story-title" data-i18n="storyTitle">Hekayəsi</h2>
-            <div class="story-text" id="storyText">
-                <p>İnad Abbasov 3 ildir kəskin leykoz (qan xərçəngi) ilə mübarizə aparır. Bu 3 il ərzində ailə nəyi var idisə satdı — evini, əşyasını, ümidlərini belə.</p>
-                <p>Borcla, göz yaşıyla, dua ilə bu günə qədər gətirdilər. Amma artıq gücləri qalmayıb.</p>
-                <p>İnad atası gündəlik fəhləliklə (şofer işləyir) ailəni dolandırmağa çalışır. Ana evlərə təmizliyə gedir.</p>
-                <p>İnad hazırda Türkiyədə Medical Park xəstəxanasında müalicə alır. Onun yaşaması üçün təcili ilik nəql (transplantasiya) olunmalıdır.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════ GALLERY ═══════════════ -->
-    <section class="gallery" id="gallery">
-        <div class="gallery-inner">
-            <h2 class="section-title" data-i18n="galleryTitle">İnadın gözündən</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item" data-img="inad1.jpg">
-                    <img src="inad1.jpg" alt="İnad" loading="lazy">
-                </div>
-                <div class="gallery-item" data-img="inad2.jpg">
-                    <img src="inad2.jpg" alt="İnad" loading="lazy">
-                </div>
-                <div class="gallery-item" data-img="inad3.jpg">
-                    <img src="inad3.jpg" alt="İnad" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════ TRANSPARENCY ═══════════════ -->
-    <section class="transparency" id="documents">
-        <div class="transparency-inner">
-            <h2 class="section-title" data-i18n="transparencyTitle">🛡️ Şəffaflıq və həqiqət</h2>
-            <div class="docs-grid">
-                <div class="doc-card" data-img="document1.jpg">
-                    <div class="doc-thumb"><img src="document1.jpg" alt="Medical Park müalicə planı" loading="lazy"></div>
-                    <div class="doc-title" data-i18n="doc1">Medical Park müalicə planı</div>
-                </div>
-                <div class="doc-card" data-img="document2.jpg">
-                    <div class="doc-thumb"><img src="document2.jpg" alt="Bank rekvizitləri" loading="lazy"></div>
-                    <div class="doc-title" data-i18n="doc2">Bank rekvizitləri + möhür</div>
-                </div>
-                <div class="doc-card" data-img="document3.jpg">
-                    <div class="doc-thumb"><img src="document3.jpg" alt="Milli Hematologiya epikrizi" loading="lazy"></div>
-                    <div class="doc-title" data-i18n="doc3">Milli Hematologiya epikrizi</div>
+                <div class="hero-right">
+                    <figure class="hero-photo">
+                        <div class="photo-trust-pill">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
+                            </svg>
+                            <span data-i18n="verified">Doğrulanıb</span>
+                        </div>
+                        <img src="inad-main.jpg" alt="İnad Abbasov, 16 yaş, Medical Park Antalya xəstəxanasında müalicə aldığı dövrdə" loading="eager" fetchpriority="high">
+                        <figcaption class="hero-photo-caption">
+                            <div class="caption-name">İnad Abbasov</div>
+                            <div class="caption-meta">
+                                <span data-i18n="captionAge">16 yaş</span>
+                                <span class="caption-divider" aria-hidden="true"></span>
+                                <span data-i18n="captionFamily">Şəhid ailəsindən</span>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
-            <div class="badges-grid">
-                <div class="badge"><span class="badge-check">✓</span><span data-i18n="badge1">Rəsmi Medical Park sənədi</span></div>
-                <div class="badge"><span class="badge-check">✓</span><span data-i18n="badge2">Prof. Dr. Akif Yeşilipek</span></div>
-                <div class="badge"><span class="badge-check">✓</span><span data-i18n="badge3">68.000 USD dəqiq məbləğ</span></div>
-                <div class="badge"><span class="badge-check">✓</span><span data-i18n="badge4">Bank rekvizitləri yoxlanılıb</span></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ═══════════════ DONATION ═══════════════ -->
-    <section class="donation" id="donation">
-        <div class="donation-inner">
-            <span class="donation-label" data-i18n="donationLabel">— İNDİ KÖMƏK ET</span>
-            <h2 class="donation-title" data-i18n="donationTitle">Bank Kartları</h2>
-            <div class="cards-grid">
-                <div class="bank-card">
-                    <div class="bank-name">Kapital Bank</div>
-                    <div class="card-number">4169 7388 0191 1817</div>
-                    <button class="copy-btn" data-card="4169738801911817" data-i18n="copyBtn">📋 Kopyala</button>
+        <!-- ═══════════ STATS STRIP ═══════════ -->
+        <section class="stats" aria-label="Statistika">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number" data-i18n="stat1Num">3 il</div>
+                    <div class="stat-label" data-i18n="stat1Label">Mübarizə</div>
                 </div>
-                <div class="bank-card">
-                    <div class="bank-name">LeoBank</div>
-                    <div class="card-number">4098 5844 9826 8356</div>
-                    <button class="copy-btn" data-card="4098584498268356" data-i18n="copyBtn">📋 Kopyala</button>
+                <div class="stat">
+                    <div class="stat-number" data-i18n="stat2Num">16</div>
+                    <div class="stat-label" data-i18n="stat2Label">İnadın yaşı</div>
                 </div>
-                <div class="bank-card">
-                    <div class="bank-name">ABB</div>
-                    <div class="card-number">5522 0993 7747 1388</div>
-                    <button class="copy-btn" data-card="5522099377471388" data-i18n="copyBtn">📋 Kopyala</button>
+                <div class="stat">
+                    <div class="stat-number" data-i18n="stat3Num">68.000$</div>
+                    <div class="stat-label" data-i18n="stat3Label">Təcili lazım</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-i18n="stat4Num">2</div>
+                    <div class="stat-label" data-i18n="stat4Label">Şəhid qardaş</div>
                 </div>
             </div>
-            <div class="card-holder" data-i18n="cardHolder">Kart sahibi: Abbasov Fariz (atası)</div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ═══════════════ SHARE ═══════════════ -->
-    <section class="share">
-        <div class="share-inner">
-            <h2 class="share-title" data-i18n="shareTitle">Yardım paylaşımla başlayır</h2>
-            <p class="share-subtitle" data-i18n="shareSubtitle">Hər paylaşım İnadın yaşama şansını artırır</p>
-            <div class="share-buttons">
-                <a href="#" class="share-btn whatsapp" id="shareWhatsApp">
-                    <span>📱</span><span>WhatsApp</span>
-                </a>
-                <a href="#" class="share-btn facebook" id="shareFacebook">
-                    <span>📘</span><span>Facebook</span>
-                </a>
-                <a href="#" class="share-btn instagram" id="shareInstagram">
-                    <span>📷</span><span>Instagram</span>
-                </a>
+        <!-- ═══════════ CHAPTER 2 — MOTHER'S QUOTE (Problem) ═══════════ -->
+        <section class="mother-quote" data-chapter="2">
+            <div class="mother-quote-inner">
+                <div class="chapter-label" data-i18n="chapter2Label">Bölmə 2 · Ananın səsi</div>
+                <div class="mother-quote-card">
+                    <div class="mother-quote-mark" aria-hidden="true">"</div>
+                    <p class="mother-quote-text" data-i18n="motherQuote">Bu ailə Vətən üçün 2 can verib. İndi övladımızı yaşatmaq üçün insanların mərhəmətinə sığınırıq...</p>
+                    <div class="mother-quote-author">
+                        <div class="author-avatar" aria-hidden="true">Ə</div>
+                        <div class="author-info">
+                            <div class="author-name">Abbasova Əfsanə</div>
+                            <div class="author-role" data-i18n="motherRole">İnadın anası</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ═══════════════ FOOTER ═══════════════ -->
+        <!-- ═══════════ CHAPTER 3 — STORY (Journey) ═══════════ -->
+        <section class="story" data-chapter="3" id="story-section">
+            <div class="story-inner">
+                <div style="text-align:center;"><div class="chapter-label" data-i18n="chapter3Label">Bölmə 3 · Hekayə</div></div>
+                <h2 class="section-title" data-i18n="storyTitle">Hekayəsi</h2>
+                <span class="section-title-underline" aria-hidden="true"></span>
+                <div class="story-text" id="storyText">
+                    <p>İnad Abbasov 3 ildir kəskin leykoz (qan xərçəngi) ilə mübarizə aparır. Bu 3 il ərzində ailə nəyi var idisə satdı — evini, əşyasını, ümidlərini belə.</p>
+                    <p>Borcla, göz yaşıyla, dua ilə bu günə qədər gətirdilər. Amma artıq gücləri qalmayıb.</p>
+                    <p>İnad atası gündəlik fəhləliklə (şofer işləyir) ailəni dolandırmağa çalışır. Ana evlərə təmizliyə gedir.</p>
+                    <p>İnad hazırda Türkiyədə Medical Park xəstəxanasında müalicə alır. Onun yaşaması üçün təcili ilik nəql (transplantasiya) olunmalıdır.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ GALLERY ═══════════ -->
+        <section class="gallery">
+            <div class="gallery-inner">
+                <h2 class="section-title" data-i18n="galleryTitle">İnadın gözündən</h2>
+                <span class="section-title-underline" aria-hidden="true"></span>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-img="inad1.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt">
+                        <img src="inad1.jpg" alt="İnad" loading="lazy">
+                        <div class="gallery-item-zoom" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-img="inad2.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt">
+                        <img src="inad2.jpg" alt="İnad" loading="lazy">
+                        <div class="gallery-item-zoom" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-img="inad3.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt">
+                        <img src="inad3.jpg" alt="İnad" loading="lazy">
+                        <div class="gallery-item-zoom" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CHAPTER 4 — TRANSPARENCY (Solution) ═══════════ -->
+        <section class="transparency" data-chapter="4" id="documents">
+            <div class="transparency-inner">
+                <div style="text-align:center;"><div class="chapter-label" data-i18n="chapter4Label">Bölmə 4 · Sənədlər</div></div>
+                <h2 class="section-title" data-i18n="transparencyTitle">Şəffaflıq və həqiqət</h2>
+                <span class="section-title-underline" aria-hidden="true"></span>
+                <div class="docs-grid">
+                    <div class="doc-card" data-img="document1.jpg" role="button" tabindex="0" aria-label="Sənədi böyüt">
+                        <div class="doc-thumb"><img src="document1.jpg" alt="Medical Park müalicə planı" loading="lazy"></div>
+                        <div class="doc-title" data-i18n="doc1">Medical Park müalicə planı</div>
+                    </div>
+                    <div class="doc-card" data-img="document2.jpg" role="button" tabindex="0" aria-label="Sənədi böyüt">
+                        <div class="doc-thumb"><img src="document2.jpg" alt="Bank rekvizitləri" loading="lazy"></div>
+                        <div class="doc-title" data-i18n="doc2">Bank rekvizitləri + möhür</div>
+                    </div>
+                    <div class="doc-card" data-img="document3.jpg" role="button" tabindex="0" aria-label="Sənədi böyüt">
+                        <div class="doc-thumb"><img src="document3.jpg" alt="Milli Hematologiya epikrizi" loading="lazy"></div>
+                        <div class="doc-title" data-i18n="doc3">Milli Hematologiya epikrizi</div>
+                    </div>
+                </div>
+                <div class="badges-grid">
+                    <div class="badge">
+                        <span class="badge-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                        <span data-i18n="badge1">Rəsmi Medical Park sənədi</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                        <span data-i18n="badge2">Prof. Dr. Akif Yeşilipek</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                        <span data-i18n="badge3">68.000 USD dəqiq məbləğ</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                        <span data-i18n="badge4">Bank rekvizitləri yoxlanılıb</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CHAPTER 5 — DONATION (Climax CTA) ═══════════ -->
+        <section class="donation" data-chapter="5" id="donation">
+            <div class="donation-inner">
+                <span class="climax-label">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 22h20L12 2z"/></svg>
+                    <span data-i18n="climaxLabel">İndi Kömək Et</span>
+                </span>
+                <h2 class="donation-title" data-i18n="donationTitle">Bank Kartları</h2>
+                <p class="donation-subtitle" data-i18n="donationSubtitle">Aşağıdakı kartlardan istənilən birinə birbaşa köçürmə edə bilərsiniz. Hər kart Abbasov Fariz (İnadın atası) adınadır.</p>
+
+                <div class="cards-grid">
+                    <div class="bank-card">
+                        <div class="bank-name">Kapital Bank</div>
+                        <div class="card-number">4169 7388 0191 1817</div>
+                        <button class="copy-btn" data-card="4169738801911817">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            <span data-i18n="copyBtn">Kart nömrəsini kopyala</span>
+                        </button>
+                    </div>
+                    <div class="bank-card">
+                        <div class="bank-name">LeoBank</div>
+                        <div class="card-number">4098 5844 9826 8356</div>
+                        <button class="copy-btn" data-card="4098584498268356">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            <span data-i18n="copyBtn">Kart nömrəsini kopyala</span>
+                        </button>
+                    </div>
+                    <div class="bank-card">
+                        <div class="bank-name">ABB Bank</div>
+                        <div class="card-number">5522 0993 7747 1388</div>
+                        <button class="copy-btn" data-card="5522099377471388">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            <span data-i18n="copyBtn">Kart nömrəsini kopyala</span>
+                        </button>
+                    </div>
+                </div>
+
+                <p class="card-holder">
+                    <span data-i18n="cardHolderLabel">Kart sahibi:</span> <strong>Abbasov Fariz</strong> · <span data-i18n="cardHolderRole">İnadın atası</span>
+                </p>
+
+                <div class="donation-actions">
+                    <a href="https://wa.me/994773059565?text=Salam%2C%20%C4%B0nada%20k%C3%B6m%C9%99k%20etm%C9%99k%20ist%C9%99yir%C9%99m" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <span data-i18n="whatsappCta">Anaya birbaşa yaz</span>
+                    </a>
+                    <a href="tel:+994773059565" class="btn btn-secondary">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.493a1 1 0 01-.5 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.5l4.493 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <span data-i18n="phoneCta">+994 77 305 95 65</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ SHARE ═══════════ -->
+        <section class="share">
+            <div class="share-inner">
+                <h2 class="share-title" data-i18n="shareTitle">Yardım paylaşımla başlayır</h2>
+                <p class="share-subtitle" data-i18n="shareSubtitle">Hər paylaşım İnadın yaşama şansını artırır</p>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn whatsapp" id="shareWhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#" class="share-btn facebook" id="shareFacebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="share-btn instagram" id="shareInstagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
     <footer>
         <p class="footer-quote" data-i18n="footerQuote">"Allah xatirinə..."</p>
         <div class="footer-contacts">
-            <div class="footer-contact">📞 <a href="tel:+994773059565">+994 77 305 95 65</a></div>
-            <div class="footer-contact" data-i18n="footerAddress">📍 Ağstafa rayonu, Qırlı kəndi</div>
+            <div class="footer-contact">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.493a1 1 0 01-.5 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.5l4.493 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <a href="tel:+994773059565">+994 77 305 95 65</a>
+            </div>
+            <div class="footer-contact">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span data-i18n="footerAddress">Ağstafa rayonu, Qırlı kəndi</span>
+            </div>
         </div>
         <div class="footer-bottom" data-i18n="footerBottom">© 2026 İnad Abbasov Ailəsi — Bütün hüquqlar qorunur</div>
     </footer>
 
-    <!-- ═══════════════ FLOATING ═══════════════ -->
-    <a href="https://wa.me/994773059565" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <span>💬</span>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/994773059565" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp ilə əlaqə">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
-    <a href="#donation" class="mobile-cta-bar" data-i18n="mobileCta">→ İnada Kömək Et</a>
+    <!-- Mobile sticky CTA -->
+    <a href="#donation" class="mobile-cta-bar">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"/></svg>
+        <span data-i18n="mobileCta">İnada Kömək Et</span>
+    </a>
 
-    <!-- ═══════════════ LIGHTBOX ═══════════════ -->
+    <!-- Lightbox -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Şəkil görüntüləyici">
-        <button class="lightbox-close" aria-label="Bağla">×</button>
-        <button class="lightbox-nav lightbox-prev" aria-label="Əvvəlki">‹</button>
+        <button class="lightbox-close" aria-label="Bağla">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Əvvəlki">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+        </button>
         <img src="" alt="" class="lightbox-img" id="lightboxImg">
-        <button class="lightbox-nav lightbox-next" aria-label="Növbəti">›</button>
+        <button class="lightbox-nav lightbox-next" aria-label="Növbəti">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+        </button>
     </div>
 
-    <!-- ═══════════════ TOAST ═══════════════ -->
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+        <span id="toastText"></span>
+    </div>
 
     <script>
     // ═══════════════════════════════════════════════════════════
@@ -1216,28 +1561,34 @@
     // ═══════════════════════════════════════════════════════════
     const TRANSLATIONS = {
         az: {
+            skipLink: "İçəriyə keç",
             navCta: "Kömək Et",
-            heroBadge: "⏰ TƏCİLİ KÖMƏK LAZIMDIR",
-            heroQuote: "Bir düşün... Əgər o uşaq sənin övladın olsaydı?",
+            statusChip: "Müalicə davam edir · Medical Park · Antalya",
+            heroTitle: 'Bir düşün.<br>Əgər o uşaq <span class="accent">sənin övladın</span> olsaydı?',
             heroSubtitle: "İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.",
-            heroCtaPrimary: "→ İnada Kömək Et",
+            treatmentLabel: "Hazırki status",
+            counterLabel: "Gündür müalicədə",
+            heroCtaPrimary: "İnada Kömək Et",
+            heroCtaWhatsapp: "Anaya Yaz",
             heroCtaSecondary: "Hekayəni Oxu",
-            heroCaption: "İnad — 16 yaş",
-            stat1Num: "3 il",
-            stat1Label: "mübarizə",
-            stat2Num: "16",
-            stat2Label: "İnadın yaşı",
-            stat3Num: "68.000$",
-            stat3Label: "təcili lazım",
-            stat4Num: "2 şəhid",
-            stat4Label: "qardaş",
-            motherLabel: "— ANASININ SÖZLƏRİ",
+            verified: "Doğrulanıb",
+            captionAge: "16 yaş",
+            captionFamily: "Şəhid ailəsindən",
+            stat1Num: "3 il", stat1Label: "Mübarizə",
+            stat2Num: "16", stat2Label: "İnadın yaşı",
+            stat3Num: "68.000$", stat3Label: "Təcili lazım",
+            stat4Num: "2", stat4Label: "Şəhid qardaş",
+            chapter1: "Giriş",
+            chapter2Label: "Bölmə 2 · Ananın səsi",
+            chapter3Label: "Bölmə 3 · Hekayə",
+            chapter4Label: "Bölmə 4 · Sənədlər",
+            chaptersList: "Problem · Yol · Sənədlər · Kömək",
             motherQuote: "Bu ailə Vətən üçün 2 can verib. İndi övladımızı yaşatmaq üçün insanların mərhəmətinə sığınırıq...",
-            motherAuthor: "Abbasova Əfsanə — İnadın anası",
+            motherRole: "İnadın anası",
             storyTitle: "Hekayəsi",
             storyHtml: '<p>İnad Abbasov 3 ildir kəskin leykoz (qan xərçəngi) ilə mübarizə aparır. Bu 3 il ərzində ailə nəyi var idisə satdı — evini, əşyasını, ümidlərini belə.</p><p>Borcla, göz yaşıyla, dua ilə bu günə qədər gətirdilər. Amma artıq gücləri qalmayıb.</p><p>İnad atası gündəlik fəhləliklə (şofer işləyir) ailəni dolandırmağa çalışır. Ana evlərə təmizliyə gedir.</p><p>İnad hazırda Türkiyədə Medical Park xəstəxanasında müalicə alır. Onun yaşaması üçün təcili ilik nəql (transplantasiya) olunmalıdır.</p>',
             galleryTitle: "İnadın gözündən",
-            transparencyTitle: "🛡️ Şəffaflıq və həqiqət",
+            transparencyTitle: "Şəffaflıq və həqiqət",
             doc1: "Medical Park müalicə planı",
             doc2: "Bank rekvizitləri + möhür",
             doc3: "Milli Hematologiya epikrizi",
@@ -1245,43 +1596,55 @@
             badge2: "Prof. Dr. Akif Yeşilipek",
             badge3: "68.000 USD dəqiq məbləğ",
             badge4: "Bank rekvizitləri yoxlanılıb",
-            donationLabel: "— İNDİ KÖMƏK ET",
+            climaxLabel: "İndi Kömək Et",
             donationTitle: "Bank Kartları",
-            copyBtn: "📋 Kopyala",
-            cardHolder: "Kart sahibi: Abbasov Fariz (atası)",
+            donationSubtitle: "Aşağıdakı kartlardan istənilən birinə birbaşa köçürmə edə bilərsiniz. Hər kart Abbasov Fariz (İnadın atası) adınadır.",
+            copyBtn: "Kart nömrəsini kopyala",
+            copiedBtn: "Kopyalandı",
+            cardHolderLabel: "Kart sahibi:",
+            cardHolderRole: "İnadın atası",
+            whatsappCta: "Anaya birbaşa yaz",
+            phoneCta: "+994 77 305 95 65",
             shareTitle: "Yardım paylaşımla başlayır",
             shareSubtitle: "Hər paylaşım İnadın yaşama şansını artırır",
             footerQuote: '"Allah xatirinə..."',
-            footerAddress: "📍 Ağstafa rayonu, Qırlı kəndi",
+            footerAddress: "Ağstafa rayonu, Qırlı kəndi",
             footerBottom: "© 2026 İnad Abbasov Ailəsi — Bütün hüquqlar qorunur",
-            mobileCta: "→ İnada Kömək Et",
-            toastCopied: "✓ Kart nömrəsi kopyalandı",
+            mobileCta: "İnada Kömək Et",
+            toastCopied: "Kart nömrəsi kopyalandı",
             toastCopyError: "Kopyalama uğursuz oldu",
+            toastLinkCopied: "Link kopyalandı! Instagram-da paylaşa bilərsiniz",
             shareText: "İnada kömək edək — 16 yaşlı bir uşağın həyatını xilas etmək üçün təcili kömək lazımdır",
         },
         ru: {
+            skipLink: "Перейти к содержимому",
             navCta: "Помочь",
-            heroBadge: "⏰ СРОЧНО НУЖНА ПОМОЩЬ",
-            heroQuote: "Подумайте... Что, если бы это был ваш ребёнок?",
+            statusChip: "Лечение продолжается · Medical Park · Анталия",
+            heroTitle: 'Подумайте.<br>Что, если бы это был <span class="accent">ваш ребёнок</span>?',
             heroSubtitle: "Инаду 16 лет. 3 года он борется с раком крови. Его семья отдала 2 сыновей за Родину. Теперь они просят вашей помощи, чтобы спасти 3-го ребёнка.",
-            heroCtaPrimary: "→ Помочь Инаду",
+            treatmentLabel: "Текущий статус",
+            counterLabel: "Дней лечения",
+            heroCtaPrimary: "Помочь Инаду",
+            heroCtaWhatsapp: "Написать маме",
             heroCtaSecondary: "Читать историю",
-            heroCaption: "Инад — 16 лет",
-            stat1Num: "3 года",
-            stat1Label: "борьбы",
-            stat2Num: "16",
-            stat2Label: "возраст Инада",
-            stat3Num: "68 000$",
-            stat3Label: "срочно нужно",
-            stat4Num: "2 шехида",
-            stat4Label: "брата",
-            motherLabel: "— СЛОВА МАТЕРИ",
+            verified: "Подтверждено",
+            captionAge: "16 лет",
+            captionFamily: "Из семьи шехидов",
+            stat1Num: "3 года", stat1Label: "Борьбы",
+            stat2Num: "16", stat2Label: "Возраст Инада",
+            stat3Num: "68 000$", stat3Label: "Срочно нужно",
+            stat4Num: "2", stat4Label: "Брата-шехида",
+            chapter1: "Введение",
+            chapter2Label: "Глава 2 · Голос матери",
+            chapter3Label: "Глава 3 · История",
+            chapter4Label: "Глава 4 · Документы",
+            chaptersList: "Проблема · Путь · Документы · Помощь",
             motherQuote: "Эта семья отдала 2 жизни за Родину. Теперь, чтобы спасти нашего ребёнка, мы взываем к милосердию людей...",
-            motherAuthor: "Аббасова Афсана — мать Инада",
+            motherRole: "мать Инада",
             storyTitle: "Его история",
             storyHtml: '<p>Инад Абасов 3 года борется с острым лейкозом (раком крови). За эти 3 года семья продала всё, что имела — дом, имущество, даже надежды.</p><p>В долгах, со слезами, с молитвами они дошли до этого дня. Но больше нет сил.</p><p>Отец Инада работает водителем-подёнщиком, пытаясь прокормить семью. Мать ходит убираться по домам.</p><p>В настоящее время Инад проходит лечение в Турции в больнице Medical Park. Чтобы он выжил, срочно необходима трансплантация костного мозга.</p>',
             galleryTitle: "Глазами Инада",
-            transparencyTitle: "🛡️ Прозрачность и правда",
+            transparencyTitle: "Прозрачность и правда",
             doc1: "План лечения Medical Park",
             doc2: "Банковские реквизиты + печать",
             doc3: "Эпикриз Национальной гематологии",
@@ -1289,43 +1652,55 @@
             badge2: "Проф. Др. Акиф Йешилипек",
             badge3: "Точная сумма 68 000 USD",
             badge4: "Банковские реквизиты проверены",
-            donationLabel: "— ПОМОЧЬ СЕЙЧАС",
+            climaxLabel: "Помочь Сейчас",
             donationTitle: "Банковские карты",
-            copyBtn: "📋 Копировать",
-            cardHolder: "Владелец карты: Abbasov Fariz (отец)",
+            donationSubtitle: "Вы можете перевести напрямую на любую из карт ниже. Все карты на имя Abbasov Fariz (отец Инада).",
+            copyBtn: "Скопировать номер карты",
+            copiedBtn: "Скопировано",
+            cardHolderLabel: "Владелец карты:",
+            cardHolderRole: "отец Инада",
+            whatsappCta: "Написать маме напрямую",
+            phoneCta: "+994 77 305 95 65",
             shareTitle: "Помощь начинается с распространения",
             shareSubtitle: "Каждый репост увеличивает шансы Инада на жизнь",
             footerQuote: '"Ради Бога..."',
-            footerAddress: "📍 Агстафинский район, село Гырлы",
+            footerAddress: "Агстафинский район, село Гырлы",
             footerBottom: "© 2026 Семья Инада Абасова — Все права защищены",
-            mobileCta: "→ Помочь Инаду",
-            toastCopied: "✓ Номер карты скопирован",
+            mobileCta: "Помочь Инаду",
+            toastCopied: "Номер карты скопирован",
             toastCopyError: "Не удалось скопировать",
+            toastLinkCopied: "Ссылка скопирована! Можете поделиться в Instagram",
             shareText: "Поможем Инаду — срочно нужна помощь, чтобы спасти жизнь 16-летнего ребёнка",
         },
         en: {
+            skipLink: "Skip to content",
             navCta: "Donate",
-            heroBadge: "⏰ URGENT HELP NEEDED",
-            heroQuote: "Just imagine... what if this child were yours?",
+            statusChip: "Treatment in progress · Medical Park · Antalya",
+            heroTitle: 'Just imagine.<br>What if this child were <span class="accent">your own</span>?',
             heroSubtitle: "İnad is 16 years old. For 3 years he has been fighting blood cancer. His family has lost 2 sons for the Motherland. Now they ask for your help to save their 3rd child.",
-            heroCtaPrimary: "→ Help İnad",
+            treatmentLabel: "Current status",
+            counterLabel: "Days in treatment",
+            heroCtaPrimary: "Help İnad",
+            heroCtaWhatsapp: "Message Mom",
             heroCtaSecondary: "Read the Story",
-            heroCaption: "İnad — age 16",
-            stat1Num: "3 yrs",
-            stat1Label: "fighting",
-            stat2Num: "16",
-            stat2Label: "İnad's age",
-            stat3Num: "$68,000",
-            stat3Label: "urgently needed",
-            stat4Num: "2 martyrs",
-            stat4Label: "brothers",
-            motherLabel: "— THE MOTHER'S WORDS",
+            verified: "Verified",
+            captionAge: "age 16",
+            captionFamily: "Martyr's family",
+            stat1Num: "3 yrs", stat1Label: "Fighting",
+            stat2Num: "16", stat2Label: "İnad's age",
+            stat3Num: "$68,000", stat3Label: "Urgently needed",
+            stat4Num: "2", stat4Label: "Martyr brothers",
+            chapter1: "Intro",
+            chapter2Label: "Chapter 2 · Mother's voice",
+            chapter3Label: "Chapter 3 · Story",
+            chapter4Label: "Chapter 4 · Documents",
+            chaptersList: "Problem · Journey · Proof · Help",
             motherQuote: "This family has given 2 lives for the Motherland. Now we turn to the mercy of people to save our child...",
-            motherAuthor: "Abbasova Afsana — İnad's mother",
+            motherRole: "İnad's mother",
             storyTitle: "His Story",
             storyHtml: '<p>İnad Abbasov has been fighting acute leukemia (blood cancer) for 3 years. In these 3 years, the family sold everything they had — their home, their belongings, even their hopes.</p><p>With debt, tears, and prayer, they have made it this far. But their strength is gone.</p><p>İnad\'s father tries to support the family by working as a daily driver. The mother goes from house to house cleaning.</p><p>İnad is currently receiving treatment at Medical Park hospital in Turkey. To survive, he urgently needs a bone marrow transplant.</p>',
             galleryTitle: "Through İnad's eyes",
-            transparencyTitle: "🛡️ Transparency & truth",
+            transparencyTitle: "Transparency & truth",
             doc1: "Medical Park treatment plan",
             doc2: "Bank details + official stamp",
             doc3: "National Hematology epicrisis",
@@ -1333,25 +1708,28 @@
             badge2: "Prof. Dr. Akif Yeşilipek",
             badge3: "Exact amount: $68,000 USD",
             badge4: "Bank details verified",
-            donationLabel: "— HELP NOW",
+            climaxLabel: "Help Now",
             donationTitle: "Bank Cards",
-            copyBtn: "📋 Copy",
-            cardHolder: "Card holder: Abbasov Fariz (father)",
+            donationSubtitle: "You can transfer directly to any of the cards below. All cards are in the name of Abbasov Fariz (İnad's father).",
+            copyBtn: "Copy card number",
+            copiedBtn: "Copied",
+            cardHolderLabel: "Card holder:",
+            cardHolderRole: "İnad's father",
+            whatsappCta: "Message mom directly",
+            phoneCta: "+994 77 305 95 65",
             shareTitle: "Help begins with sharing",
             shareSubtitle: "Every share increases İnad's chance of survival",
             footerQuote: '"For God\'s sake..."',
-            footerAddress: "📍 Aghstafa district, Qırlı village",
+            footerAddress: "Aghstafa district, Qırlı village",
             footerBottom: "© 2026 İnad Abbasov Family — All rights reserved",
-            mobileCta: "→ Help İnad",
-            toastCopied: "✓ Card number copied",
+            mobileCta: "Help İnad",
+            toastCopied: "Card number copied",
             toastCopyError: "Copy failed",
+            toastLinkCopied: "Link copied! You can share on Instagram",
             shareText: "Let's help İnad — urgent help needed to save the life of a 16-year-old child",
         }
     };
 
-    // ═══════════════════════════════════════════════════════════
-    // 🌐 LANGUAGE SWITCHER
-    // ═══════════════════════════════════════════════════════════
     let currentLang = 'az';
 
     function setLanguage(lang) {
@@ -1360,33 +1738,24 @@
         document.documentElement.lang = lang;
         const t = TRANSLATIONS[lang];
 
-        // Update all data-i18n elements
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (t[key] !== undefined) {
-                if (key === 'storyHtml') {
-                    el.innerHTML = t[key];
-                } else {
-                    el.textContent = t[key];
-                }
+            if (t[key] === undefined) return;
+            if (key === 'heroTitle' || key === 'storyHtml') {
+                el.innerHTML = t[key];
+            } else {
+                el.textContent = t[key];
             }
         });
 
-        // Story has multiple paragraphs — use innerHTML
         const storyEl = document.getElementById('storyText');
-        if (storyEl && t.storyHtml) {
-            storyEl.innerHTML = t.storyHtml;
-        }
+        if (storyEl && t.storyHtml) storyEl.innerHTML = t.storyHtml;
 
-        // Active button state
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
-        // Update share button URLs
         updateShareLinks();
-
-        // Save preference
         try { localStorage.setItem('inad-lang', lang); } catch (e) {}
     }
 
@@ -1394,38 +1763,48 @@
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
     });
 
-    // ═══════════════════════════════════════════════════════════
-    // 📋 COPY TO CLIPBOARD + TOAST + META PIXEL
-    // ═══════════════════════════════════════════════════════════
+    // ═══════════ TOAST ═══════════
     function showToast(message, isError = false) {
         const toast = document.getElementById('toast');
-        toast.textContent = message;
-        toast.style.background = isError ? '#C62828' : '#2E7D32';
+        document.getElementById('toastText').textContent = message;
+        toast.style.background = isError ? 'var(--color-destructive)' : 'var(--color-success)';
         toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2400);
+        clearTimeout(toast._tid);
+        toast._tid = setTimeout(() => toast.classList.remove('show'), 2600);
     }
 
+    // ═══════════ COPY TO CLIPBOARD + META PIXEL ═══════════
     document.querySelectorAll('.copy-btn').forEach(btn => {
         btn.addEventListener('click', async () => {
             const cardNum = btn.dataset.card;
             const t = TRANSLATIONS[currentLang];
+            const textSpan = btn.querySelector('span');
+            const originalText = textSpan.textContent;
 
-            try {
-                await navigator.clipboard.writeText(cardNum);
+            const success = await (async () => {
+                try {
+                    await navigator.clipboard.writeText(cardNum);
+                    return true;
+                } catch {
+                    try {
+                        const ta = document.createElement('textarea');
+                        ta.value = cardNum;
+                        ta.style.position = 'fixed';
+                        ta.style.opacity = '0';
+                        document.body.appendChild(ta);
+                        ta.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(ta);
+                        return true;
+                    } catch { return false; }
+                }
+            })();
 
-                // Visual feedback
-                const original = btn.textContent;
-                btn.textContent = '✓ ' + (currentLang === 'az' ? 'Kopyalandı' : currentLang === 'ru' ? 'Скопировано' : 'Copied');
+            if (success) {
                 btn.classList.add('copied');
-
-                setTimeout(() => {
-                    btn.textContent = t.copyBtn;
-                    btn.classList.remove('copied');
-                }, 2000);
-
+                textSpan.textContent = t.copiedBtn;
                 showToast(t.toastCopied);
 
-                // Meta Pixel AddToCart event
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'AddToCart', {
                         content_name: 'Bank Card Copy',
@@ -1435,34 +1814,20 @@
                         currency: 'USD'
                     });
                 }
-            } catch (err) {
-                // Fallback for older browsers
-                try {
-                    const ta = document.createElement('textarea');
-                    ta.value = cardNum;
-                    ta.style.position = 'fixed';
-                    ta.style.opacity = '0';
-                    document.body.appendChild(ta);
-                    ta.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(ta);
-                    showToast(t.toastCopied);
-                } catch (e2) {
-                    showToast(t.toastCopyError, true);
-                }
+
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    textSpan.textContent = originalText;
+                }, 2200);
+            } else {
+                showToast(t.toastCopyError, true);
             }
         });
     });
 
-    // ═══════════════════════════════════════════════════════════
-    // 🖼️ LIGHTBOX (gallery + documents)
-    // ═══════════════════════════════════════════════════════════
+    // ═══════════ LIGHTBOX ═══════════
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.querySelector('.lightbox-close');
-    const lightboxPrev = document.querySelector('.lightbox-prev');
-    const lightboxNext = document.querySelector('.lightbox-next');
-
     let lightboxImages = [];
     let lightboxIndex = 0;
 
@@ -1473,37 +1838,42 @@
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
-
     function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
     }
-
     function navLightbox(dir) {
         lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
         lightboxImg.src = lightboxImages[lightboxIndex];
     }
 
-    // Gallery items
     const galleryImages = Array.from(document.querySelectorAll('.gallery-item')).map(el => el.dataset.img);
     document.querySelectorAll('.gallery-item').forEach((el, i) => {
         el.addEventListener('click', () => openLightbox(galleryImages, i));
+        el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLightbox(galleryImages, i);
+            }
+        });
     });
 
-    // Document items
     const docImages = Array.from(document.querySelectorAll('.doc-card')).map(el => el.dataset.img);
     document.querySelectorAll('.doc-card').forEach((el, i) => {
         el.addEventListener('click', () => openLightbox(docImages, i));
+        el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLightbox(docImages, i);
+            }
+        });
     });
 
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); navLightbox(-1); });
-    lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); navLightbox(1); });
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); navLightbox(-1); });
+    document.querySelector('.lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); navLightbox(1); });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
     lightboxImg.addEventListener('click', (e) => e.stopPropagation());
-
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
         if (e.key === 'Escape') closeLightbox();
@@ -1511,14 +1881,11 @@
         if (e.key === 'ArrowRight') navLightbox(1);
     });
 
-    // ═══════════════════════════════════════════════════════════
-    // 🔗 SHARE BUTTONS
-    // ═══════════════════════════════════════════════════════════
+    // ═══════════ SHARE BUTTONS ═══════════
     function updateShareLinks() {
         const url = window.location.href;
         const t = TRANSLATIONS[currentLang];
         const text = t.shareText;
-
         document.getElementById('shareWhatsApp').href =
             `https://wa.me/?text=${encodeURIComponent(text + ' — ' + url)}`;
         document.getElementById('shareFacebook').href =
@@ -1530,23 +1897,48 @@
         const t = TRANSLATIONS[currentLang];
         try {
             await navigator.clipboard.writeText(window.location.href);
-            const msg = currentLang === 'az'
-                ? 'Link kopyalandı! Instagram-da paylaşa bilərsiniz 📷'
-                : currentLang === 'ru'
-                ? 'Ссылка скопирована! Можете поделиться в Instagram 📷'
-                : 'Link copied! You can share on Instagram 📷';
-            showToast(msg);
+            showToast(t.toastLinkCopied);
             window.open('https://www.instagram.com/', '_blank');
-        } catch (err) {
+        } catch {
             window.open('https://www.instagram.com/', '_blank');
         }
     });
 
-    // ═══════════════════════════════════════════════════════════
-    // 🚀 INIT
-    // ═══════════════════════════════════════════════════════════
+    // ═══════════ STORY PROGRESS BAR ═══════════
+    const chapters = document.querySelectorAll('[data-chapter]');
+    const totalChapters = 5;
+    const progressFill = document.getElementById('progressFill');
+    const chapterNum = document.getElementById('chapterNum');
+    const chapterName = document.getElementById('chapterName');
+    const chapterNames = {
+        1: 'chapter1',
+        2: 'chapter2Label',
+        3: 'chapter3Label',
+        4: 'chapter4Label',
+        5: 'climaxLabel'
+    };
+
+    if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+                    const ch = parseInt(entry.target.dataset.chapter);
+                    progressFill.style.width = (ch / totalChapters * 100) + '%';
+                    chapterNum.textContent = `${ch} / ${totalChapters}`;
+                    const key = chapterNames[ch];
+                    const t = TRANSLATIONS[currentLang];
+                    if (t[key]) {
+                        const txt = t[key];
+                        chapterName.textContent = txt.includes('·') ? txt.split('·').pop().trim() : txt;
+                    }
+                }
+            });
+        }, { threshold: [0.3, 0.5] });
+        chapters.forEach(c => obs.observe(c));
+    }
+
+    // ═══════════ INIT ═══════════
     (function init() {
-        // Restore saved language
         let savedLang = 'az';
         try { savedLang = localStorage.getItem('inad-lang') || 'az'; } catch (e) {}
         setLanguage(savedLang);

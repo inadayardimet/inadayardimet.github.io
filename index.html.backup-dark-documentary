@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>İnada Kömək Et — Qan Xərçəngi ilə Mübarizə | Şəhid Ailəsinin Övladı</title>
+    <meta name="description" content="16 yaşlı İnad Abbasov 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 şəhid verib. Türkiyədə ilik transplantasiyası üçün təcili 68.000 USD lazımdır.">
+    <meta name="keywords" content="İnad Abbasov, qan xərçəngi, leykoz, ilik transplantasiyası, yardım, kömək, şəhid ailəsi, Medical Park, Ağstafa">
+    <meta name="author" content="İnad Abbasov Ailəsi">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inadayardimet.github.io/">
+    <meta property="og:title" content="İnada Kömək Et — Qan Xərçəngi ilə Mübarizə">
+    <meta property="og:description" content="16 yaşlı İnad 3 ildir qan xərçəngi ilə mübarizə aparır. Şəhid ailəsinin 3-cü övladını qorumaq üçün təcili 68.000 USD lazımdır.">
+    <meta property="og:image" content="https://inadayardimet.github.io/inad-main.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="az_AZ">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://inadayardimet.github.io/">
+    <meta name="twitter:title" content="İnada Kömək Et — Qan Xərçəngi ilə Mübarizə">
+    <meta name="twitter:description" content="16 yaşlı İnad 3 ildir qan xərçəngi ilə mübarizə aparır. Təcili 68.000 USD lazımdır.">
+    <meta name="twitter:image" content="https://inadayardimet.github.io/inad-main.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%231a1a1a'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='55' font-style='italic' fill='%23C62828' text-anchor='middle'%3Eİ%3C/text%3E%3C/svg%3E">
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="inad-main.jpg">
+
+    <!-- Google Fonts: Lora (serif), IBM Plex Sans (UI), Bebas Neue (stats) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-white: #FFFFFF;
+            --bg-dark: #1a1a1a;
+            --bg-cream: #F8F5F0;
+            --accent-red: #C62828;
+            --accent-red-dark: #B71C1C;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+            --text-white: #FFFFFF;
+            --border-subtle: rgba(0, 0, 0, 0.08);
+            --border-dark: rgba(255, 255, 255, 0.12);
+            --whatsapp: #25D366;
+            --facebook: #1877F2;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+            background: var(--bg-white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img { max-width: 100%; display: block; }
+
+        /* ═══════════════════════════════════════ */
+        /* NAVIGATION                              */
+        /* ═══════════════════════════════════════ */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg-dark);
+            color: var(--text-white);
+            padding: 14px 24px;
+            border-bottom: 1px solid var(--border-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Lora', serif;
+            font-size: 22px;
+            font-weight: 600;
+            font-style: italic;
+            letter-spacing: -0.3px;
+            color: var(--text-white);
+            text-decoration: none;
+        }
+
+        .nav-logo span { color: var(--accent-red); }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 6px 10px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            font-family: inherit;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .lang-btn:hover { color: var(--text-white); }
+        .lang-btn.active { color: var(--text-white); border-bottom: 1px solid var(--accent-red); }
+
+        .nav-cta {
+            background: var(--accent-red);
+            color: var(--text-white);
+            border: none;
+            padding: 10px 20px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: background 0.2s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-cta:hover { background: var(--accent-red-dark); }
+
+        .nav-hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-white);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* HERO                                    */
+        /* ═══════════════════════════════════════ */
+        .hero {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            padding: 60px 40px;
+        }
+
+        .hero-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-left { max-width: 620px; }
+
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--accent-red);
+            color: var(--accent-red);
+            padding: 6px 14px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+
+        .hero-quote {
+            font-family: 'Lora', serif;
+            font-size: 38px;
+            font-style: italic;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            color: var(--text-white);
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 36px;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent-red);
+            color: var(--text-white);
+            border: 1px solid var(--accent-red);
+            padding: 14px 28px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            display: inline-block;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-red-dark);
+            border-color: var(--accent-red-dark);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 14px 28px;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            display: inline-block;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-white);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-right {
+            position: relative;
+        }
+
+        .hero-photo {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--border-dark);
+            background: #2a2a2a;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .hero-photo-caption {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--text-white);
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-radius: 2px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* STATS STRIP                             */
+        /* ═══════════════════════════════════════ */
+        .stats {
+            background: var(--accent-red);
+            color: var(--text-white);
+            padding: 40px 24px;
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 0 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat:last-child { border-right: none; }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.9;
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* MOTHER QUOTE                            */
+        /* ═══════════════════════════════════════ */
+        .mother-quote {
+            background: var(--bg-white);
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .mother-quote-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            border-left: 3px solid var(--accent-red);
+            padding: 12px 0 12px 32px;
+            text-align: left;
+        }
+
+        .mother-quote-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .mother-quote-text {
+            font-family: 'Lora', serif;
+            font-size: 26px;
+            font-style: italic;
+            font-weight: 500;
+            line-height: 1.5;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
+        }
+
+        .mother-quote-author {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* STORY                                   */
+        /* ═══════════════════════════════════════ */
+        .story {
+            background: var(--bg-cream);
+            padding: 80px 40px;
+        }
+
+        .story-inner {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .story-title {
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .story-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-red);
+            margin: 16px auto 48px;
+        }
+
+        .story-text {
+            column-count: 2;
+            column-gap: 40px;
+            font-size: 15px;
+            line-height: 1.85;
+            color: var(--text-dark);
+        }
+
+        .story-text p {
+            margin-bottom: 18px;
+            break-inside: avoid;
+        }
+
+        .story-text p:first-child::first-letter {
+            font-family: 'Lora', serif;
+            font-size: 56px;
+            font-weight: 700;
+            float: left;
+            line-height: 1;
+            margin: 4px 8px 0 0;
+            color: var(--accent-red);
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* GALLERY                                 */
+        /* ═══════════════════════════════════════ */
+        .gallery {
+            background: var(--bg-white);
+            padding: 80px 40px;
+        }
+
+        .gallery-inner { max-width: 1200px; margin: 0 auto; }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-red);
+            margin: 16px auto 48px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 4px;
+            background: #f0f0f0;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.85);
+        }
+
+        .gallery-item::after {
+            content: '⊕';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--text-white);
+            font-size: 32px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-item:hover::after { opacity: 1; }
+
+        /* ═══════════════════════════════════════ */
+        /* TRANSPARENCY / DOCUMENTS                */
+        /* ═══════════════════════════════════════ */
+        .transparency {
+            background: var(--bg-white);
+            padding: 80px 40px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .transparency-inner { max-width: 1200px; margin: 0 auto; }
+
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .doc-card {
+            background: var(--bg-cream);
+            border: 1px solid var(--border-subtle);
+            padding: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-radius: 4px;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-red);
+        }
+
+        .doc-thumb {
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            margin-bottom: 12px;
+            background: #fff;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .doc-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .doc-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-cream);
+            padding: 14px 18px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-red);
+        }
+
+        .badge-check {
+            color: var(--accent-red);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* DONATION                                */
+        /* ═══════════════════════════════════════ */
+        .donation {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            padding: 80px 40px;
+        }
+
+        .donation-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+
+        .donation-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .donation-title {
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 48px;
+            color: var(--text-white);
+            letter-spacing: -0.5px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .bank-card {
+            background: #2a2a2a;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 28px 24px;
+            border-radius: 4px;
+            text-align: left;
+            transition: all 0.2s ease;
+        }
+
+        .bank-card:hover {
+            border-color: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        .bank-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+
+        .card-number {
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-white);
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background: var(--accent-red);
+            color: var(--text-white);
+            border: none;
+            padding: 10px 18px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            width: 100%;
+            letter-spacing: 0.3px;
+        }
+
+        .copy-btn:hover { background: var(--accent-red-dark); }
+        .copy-btn.copied { background: #2E7D32; }
+
+        .card-holder {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 12px;
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* SHARE                                   */
+        /* ═══════════════════════════════════════ */
+        .share {
+            background: var(--bg-white);
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .share-inner { max-width: 760px; margin: 0 auto; }
+
+        .share-title {
+            font-family: 'Lora', serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .share-subtitle {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 36px;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 26px;
+            color: var(--text-white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .share-btn.whatsapp { background: var(--whatsapp); }
+        .share-btn.facebook { background: var(--facebook); }
+        .share-btn.instagram { background: linear-gradient(135deg, #E1306C, #C13584); }
+
+        /* ═══════════════════════════════════════ */
+        /* FOOTER                                  */
+        /* ═══════════════════════════════════════ */
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .footer-quote {
+            font-family: 'Lora', serif;
+            font-size: 22px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 32px;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: -0.3px;
+        }
+
+        .footer-contacts {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-contact a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-contact a:hover { color: var(--accent-red); }
+
+        .footer-bottom {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            border-top: 1px solid var(--border-dark);
+            padding-top: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* FLOATING ELEMENTS                       */
+        /* ═══════════════════════════════════════ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: var(--whatsapp);
+            color: var(--text-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+            z-index: 90;
+            transition: all 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+        }
+
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--accent-red);
+            color: var(--text-white);
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            z-index: 95;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+            letter-spacing: 0.3px;
+        }
+
+        .mobile-cta-bar:hover { background: var(--accent-red-dark); }
+
+        /* ═══════════════════════════════════════ */
+        /* TOAST                                   */
+        /* ═══════════════════════════════════════ */
+        .toast {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            background: #2E7D32;
+            color: var(--text-white);
+            padding: 14px 24px;
+            border-radius: 2px;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 200;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* LIGHTBOX                                */
+        /* ═══════════════════════════════════════ */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            cursor: zoom-out;
+        }
+
+        .lightbox.active { display: flex; }
+
+        .lightbox-img {
+            max-width: 92vw;
+            max-height: 90vh;
+            object-fit: contain;
+            cursor: default;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: none;
+            border: none;
+            color: var(--text-white);
+            font-size: 36px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 8px;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-white);
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .lightbox-nav:hover { background: rgba(255, 255, 255, 0.2); }
+        .lightbox-prev { left: 24px; }
+        .lightbox-next { right: 24px; }
+
+        /* ═══════════════════════════════════════ */
+        /* RESPONSIVE                              */
+        /* ═══════════════════════════════════════ */
+        @media (max-width: 968px) {
+            .hero { padding: 50px 24px; }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-quote { font-size: 30px; }
+            .hero-right { max-width: 480px; margin: 0 auto; width: 100%; }
+
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .stat { border-right: none; padding: 16px; }
+            .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+
+            .mother-quote, .story, .gallery, .transparency, .donation, .share {
+                padding: 60px 24px;
+            }
+
+            .story-text { column-count: 1; }
+
+            .gallery-grid, .docs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .badges-grid { grid-template-columns: 1fr; }
+
+            .section-title, .story-title, .donation-title { font-size: 28px; }
+            .mother-quote-text { font-size: 22px; }
+            .share-title { font-size: 26px; }
+        }
+
+        @media (max-width: 640px) {
+            .nav { padding: 12px 16px; }
+            .nav-logo { font-size: 20px; }
+            .nav-right { gap: 8px; }
+            .lang-switcher { font-size: 11px; }
+            .lang-btn { padding: 4px 6px; font-size: 11px; }
+            .nav-cta { padding: 8px 14px; font-size: 13px; }
+
+            .hero { padding: 40px 20px; }
+            .hero-quote { font-size: 26px; }
+            .hero-subtitle { font-size: 15px; }
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .btn-primary,
+            .hero-buttons .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+
+            .stat-number { font-size: 36px; }
+
+            .gallery-grid { grid-template-columns: 1fr; gap: 12px; }
+            .docs-grid { grid-template-columns: 1fr; }
+
+            .mother-quote-inner { padding-left: 20px; }
+            .mother-quote-text { font-size: 20px; }
+
+            .footer-contacts { flex-direction: column; gap: 12px; }
+
+            .mobile-cta-bar { display: block; }
+            body { padding-bottom: 60px; }
+            .whatsapp-float { bottom: 80px; }
+        }
+
+        /* Accessibility */
+        :focus-visible {
+            outline: 2px solid var(--accent-red);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ═══════════════ NAVIGATION ═══════════════ -->
+    <nav class="nav" role="navigation" aria-label="Əsas navigasiya">
+        <a href="#" class="nav-logo">İ<span>nad</span></a>
+        <div class="nav-right">
+            <div class="lang-switcher" role="group" aria-label="Dil seçimi">
+                <button class="lang-btn active" data-lang="az" aria-label="Azərbaycan">AZ</button>
+                <button class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+                <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+            </div>
+            <a href="#donation" class="nav-cta" data-i18n="navCta">Kömək Et</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <span class="hero-badge" data-i18n="heroBadge">⏰ TƏCİLİ KÖMƏK LAZIMDIR</span>
+                <h1 class="hero-quote" data-i18n="heroQuote">Bir düşün... Əgər o uşaq sənin övladın olsaydı?</h1>
+                <p class="hero-subtitle" data-i18n="heroSubtitle">İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.</p>
+                <div class="hero-buttons">
+                    <a href="#donation" class="btn-primary" data-i18n="heroCtaPrimary">→ İnada Kömək Et</a>
+                    <a href="#story" class="btn-secondary" data-i18n="heroCtaSecondary">Hekayəni Oxu</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-photo">
+                    <img src="inad-main.jpg" alt="İnad Abbasov, 16 yaş" loading="eager" fetchpriority="high">
+                    <div class="hero-photo-caption" data-i18n="heroCaption">İnad — 16 yaş</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ STATS ═══════════════ -->
+    <section class="stats" aria-label="Statistika">
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number" data-i18n="stat1Num">3 il</div>
+                <div class="stat-label" data-i18n="stat1Label">mübarizə</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-i18n="stat2Num">16</div>
+                <div class="stat-label" data-i18n="stat2Label">İnadın yaşı</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-i18n="stat3Num">68.000$</div>
+                <div class="stat-label" data-i18n="stat3Label">təcili lazım</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-i18n="stat4Num">2 şəhid</div>
+                <div class="stat-label" data-i18n="stat4Label">qardaş</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ MOTHER QUOTE ═══════════════ -->
+    <section class="mother-quote">
+        <div class="mother-quote-inner">
+            <span class="mother-quote-label" data-i18n="motherLabel">— ANASININ SÖZLƏRİ</span>
+            <p class="mother-quote-text" data-i18n="motherQuote">Bu ailə Vətən üçün 2 can verib. İndi övladımızı yaşatmaq üçün insanların mərhəmətinə sığınırıq...</p>
+            <div class="mother-quote-author" data-i18n="motherAuthor">Abbasova Əfsanə — İnadın anası</div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ STORY ═══════════════ -->
+    <section class="story" id="story">
+        <div class="story-inner">
+            <h2 class="story-title" data-i18n="storyTitle">Hekayəsi</h2>
+            <div class="story-text" id="storyText">
+                <p>İnad Abbasov 3 ildir kəskin leykoz (qan xərçəngi) ilə mübarizə aparır. Bu 3 il ərzində ailə nəyi var idisə satdı — evini, əşyasını, ümidlərini belə.</p>
+                <p>Borcla, göz yaşıyla, dua ilə bu günə qədər gətirdilər. Amma artıq gücləri qalmayıb.</p>
+                <p>İnad atası gündəlik fəhləliklə (şofer işləyir) ailəni dolandırmağa çalışır. Ana evlərə təmizliyə gedir.</p>
+                <p>İnad hazırda Türkiyədə Medical Park xəstəxanasında müalicə alır. Onun yaşaması üçün təcili ilik nəql (transplantasiya) olunmalıdır.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ GALLERY ═══════════════ -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-inner">
+            <h2 class="section-title" data-i18n="galleryTitle">İnadın gözündən</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-img="inad1.jpg">
+                    <img src="inad1.jpg" alt="İnad" loading="lazy">
+                </div>
+                <div class="gallery-item" data-img="inad2.jpg">
+                    <img src="inad2.jpg" alt="İnad" loading="lazy">
+                </div>
+                <div class="gallery-item" data-img="inad3.jpg">
+                    <img src="inad3.jpg" alt="İnad" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TRANSPARENCY ═══════════════ -->
+    <section class="transparency" id="documents">
+        <div class="transparency-inner">
+            <h2 class="section-title" data-i18n="transparencyTitle">🛡️ Şəffaflıq və həqiqət</h2>
+            <div class="docs-grid">
+                <div class="doc-card" data-img="document1.jpg">
+                    <div class="doc-thumb"><img src="document1.jpg" alt="Medical Park müalicə planı" loading="lazy"></div>
+                    <div class="doc-title" data-i18n="doc1">Medical Park müalicə planı</div>
+                </div>
+                <div class="doc-card" data-img="document2.jpg">
+                    <div class="doc-thumb"><img src="document2.jpg" alt="Bank rekvizitləri" loading="lazy"></div>
+                    <div class="doc-title" data-i18n="doc2">Bank rekvizitləri + möhür</div>
+                </div>
+                <div class="doc-card" data-img="document3.jpg">
+                    <div class="doc-thumb"><img src="document3.jpg" alt="Milli Hematologiya epikrizi" loading="lazy"></div>
+                    <div class="doc-title" data-i18n="doc3">Milli Hematologiya epikrizi</div>
+                </div>
+            </div>
+            <div class="badges-grid">
+                <div class="badge"><span class="badge-check">✓</span><span data-i18n="badge1">Rəsmi Medical Park sənədi</span></div>
+                <div class="badge"><span class="badge-check">✓</span><span data-i18n="badge2">Prof. Dr. Akif Yeşilipek</span></div>
+                <div class="badge"><span class="badge-check">✓</span><span data-i18n="badge3">68.000 USD dəqiq məbləğ</span></div>
+                <div class="badge"><span class="badge-check">✓</span><span data-i18n="badge4">Bank rekvizitləri yoxlanılıb</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ DONATION ═══════════════ -->
+    <section class="donation" id="donation">
+        <div class="donation-inner">
+            <span class="donation-label" data-i18n="donationLabel">— İNDİ KÖMƏK ET</span>
+            <h2 class="donation-title" data-i18n="donationTitle">Bank Kartları</h2>
+            <div class="cards-grid">
+                <div class="bank-card">
+                    <div class="bank-name">Kapital Bank</div>
+                    <div class="card-number">4169 7388 0191 1817</div>
+                    <button class="copy-btn" data-card="4169738801911817" data-i18n="copyBtn">📋 Kopyala</button>
+                </div>
+                <div class="bank-card">
+                    <div class="bank-name">LeoBank</div>
+                    <div class="card-number">4098 5844 9826 8356</div>
+                    <button class="copy-btn" data-card="4098584498268356" data-i18n="copyBtn">📋 Kopyala</button>
+                </div>
+                <div class="bank-card">
+                    <div class="bank-name">ABB</div>
+                    <div class="card-number">5522 0993 7747 1388</div>
+                    <button class="copy-btn" data-card="5522099377471388" data-i18n="copyBtn">📋 Kopyala</button>
+                </div>
+            </div>
+            <div class="card-holder" data-i18n="cardHolder">Kart sahibi: Abbasov Fariz (atası)</div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ SHARE ═══════════════ -->
+    <section class="share">
+        <div class="share-inner">
+            <h2 class="share-title" data-i18n="shareTitle">Yardım paylaşımla başlayır</h2>
+            <p class="share-subtitle" data-i18n="shareSubtitle">Hər paylaşım İnadın yaşama şansını artırır</p>
+            <div class="share-buttons">
+                <a href="#" class="share-btn whatsapp" id="shareWhatsApp">
+                    <span>📱</span><span>WhatsApp</span>
+                </a>
+                <a href="#" class="share-btn facebook" id="shareFacebook">
+                    <span>📘</span><span>Facebook</span>
+                </a>
+                <a href="#" class="share-btn instagram" id="shareInstagram">
+                    <span>📷</span><span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer>
+        <p class="footer-quote" data-i18n="footerQuote">"Allah xatirinə..."</p>
+        <div class="footer-contacts">
+            <div class="footer-contact">📞 <a href="tel:+994773059565">+994 77 305 95 65</a></div>
+            <div class="footer-contact" data-i18n="footerAddress">📍 Ağstafa rayonu, Qırlı kəndi</div>
+        </div>
+        <div class="footer-bottom" data-i18n="footerBottom">© 2026 İnad Abbasov Ailəsi — Bütün hüquqlar qorunur</div>
+    </footer>
+
+    <!-- ═══════════════ FLOATING ═══════════════ -->
+    <a href="https://wa.me/994773059565" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <span>💬</span>
+    </a>
+
+    <a href="#donation" class="mobile-cta-bar" data-i18n="mobileCta">→ İnada Kömək Et</a>
+
+    <!-- ═══════════════ LIGHTBOX ═══════════════ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Şəkil görüntüləyici">
+        <button class="lightbox-close" aria-label="Bağla">×</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Əvvəlki">‹</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        <button class="lightbox-nav lightbox-next" aria-label="Növbəti">›</button>
+    </div>
+
+    <!-- ═══════════════ TOAST ═══════════════ -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+    // ═══════════════════════════════════════════════════════════
+    // 🌐 MULTILINGUAL DATA (AZ / RU / EN)
+    // ═══════════════════════════════════════════════════════════
+    const TRANSLATIONS = {
+        az: {
+            navCta: "Kömək Et",
+            heroBadge: "⏰ TƏCİLİ KÖMƏK LAZIMDIR",
+            heroQuote: "Bir düşün... Əgər o uşaq sənin övladın olsaydı?",
+            heroSubtitle: "İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.",
+            heroCtaPrimary: "→ İnada Kömək Et",
+            heroCtaSecondary: "Hekayəni Oxu",
+            heroCaption: "İnad — 16 yaş",
+            stat1Num: "3 il",
+            stat1Label: "mübarizə",
+            stat2Num: "16",
+            stat2Label: "İnadın yaşı",
+            stat3Num: "68.000$",
+            stat3Label: "təcili lazım",
+            stat4Num: "2 şəhid",
+            stat4Label: "qardaş",
+            motherLabel: "— ANASININ SÖZLƏRİ",
+            motherQuote: "Bu ailə Vətən üçün 2 can verib. İndi övladımızı yaşatmaq üçün insanların mərhəmətinə sığınırıq...",
+            motherAuthor: "Abbasova Əfsanə — İnadın anası",
+            storyTitle: "Hekayəsi",
+            storyHtml: '<p>İnad Abbasov 3 ildir kəskin leykoz (qan xərçəngi) ilə mübarizə aparır. Bu 3 il ərzində ailə nəyi var idisə satdı — evini, əşyasını, ümidlərini belə.</p><p>Borcla, göz yaşıyla, dua ilə bu günə qədər gətirdilər. Amma artıq gücləri qalmayıb.</p><p>İnad atası gündəlik fəhləliklə (şofer işləyir) ailəni dolandırmağa çalışır. Ana evlərə təmizliyə gedir.</p><p>İnad hazırda Türkiyədə Medical Park xəstəxanasında müalicə alır. Onun yaşaması üçün təcili ilik nəql (transplantasiya) olunmalıdır.</p>',
+            galleryTitle: "İnadın gözündən",
+            transparencyTitle: "🛡️ Şəffaflıq və həqiqət",
+            doc1: "Medical Park müalicə planı",
+            doc2: "Bank rekvizitləri + möhür",
+            doc3: "Milli Hematologiya epikrizi",
+            badge1: "Rəsmi Medical Park sənədi",
+            badge2: "Prof. Dr. Akif Yeşilipek",
+            badge3: "68.000 USD dəqiq məbləğ",
+            badge4: "Bank rekvizitləri yoxlanılıb",
+            donationLabel: "— İNDİ KÖMƏK ET",
+            donationTitle: "Bank Kartları",
+            copyBtn: "📋 Kopyala",
+            cardHolder: "Kart sahibi: Abbasov Fariz (atası)",
+            shareTitle: "Yardım paylaşımla başlayır",
+            shareSubtitle: "Hər paylaşım İnadın yaşama şansını artırır",
+            footerQuote: '"Allah xatirinə..."',
+            footerAddress: "📍 Ağstafa rayonu, Qırlı kəndi",
+            footerBottom: "© 2026 İnad Abbasov Ailəsi — Bütün hüquqlar qorunur",
+            mobileCta: "→ İnada Kömək Et",
+            toastCopied: "✓ Kart nömrəsi kopyalandı",
+            toastCopyError: "Kopyalama uğursuz oldu",
+            shareText: "İnada kömək edək — 16 yaşlı bir uşağın həyatını xilas etmək üçün təcili kömək lazımdır",
+        },
+        ru: {
+            navCta: "Помочь",
+            heroBadge: "⏰ СРОЧНО НУЖНА ПОМОЩЬ",
+            heroQuote: "Подумайте... Что, если бы это был ваш ребёнок?",
+            heroSubtitle: "Инаду 16 лет. 3 года он борется с раком крови. Его семья отдала 2 сыновей за Родину. Теперь они просят вашей помощи, чтобы спасти 3-го ребёнка.",
+            heroCtaPrimary: "→ Помочь Инаду",
+            heroCtaSecondary: "Читать историю",
+            heroCaption: "Инад — 16 лет",
+            stat1Num: "3 года",
+            stat1Label: "борьбы",
+            stat2Num: "16",
+            stat2Label: "возраст Инада",
+            stat3Num: "68 000$",
+            stat3Label: "срочно нужно",
+            stat4Num: "2 шехида",
+            stat4Label: "брата",
+            motherLabel: "— СЛОВА МАТЕРИ",
+            motherQuote: "Эта семья отдала 2 жизни за Родину. Теперь, чтобы спасти нашего ребёнка, мы взываем к милосердию людей...",
+            motherAuthor: "Аббасова Афсана — мать Инада",
+            storyTitle: "Его история",
+            storyHtml: '<p>Инад Абасов 3 года борется с острым лейкозом (раком крови). За эти 3 года семья продала всё, что имела — дом, имущество, даже надежды.</p><p>В долгах, со слезами, с молитвами они дошли до этого дня. Но больше нет сил.</p><p>Отец Инада работает водителем-подёнщиком, пытаясь прокормить семью. Мать ходит убираться по домам.</p><p>В настоящее время Инад проходит лечение в Турции в больнице Medical Park. Чтобы он выжил, срочно необходима трансплантация костного мозга.</p>',
+            galleryTitle: "Глазами Инада",
+            transparencyTitle: "🛡️ Прозрачность и правда",
+            doc1: "План лечения Medical Park",
+            doc2: "Банковские реквизиты + печать",
+            doc3: "Эпикриз Национальной гематологии",
+            badge1: "Официальный документ Medical Park",
+            badge2: "Проф. Др. Акиф Йешилипек",
+            badge3: "Точная сумма 68 000 USD",
+            badge4: "Банковские реквизиты проверены",
+            donationLabel: "— ПОМОЧЬ СЕЙЧАС",
+            donationTitle: "Банковские карты",
+            copyBtn: "📋 Копировать",
+            cardHolder: "Владелец карты: Abbasov Fariz (отец)",
+            shareTitle: "Помощь начинается с распространения",
+            shareSubtitle: "Каждый репост увеличивает шансы Инада на жизнь",
+            footerQuote: '"Ради Бога..."',
+            footerAddress: "📍 Агстафинский район, село Гырлы",
+            footerBottom: "© 2026 Семья Инада Абасова — Все права защищены",
+            mobileCta: "→ Помочь Инаду",
+            toastCopied: "✓ Номер карты скопирован",
+            toastCopyError: "Не удалось скопировать",
+            shareText: "Поможем Инаду — срочно нужна помощь, чтобы спасти жизнь 16-летнего ребёнка",
+        },
+        en: {
+            navCta: "Donate",
+            heroBadge: "⏰ URGENT HELP NEEDED",
+            heroQuote: "Just imagine... what if this child were yours?",
+            heroSubtitle: "İnad is 16 years old. For 3 years he has been fighting blood cancer. His family has lost 2 sons for the Motherland. Now they ask for your help to save their 3rd child.",
+            heroCtaPrimary: "→ Help İnad",
+            heroCtaSecondary: "Read the Story",
+            heroCaption: "İnad — age 16",
+            stat1Num: "3 yrs",
+            stat1Label: "fighting",
+            stat2Num: "16",
+            stat2Label: "İnad's age",
+            stat3Num: "$68,000",
+            stat3Label: "urgently needed",
+            stat4Num: "2 martyrs",
+            stat4Label: "brothers",
+            motherLabel: "— THE MOTHER'S WORDS",
+            motherQuote: "This family has given 2 lives for the Motherland. Now we turn to the mercy of people to save our child...",
+            motherAuthor: "Abbasova Afsana — İnad's mother",
+            storyTitle: "His Story",
+            storyHtml: '<p>İnad Abbasov has been fighting acute leukemia (blood cancer) for 3 years. In these 3 years, the family sold everything they had — their home, their belongings, even their hopes.</p><p>With debt, tears, and prayer, they have made it this far. But their strength is gone.</p><p>İnad\'s father tries to support the family by working as a daily driver. The mother goes from house to house cleaning.</p><p>İnad is currently receiving treatment at Medical Park hospital in Turkey. To survive, he urgently needs a bone marrow transplant.</p>',
+            galleryTitle: "Through İnad's eyes",
+            transparencyTitle: "🛡️ Transparency & truth",
+            doc1: "Medical Park treatment plan",
+            doc2: "Bank details + official stamp",
+            doc3: "National Hematology epicrisis",
+            badge1: "Official Medical Park document",
+            badge2: "Prof. Dr. Akif Yeşilipek",
+            badge3: "Exact amount: $68,000 USD",
+            badge4: "Bank details verified",
+            donationLabel: "— HELP NOW",
+            donationTitle: "Bank Cards",
+            copyBtn: "📋 Copy",
+            cardHolder: "Card holder: Abbasov Fariz (father)",
+            shareTitle: "Help begins with sharing",
+            shareSubtitle: "Every share increases İnad's chance of survival",
+            footerQuote: '"For God\'s sake..."',
+            footerAddress: "📍 Aghstafa district, Qırlı village",
+            footerBottom: "© 2026 İnad Abbasov Family — All rights reserved",
+            mobileCta: "→ Help İnad",
+            toastCopied: "✓ Card number copied",
+            toastCopyError: "Copy failed",
+            shareText: "Let's help İnad — urgent help needed to save the life of a 16-year-old child",
+        }
+    };
+
+    // ═══════════════════════════════════════════════════════════
+    // 🌐 LANGUAGE SWITCHER
+    // ═══════════════════════════════════════════════════════════
+    let currentLang = 'az';
+
+    function setLanguage(lang) {
+        if (!TRANSLATIONS[lang]) return;
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        const t = TRANSLATIONS[lang];
+
+        // Update all data-i18n elements
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (t[key] !== undefined) {
+                if (key === 'storyHtml') {
+                    el.innerHTML = t[key];
+                } else {
+                    el.textContent = t[key];
+                }
+            }
+        });
+
+        // Story has multiple paragraphs — use innerHTML
+        const storyEl = document.getElementById('storyText');
+        if (storyEl && t.storyHtml) {
+            storyEl.innerHTML = t.storyHtml;
+        }
+
+        // Active button state
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        // Update share button URLs
+        updateShareLinks();
+
+        // Save preference
+        try { localStorage.setItem('inad-lang', lang); } catch (e) {}
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    // ═══════════════════════════════════════════════════════════
+    // 📋 COPY TO CLIPBOARD + TOAST + META PIXEL
+    // ═══════════════════════════════════════════════════════════
+    function showToast(message, isError = false) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.style.background = isError ? '#C62828' : '#2E7D32';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+    }
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const cardNum = btn.dataset.card;
+            const t = TRANSLATIONS[currentLang];
+
+            try {
+                await navigator.clipboard.writeText(cardNum);
+
+                // Visual feedback
+                const original = btn.textContent;
+                btn.textContent = '✓ ' + (currentLang === 'az' ? 'Kopyalandı' : currentLang === 'ru' ? 'Скопировано' : 'Copied');
+                btn.classList.add('copied');
+
+                setTimeout(() => {
+                    btn.textContent = t.copyBtn;
+                    btn.classList.remove('copied');
+                }, 2000);
+
+                showToast(t.toastCopied);
+
+                // Meta Pixel AddToCart event
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'AddToCart', {
+                        content_name: 'Bank Card Copy',
+                        content_category: 'Donation',
+                        content_ids: [cardNum.substring(0, 4)],
+                        value: 0,
+                        currency: 'USD'
+                    });
+                }
+            } catch (err) {
+                // Fallback for older browsers
+                try {
+                    const ta = document.createElement('textarea');
+                    ta.value = cardNum;
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                    showToast(t.toastCopied);
+                } catch (e2) {
+                    showToast(t.toastCopyError, true);
+                }
+            }
+        });
+    });
+
+    // ═══════════════════════════════════════════════════════════
+    // 🖼️ LIGHTBOX (gallery + documents)
+    // ═══════════════════════════════════════════════════════════
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+
+    let lightboxImages = [];
+    let lightboxIndex = 0;
+
+    function openLightbox(images, index) {
+        lightboxImages = images;
+        lightboxIndex = index;
+        lightboxImg.src = images[index];
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function navLightbox(dir) {
+        lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+        lightboxImg.src = lightboxImages[lightboxIndex];
+    }
+
+    // Gallery items
+    const galleryImages = Array.from(document.querySelectorAll('.gallery-item')).map(el => el.dataset.img);
+    document.querySelectorAll('.gallery-item').forEach((el, i) => {
+        el.addEventListener('click', () => openLightbox(galleryImages, i));
+    });
+
+    // Document items
+    const docImages = Array.from(document.querySelectorAll('.doc-card')).map(el => el.dataset.img);
+    document.querySelectorAll('.doc-card').forEach((el, i) => {
+        el.addEventListener('click', () => openLightbox(docImages, i));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); navLightbox(-1); });
+    lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); navLightbox(1); });
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navLightbox(-1);
+        if (e.key === 'ArrowRight') navLightbox(1);
+    });
+
+    // ═══════════════════════════════════════════════════════════
+    // 🔗 SHARE BUTTONS
+    // ═══════════════════════════════════════════════════════════
+    function updateShareLinks() {
+        const url = window.location.href;
+        const t = TRANSLATIONS[currentLang];
+        const text = t.shareText;
+
+        document.getElementById('shareWhatsApp').href =
+            `https://wa.me/?text=${encodeURIComponent(text + ' — ' + url)}`;
+        document.getElementById('shareFacebook').href =
+            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+    }
+
+    document.getElementById('shareInstagram').addEventListener('click', async (e) => {
+        e.preventDefault();
+        const t = TRANSLATIONS[currentLang];
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            const msg = currentLang === 'az'
+                ? 'Link kopyalandı! Instagram-da paylaşa bilərsiniz 📷'
+                : currentLang === 'ru'
+                ? 'Ссылка скопирована! Можете поделиться в Instagram 📷'
+                : 'Link copied! You can share on Instagram 📷';
+            showToast(msg);
+            window.open('https://www.instagram.com/', '_blank');
+        } catch (err) {
+            window.open('https://www.instagram.com/', '_blank');
+        }
+    });
+
+    // ═══════════════════════════════════════════════════════════
+    // 🚀 INIT
+    // ═══════════════════════════════════════════════════════════
+    (function init() {
+        // Restore saved language
+        let savedLang = 'az';
+        try { savedLang = localStorage.getItem('inad-lang') || 'az'; } catch (e) {}
+        setLanguage(savedLang);
+    })();
+    </script>
+</body>
+</html>
