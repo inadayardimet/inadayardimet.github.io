@@ -119,6 +119,9 @@
             --color-whatsapp-hover: var(--whatsapp-hover);
             --color-facebook: #1877F2;
 
+            /* Section transition fade zone (height of gradient blend) */
+            --section-fade: 90px;
+
             /* Spacing scale (4px base) */
             --s-1: 4px;  --s-2: 8px;   --s-3: 12px; --s-4: 16px;
             --s-5: 20px; --s-6: 24px;  --s-8: 32px; --s-10: 40px;
@@ -564,6 +567,7 @@
         }
 
         @media (max-width: 768px) {
+            :root { --section-fade: 56px; }
             .hero { min-height: 88vh; padding: var(--s-16) var(--s-5) var(--s-12); }
             .hero .hero-title { font-size: 1.75rem; }
             .hero .hero-subtitle { font-size: 1rem; margin-top: 1.25rem; }
@@ -1093,7 +1097,7 @@
         /* ═══════════ GALLERY ═══════════ */
         .gallery {
             padding: var(--s-16) var(--s-10);
-            background: var(--color-surface);
+            background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-surface) var(--section-fade), var(--bg-surface) 100%);
         }
         .gallery-inner { max-width: 1080px; margin: 0 auto; }
         .gallery-grid {
@@ -1141,8 +1145,7 @@
         /* ═══════════ CHAPTER 4 — TRANSPARENCY (Solution) ═══════════ */
         .transparency {
             padding: var(--s-16) var(--s-10);
-            background: var(--color-muted);
-            border-top: 1px solid var(--color-border);
+            background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-warm) var(--section-fade), var(--bg-warm) 100%);
         }
         .transparency-inner { max-width: 1080px; margin: 0 auto; }
         .docs-grid {
@@ -1210,7 +1213,7 @@
         /* ═══════════ DONATION IMPACT (text-only amount cards) ═══════════ */
         .donation-impact {
             padding: 4rem 1.5rem;
-            background: var(--bg-primary);
+            background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-primary) var(--section-fade), var(--bg-primary) 100%);
         }
         .container-narrow {
             max-width: 1080px;
@@ -1279,8 +1282,7 @@
         /* ═══════════ CHAPTER 5 — DONATION (Climax CTA) ═══════════ */
         .donation {
             padding: var(--s-16) var(--s-10);
-            background: var(--color-surface-urgent);
-            border-top: 1px solid var(--color-border-warm);
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--accent-bg) var(--section-fade), var(--accent-bg) 100%);
         }
         .donation-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
 
@@ -1421,7 +1423,7 @@
         /* ═══════════ SHARE ═══════════ */
         .share {
             padding: var(--s-16) var(--s-10);
-            background: var(--color-surface);
+            background: linear-gradient(180deg, var(--accent-bg) 0%, var(--bg-surface) var(--section-fade), var(--bg-surface) 100%);
             text-align: center;
         }
         .share-inner { max-width: 760px; margin: 0 auto; }
