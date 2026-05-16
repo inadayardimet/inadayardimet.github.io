@@ -419,10 +419,10 @@
             display: inline-block;
         }
 
-        /* Date badge — glass pill, positioned below trust pill (top-right of hero) */
+        /* Date badge — glass pill, positioned below trust pill (top-right of hero) with breathing room */
         .hero-date-badge {
             position: absolute;
-            top: calc(var(--s-5) + 38px);
+            top: calc(var(--s-5) + 56px);
             right: var(--s-5);
             z-index: 2;
             display: inline-flex;
@@ -443,7 +443,7 @@
         .hero-date-value { font-weight: 500; }
         @media (max-width: 768px) {
             .hero-date-badge {
-                top: calc(var(--s-4) + 34px);
+                top: calc(var(--s-5) + 50px);
                 right: var(--s-4);
                 font-size: 0.75rem;
                 padding: 6px 12px;
