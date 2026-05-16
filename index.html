@@ -200,6 +200,26 @@
             h3 { font-size: 1.25rem; }
         }
 
+        /* ─── SCROLL PROGRESS BAR (top of viewport) ─── */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .scroll-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--accent);
+            box-shadow: 0 0 8px rgba(232, 93, 44, 0.5);
+            transition: width 0.08s ease-out;
+            will-change: width;
+        }
+
         /* ─── SCROLL ANIMATIONS (IntersectionObserver) ─── */
         [data-animate] {
             opacity: 0;
@@ -1729,6 +1749,11 @@
 <body>
     <a href="#main" class="skip-link" data-i18n="skipLink">İçəriyə keç</a>
 
+    <!-- Scroll progress bar (top of viewport) -->
+    <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+    </div>
+
     <!-- ═══════════ NAV ═══════════ -->
     <header class="nav" role="navigation" aria-label="Əsas naviqasiya">
         <a href="#" class="logo">İ<span>nad</span></a>
@@ -2555,6 +2580,28 @@
             rootMargin: '0px 0px -50px 0px'
         });
         document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    })();
+
+    // ═══════════ SCROLL PROGRESS BAR ═══════════
+    (function scrollProgress() {
+        const fill = document.getElementById('scrollProgressFill');
+        if (!fill) return;
+        let ticking = false;
+        function update() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+            fill.style.width = pct + '%';
+            ticking = false;
+        }
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(update);
+                ticking = true;
+            }
+        }, { passive: true });
+        window.addEventListener('resize', update, { passive: true });
+        update();
     })();
 
     // ═══════════ INIT ═══════════
