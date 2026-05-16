@@ -258,28 +258,37 @@
 
         .lang-switcher {
             display: flex;
-            background: var(--color-muted);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius);
-            padding: 2px;
+            align-items: center;
+            background: var(--bg-dark);
+            border-radius: 100px;
+            padding: 4px;
+            gap: 2px;
+            box-shadow: 0 2px 8px rgba(10, 37, 64, 0.15);
         }
         .lang-btn {
-            min-height: 36px;
-            min-width: 36px;
-            padding: var(--s-2) var(--s-3);
-            font-size: var(--fs-xs);
-            font-weight: 600;
-            letter-spacing: 1.2px;
+            padding: 8px 14px;
+            font-family: var(--font);
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
-            color: var(--color-muted-foreground);
-            border-radius: 4px;
-            transition: all var(--transition);
+            color: rgba(255, 255, 255, 0.7);
+            background: transparent;
+            border-radius: 100px;
+            transition: all 0.2s ease;
+            line-height: 1;
         }
-        .lang-btn:hover { color: var(--color-foreground); }
+        .lang-btn:hover {
+            color: rgba(255, 255, 255, 1);
+            background: rgba(255, 255, 255, 0.08);
+        }
         .lang-btn.active {
-            background: var(--color-surface);
-            color: var(--color-foreground);
-            box-shadow: var(--shadow-sm);
+            background: var(--accent);
+            color: var(--text-on-dark);
+            font-weight: 600;
+        }
+        .lang-btn.active:hover {
+            background: var(--accent);
         }
 
         /* ─── BUTTON SYSTEM ─── */
@@ -355,7 +364,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(10, 37, 64, 0.4) 0%, rgba(10, 37, 64, 0.85) 100%);
+            background: linear-gradient(180deg, rgba(10, 37, 64, 0.55) 0%, rgba(10, 37, 64, 0.92) 100%);
             z-index: 1;
             pointer-events: none;
         }
@@ -393,6 +402,7 @@
             color: var(--text-on-dark);
             font-size: 2.5rem;
             margin: 0 0 var(--s-5) 0;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         }
         .hero .hero-title em {
             color: var(--accent-soft);
@@ -402,11 +412,12 @@
             font-weight: 500;
         }
         .hero .hero-subtitle {
-            color: var(--text-on-dark-muted);
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 1rem;
             line-height: 1.7;
             max-width: 520px;
             margin: 0;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
         }
 
         /* Trust pill at top-right of hero */
@@ -448,7 +459,7 @@
         @media (max-width: 768px) {
             .hero { min-height: 80vh; padding: var(--s-16) var(--s-5) var(--s-12); }
             .hero .hero-title { font-size: 1.75rem; }
-            .hero .hero-subtitle { font-size: 0.9rem; }
+            .hero .hero-subtitle { font-size: 0.95rem; }
             .hero-eyebrow { font-size: 0.65rem; }
             .scroll-indicator { bottom: var(--s-4); }
         }
@@ -876,7 +887,7 @@
             position: relative;
         }
         .unified-inner {
-            max-width: 780px;
+            max-width: 720px;
             margin: 0 auto;
             position: relative;
         }
@@ -935,111 +946,108 @@
         .u-stat.highlight .u-stat-unit { color: var(--accent); }
         .u-stat.highlight .u-stat-label { color: var(--accent-text); }
 
-        /* Story body */
+        /* Story body — no drop cap, comfortable reading */
         .unified-story .story-paragraphs p {
-            font-size: var(--fs-md);
-            line-height: 1.85;
-            color: var(--color-foreground);
-            margin-bottom: var(--s-6);
+            font-family: var(--font);
+            font-size: 1.0625rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--text-body);
+            margin-bottom: 1.5rem;
         }
-        .unified-story .story-paragraphs:first-of-type p:first-child::first-letter {
-            font-size: 80px;
-            font-weight: 800;
-            float: left;
-            line-height: 1;
-            margin: 8px 14px -8px 0;
-            color: var(--color-accent);
-            letter-spacing: -3px;
-        }
+        .unified-story .story-paragraphs p:last-child { margin-bottom: 0; }
 
         /* Pull-quote (editorial style) */
+        /* Pull-quote — warm card, accent left border, large serif quote mark */
         .pull-quote {
-            margin: var(--s-12) 0;
-            padding: var(--s-10) var(--s-8);
-            background: var(--color-surface);
-            border-radius: var(--radius-xl);
-            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(15, 23, 42, 0.04);
+            margin: var(--s-10) 0;
+            padding: 1.75rem;
+            padding-top: 2.25rem;
+            background: var(--bg-warm);
+            border-left: 3px solid var(--accent);
+            border-radius: 12px;
             position: relative;
-            overflow: hidden;
         }
         .pull-quote::before {
-            content: '';
+            content: '\201C';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-accent) 100%);
-        }
-        .pq-mark {
-            position: absolute;
-            top: var(--s-5);
-            right: var(--s-6);
-            width: 60px;
-            height: 60px;
-            color: var(--color-primary);
-            opacity: 0.1;
+            top: 0.5rem;
+            left: 1.25rem;
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--accent-soft);
+            opacity: 0.6;
             pointer-events: none;
         }
+        .pq-mark { display: none; }
         .pq-text {
-            font-size: clamp(var(--fs-lg), 2.4vw, var(--fs-xl));
-            font-weight: 500;
+            font-family: var(--font-serif);
+            font-size: 1.125rem;
+            font-weight: 400;
             font-style: italic;
-            line-height: 1.5;
-            color: var(--color-foreground);
-            margin-bottom: var(--s-8);
-            letter-spacing: -0.3px;
-            padding-right: var(--s-10);
+            line-height: 1.6;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.01em;
+            padding-right: 0;
         }
         .pq-author {
             display: flex;
             align-items: center;
-            gap: var(--s-3);
-            padding-top: var(--s-5);
-            border-top: 1px solid var(--color-border);
+            gap: 0.75rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(232, 93, 44, 0.15);
             font-style: normal;
             flex-wrap: wrap;
         }
         .pq-avatar {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            color: var(--color-on-primary);
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: var(--text-on-dark);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: var(--fs-md);
-            box-shadow: 0 6px 16px rgba(8, 145, 178, 0.25);
+            font-family: var(--font-serif);
+            font-weight: 500;
+            font-size: 1.125rem;
             flex-shrink: 0;
-            border: 3px solid var(--color-surface);
-            outline: 1px solid var(--color-border);
         }
-        .pq-info { display: flex; flex-direction: column; gap: 2px; }
-        .pq-info strong { font-size: var(--fs-base); font-weight: 700; color: var(--color-foreground); letter-spacing: -0.2px; }
-        .pq-info span { font-size: var(--fs-sm); color: var(--color-muted-foreground); }
+        .pq-info { display: flex; flex-direction: column; gap: 1px; }
+        .pq-info strong {
+            font-family: var(--font);
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: 0;
+        }
+        .pq-info span {
+            font-family: var(--font);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
         .pq-verified {
             margin-left: auto;
             display: inline-flex;
             align-items: center;
-            gap: var(--s-1);
-            color: var(--color-primary);
-            font-size: var(--fs-xs);
-            font-weight: 600;
-            background: var(--color-primary-soft);
-            padding: var(--s-2) var(--s-3);
-            border-radius: 100px;
-            border: 1px solid rgba(8, 145, 178, 0.15);
+            gap: 6px;
+            background: transparent;
+            border: none;
+            padding: 0;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 500;
         }
-        .pq-verified svg { width: 14px; height: 14px; }
+        .pq-verified svg { width: 14px; height: 14px; color: var(--accent); flex-shrink: 0; }
 
         /* ═══════════ GALLERY ═══════════ */
         .gallery {
             padding: var(--s-16) var(--s-10);
             background: var(--color-surface);
         }
-        .gallery-inner { max-width: 1200px; margin: 0 auto; }
+        .gallery-inner { max-width: 1080px; margin: 0 auto; }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1049,24 +1057,20 @@
             position: relative;
             aspect-ratio: 3 / 4;
             overflow: hidden;
-            cursor: pointer;
+            cursor: zoom-in;
             border-radius: var(--radius-lg);
-            background: var(--color-muted);
-            border: 1px solid var(--color-border);
-            transition: all var(--transition);
-        }
-        .gallery-item:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--color-primary);
+            background: var(--bg-warm);
+            border: 0.5px solid var(--border-subtle);
         }
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 400ms ease;
+            transition: transform 0.4s ease;
+            /* Uniform filter to even out mismatched lighting */
+            filter: contrast(1.05) saturate(0.95) brightness(0.98);
         }
-        .gallery-item:hover img { transform: scale(1.06); }
+        .gallery-item:hover img { transform: scale(1.03); }
         .gallery-item-zoom {
             position: absolute;
             top: var(--s-3);
@@ -1092,7 +1096,7 @@
             background: var(--color-muted);
             border-top: 1px solid var(--color-border);
         }
-        .transparency-inner { max-width: 1200px; margin: 0 auto; }
+        .transparency-inner { max-width: 1080px; margin: 0 auto; }
         .docs-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1128,13 +1132,6 @@
             text-align: center;
             line-height: 1.4;
             padding: 0 var(--s-2);
-        }
-        .badges-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--s-3);
-            max-width: 800px;
-            margin: 0 auto;
         }
         .badge {
             display: flex;
@@ -1206,55 +1203,77 @@
             margin-bottom: var(--s-8);
         }
         .bank-card {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border-warm);
-            border-radius: var(--radius-lg);
-            padding: var(--s-6) var(--s-5);
+            background: var(--bg-surface);
+            border: 0.5px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.25rem;
             text-align: left;
-            transition: all var(--transition);
-            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: border-color 0.2s ease, transform 0.2s ease;
         }
         .bank-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--color-accent);
+            border-color: var(--border-accent);
         }
         .bank-name {
-            font-size: var(--fs-xs);
-            font-weight: 700;
-            color: var(--color-accent-hover);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: var(--s-4);
+            font-family: var(--font);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            text-transform: none;
+            letter-spacing: 0;
+            margin: 0;
+        }
+        .card-holder {
+            font-family: var(--font);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: -0.5rem 0 0 0;
         }
         .card-number {
-            font-family: 'Inter', monospace;
+            font-family: 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
             font-feature-settings: 'tnum';
-            font-size: var(--fs-md);
-            font-weight: 700;
-            color: var(--color-foreground);
-            letter-spacing: 1px;
-            margin-bottom: var(--s-5);
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: 0.05em;
             word-break: break-all;
+            margin: 0;
         }
         .copy-btn {
-            min-height: var(--touch-min);
-            width: 100%;
-            background: var(--color-foreground);
-            color: var(--color-on-primary);
-            padding: var(--s-3) var(--s-4);
-            font-size: var(--fs-sm);
-            font-weight: 600;
-            border-radius: var(--radius);
-            transition: all var(--transition);
+            align-self: flex-start;
+            min-height: auto;
+            width: auto;
+            background: transparent;
+            color: var(--accent);
+            border: 0.5px solid var(--accent);
+            padding: 6px 14px;
+            font-family: var(--font);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: var(--s-2);
+            gap: 6px;
+            transform: scale(1);
         }
-        .copy-btn:hover { background: var(--color-foreground-soft); }
-        .copy-btn.copied { background: var(--color-success); }
-        .copy-btn svg { width: 16px; height: 16px; }
+        .copy-btn:hover {
+            background: rgba(232, 93, 44, 0.06);
+        }
+        .copy-btn.copied {
+            background: var(--accent);
+            color: var(--text-on-dark);
+            border-color: var(--accent);
+            animation: copyMorph 0.4s ease;
+        }
+        @keyframes copyMorph {
+            0%   { transform: scale(0.97); }
+            100% { transform: scale(1); }
+        }
+        .copy-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
 
         .card-holder {
             font-size: var(--fs-sm);
@@ -1315,124 +1334,115 @@
 
         /* ═══════════ FOOTER ═══════════ */
         footer {
-            background: var(--color-foreground);
-            color: var(--color-on-primary);
-            padding: var(--s-16) var(--s-10) var(--s-10);
+            background: var(--bg-dark);
+            color: var(--text-on-dark);
+            padding: 2.5rem 1.5rem;
             text-align: center;
         }
-        .footer-quote {
-            font-size: var(--fs-xl);
+        .footer-message {
+            font-family: var(--font-serif);
             font-style: italic;
             font-weight: 400;
-            margin-bottom: var(--s-10);
-            opacity: 0.9;
-            max-width: 580px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 auto 1.5rem auto;
+            max-width: 520px;
+            line-height: 1.6;
         }
-        .footer-contacts {
+        .footer-social {
             display: flex;
-            gap: var(--s-10);
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: var(--s-10);
-        }
-        .footer-contact {
-            display: flex;
-            align-items: center;
-            gap: var(--s-2);
-            font-size: var(--fs-sm);
-            color: rgba(255, 255, 255, 0.85);
-        }
-        .footer-contact svg { width: 16px; height: 16px; color: var(--color-secondary); }
-        .footer-contact a { color: inherit; transition: color var(--transition); }
-        .footer-contact a:hover { color: var(--color-secondary); }
-        .footer-bottom {
-            font-size: var(--fs-xs);
-            color: rgba(255, 255, 255, 0.5);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: var(--s-6);
-            letter-spacing: 0.5px;
-        }
-
-        /* ─── FLOATING ELEMENTS ─── */
-        /* Desktop: WhatsApp floating bottom-right */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 56px;
-            height: 56px;
-            background: var(--whatsapp);
-            color: var(--text-on-dark);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-            z-index: 90;
-            transition: all 0.2s ease;
-        }
-        .whatsapp-float:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5); }
-        .whatsapp-float:active { transform: translateY(0); }
-        .whatsapp-float svg { width: 28px; height: 28px; }
-
-        /* Mobile sticky bar (hidden on desktop ≥768px) */
-        .sticky-cta-bar {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--bg-dark);
-            padding: 12px 16px;
             gap: 12px;
-            align-items: center;
-            z-index: 50;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+            justify-content: center;
+            margin-bottom: 1.5rem;
         }
-        .sticky-cta-bar .cta-primary {
-            flex: 1;
-            min-height: 44px;
-            background: var(--accent);
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: transparent;
+            border: 0.5px solid rgba(255, 255, 255, 0.2);
             color: var(--text-on-dark);
-            border-radius: 8px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        .footer-social a:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            color: var(--accent-soft);
+        }
+        .footer-social svg { width: 18px; height: 18px; }
+        .footer-bottom {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ─── FLOATING CTAs (Yusif-style, all viewports, bottom-right) ─── */
+        .floating-ctas {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 60;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .float-whatsapp {
+            width: 52px;
+            height: 52px;
+            background: var(--whatsapp);
+            color: var(--text-on-dark);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        .float-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+            background: var(--whatsapp-hover);
+        }
+        .float-whatsapp:active { transform: translateY(0); }
+        .float-whatsapp svg { width: 24px; height: 24px; }
+
+        .float-donate {
+            background: var(--accent);
+            color: var(--text-on-dark);
+            padding: 12px 20px;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
             gap: 8px;
             font-family: var(--font);
             font-size: 0.875rem;
             font-weight: 600;
+            line-height: 1;
+            box-shadow: 0 4px 16px rgba(232, 93, 44, 0.3);
             transition: all 0.2s ease;
         }
-        .sticky-cta-bar .cta-primary:hover { background: var(--accent-hover); }
-        .sticky-cta-bar .cta-primary svg { width: 18px; height: 18px; }
-        .sticky-cta-bar .cta-whatsapp {
-            width: 40px;
-            height: 40px;
-            background: var(--whatsapp);
-            color: var(--text-on-dark);
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: background 0.2s ease;
+        .float-donate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232, 93, 44, 0.45);
+            background: var(--accent-hover);
         }
-        .sticky-cta-bar .cta-whatsapp:hover { background: var(--whatsapp-hover); }
-        .sticky-cta-bar .cta-whatsapp svg { width: 22px; height: 22px; }
+        .float-donate:active { transform: translateY(0); }
+        .float-donate svg { width: 18px; height: 18px; flex-shrink: 0; }
 
         @media (max-width: 767px) {
-            .whatsapp-float { display: none; }
-            .sticky-cta-bar { display: flex; }
-            body { padding-bottom: 76px; }
+            .floating-ctas { bottom: 16px; right: 16px; gap: 8px; }
+            .float-whatsapp { width: 48px; height: 48px; }
+            .float-whatsapp svg { width: 22px; height: 22px; }
+            .float-donate { padding: 10px 16px; font-size: 0.8125rem; }
+            .float-donate svg { width: 16px; height: 16px; }
         }
 
-        /* ─── Phase 1 Micro-interactions ─── */
-        .cta-primary:active,
-        .cta-whatsapp:active,
-        .whatsapp-float:active,
+        /* Micro-interactions baseline */
         .btn:active,
         .copy-btn:active,
         .scroll-indicator:active {
@@ -1474,16 +1484,20 @@
         .lightbox {
             position: fixed;
             inset: 0;
-            background: rgba(22, 78, 99, 0.95);
-            z-index: 1000;
+            background: rgba(10, 37, 64, 0.95);
+            z-index: 100;
             display: none;
             align-items: center;
             justify-content: center;
             padding: var(--s-10);
             cursor: zoom-out;
-            backdrop-filter: blur(6px);
+            opacity: 0;
+            transition: opacity 0.2s ease;
         }
-        .lightbox.active { display: flex; }
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
         .lightbox-img {
             max-width: 92vw;
             max-height: 90vh;
@@ -1507,7 +1521,7 @@
             transition: background var(--transition);
         }
         .lightbox-close:hover { background: rgba(255, 255, 255, 0.2); }
-        .lightbox-close svg { width: 24px; height: 24px; }
+        .lightbox-close svg { width: 32px; height: 32px; }
         .lightbox-nav {
             position: absolute;
             top: 50%;
@@ -1532,7 +1546,7 @@
             .hero { padding: var(--s-12) var(--s-8) var(--s-16); }
             .hero-grid { gap: var(--s-12); }
             .story-unified, .gallery, .transparency, .donation, .share {
-                padding: var(--s-12) var(--s-8);
+                padding: var(--s-10) var(--s-8);
             }
         }
 
@@ -1545,15 +1559,18 @@
 
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-3); }
             .stat { padding: var(--s-5) var(--s-3); }
-            .story-unified { padding: var(--s-16) var(--s-5); }
+            .story-unified, .gallery, .transparency, .donation, .share {
+                padding: 2.5rem 1.25rem;
+            }
+            .story-unified { padding: 2.5rem var(--s-5); }
             .unified-stats { grid-template-columns: repeat(2, 1fr); }
             .u-stat { padding: 1rem 0.875rem; }
             .u-stat-num { font-size: 1.625rem; }
-            .pull-quote { padding: var(--s-6) var(--s-5); margin: var(--s-8) 0; }
-            .pq-text { padding-right: 0; font-size: var(--fs-md); }
-            .pq-mark { width: 48px; height: 48px; }
+            .pull-quote { padding: 1.5rem 1.25rem; padding-top: 2rem; margin: 2rem 0; }
+            .pull-quote::before { font-size: 3.25rem; top: 0.4rem; left: 1rem; }
+            .pq-text { font-size: 1rem; }
             .pq-verified { margin-left: 0; }
-            .unified-story .story-paragraphs:first-of-type p:first-child::first-letter { font-size: 56px; }
+            .unified-story .story-paragraphs p { font-size: 1rem; line-height: 1.75; margin-bottom: 1.25rem; }
 
             .mother-quote { padding: var(--s-16) var(--s-5); }
             .mother-quote-card { padding: var(--s-8) var(--s-6); }
@@ -1567,7 +1584,6 @@
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .docs-grid { grid-template-columns: repeat(2, 1fr); }
             .cards-grid { grid-template-columns: 1fr; gap: var(--s-4); }
-            .badges-grid { grid-template-columns: 1fr; }
 
             .footer-contacts { gap: var(--s-5); }
         }
@@ -1628,7 +1644,7 @@
             </div>
             <div class="hero-grid">
                 <div class="hero-left">
-                    <span class="hero-eyebrow" data-i18n="heroEyebrow">XEYRİYYƏ · İNAD ABBASOV</span>
+                    <span class="hero-eyebrow" data-i18n="heroEyebrow">İNAD ABBASOV</span>
                     <h1 id="hero-title" class="hero-title" data-i18n="heroTitle">
                         Bir düşün.<br>Əgər o uşaq <em>sənin övladın</em> olsaydı?
                     </h1>
@@ -1754,24 +1770,6 @@
                         <div class="doc-title" data-i18n="doc3">Milli Hematologiya epikrizi</div>
                     </div>
                 </div>
-                <div class="badges-grid">
-                    <div class="badge">
-                        <span class="badge-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
-                        <span data-i18n="badge1">Rəsmi Medical Park sənədi</span>
-                    </div>
-                    <div class="badge">
-                        <span class="badge-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
-                        <span data-i18n="badge2">Prof. Dr. Akif Yeşilipek</span>
-                    </div>
-                    <div class="badge">
-                        <span class="badge-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
-                        <span data-i18n="badge3">68.000 USD dəqiq məbləğ</span>
-                    </div>
-                    <div class="badge">
-                        <span class="badge-check"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
-                        <span data-i18n="badge4">Bank rekvizitləri yoxlanılıb</span>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -1788,33 +1786,38 @@
                 <div class="cards-grid">
                     <div class="bank-card">
                         <div class="bank-name">Kapital Bank</div>
+                        <div class="card-holder">Abbasov Fariz</div>
                         <div class="card-number">4169 7388 0191 1817</div>
-                        <button class="copy-btn" data-card="4169738801911817">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                            <span data-i18n="copyBtn">Kart nömrəsini kopyala</span>
+                        <button class="copy-btn" data-card="4169738801911817" aria-label="Kart nömrəsini kopyala">
+                            <span class="copy-btn-icon" aria-hidden="true">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            </span>
+                            <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
                         </button>
                     </div>
                     <div class="bank-card">
                         <div class="bank-name">LeoBank</div>
+                        <div class="card-holder">Abbasov Fariz</div>
                         <div class="card-number">4098 5844 9826 8356</div>
-                        <button class="copy-btn" data-card="4098584498268356">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                            <span data-i18n="copyBtn">Kart nömrəsini kopyala</span>
+                        <button class="copy-btn" data-card="4098584498268356" aria-label="Kart nömrəsini kopyala">
+                            <span class="copy-btn-icon" aria-hidden="true">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            </span>
+                            <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
                         </button>
                     </div>
                     <div class="bank-card">
                         <div class="bank-name">ABB Bank</div>
+                        <div class="card-holder">Abbasov Fariz</div>
                         <div class="card-number">5522 0993 7747 1388</div>
-                        <button class="copy-btn" data-card="5522099377471388">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                            <span data-i18n="copyBtn">Kart nömrəsini kopyala</span>
+                        <button class="copy-btn" data-card="5522099377471388" aria-label="Kart nömrəsini kopyala">
+                            <span class="copy-btn-icon" aria-hidden="true">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            </span>
+                            <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
                         </button>
                     </div>
                 </div>
-
-                <p class="card-holder">
-                    <span data-i18n="cardHolderLabel">Kart sahibi:</span> <strong>Abbasov Fariz</strong> · <span data-i18n="cardHolderRole">İnadın atası</span>
-                </p>
 
                 <div class="donation-actions">
                     <a href="https://wa.me/994773059565?text=Salam%2C%20%C4%B0nada%20k%C3%B6m%C9%99k%20etm%C9%99k%20ist%C9%99yir%C9%99m" class="btn btn-whatsapp" target="_blank" rel="noopener">
@@ -1854,35 +1857,31 @@
 
     <!-- ═══════════ FOOTER ═══════════ -->
     <footer>
-        <p class="footer-quote" data-i18n="footerQuote">"Allah xatirinə..."</p>
-        <div class="footer-contacts">
-            <div class="footer-contact">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.493a1 1 0 01-.5 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.5l4.493 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                <a href="tel:+994773059565">+994 77 305 95 65</a>
-            </div>
-            <div class="footer-contact">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                <span data-i18n="footerAddress">Ağstafa rayonu, Qırlı kəndi</span>
-            </div>
+        <p class="footer-message" data-i18n="footerMessage">İnad üçün dua, dəstək, dua.</p>
+        <div class="footer-social" aria-label="Sosial şəbəkələr">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/994773059565" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
         </div>
-        <div class="footer-bottom" data-i18n="footerBottom">© 2026 İnad Abbasov Ailəsi — Bütün hüquqlar qorunur</div>
+        <div class="footer-bottom" data-i18n="footerBottom">© 2026 İnad Abbasov üçün toplanan dəstək · WhatsApp: +994 77 305 95 65</div>
     </footer>
 
-    <!-- Floating WhatsApp (desktop only) -->
-    <a href="https://wa.me/994773059565" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
-
-    <!-- Mobile sticky CTA bar (mobile only) -->
-    <div class="sticky-cta-bar" role="region" aria-label="Sürətli kömək">
-        <a href="#donation" class="cta-primary">
+    <!-- Floating CTAs (Yusif-style, all viewports, bottom-right) -->
+    <div class="floating-ctas" role="region" aria-label="Sürətli kömək">
+        <a href="https://wa.me/994773059565" class="float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="#donation" class="float-donate">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h.01M11 15h2M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
             <span data-i18n="floatingCardBtn">Kart hesabları</span>
-        </a>
-        <a href="https://wa.me/994773059565" class="cta-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </a>
     </div>
 
@@ -1915,7 +1914,7 @@
             skipLink: "İçəriyə keç",
             navCta: "Kömək Et",
             statusChip: "Müalicə davam edir · Medical Park · Antalya",
-            heroEyebrow: "XEYRİYYƏ · İNAD ABBASOV",
+            heroEyebrow: "İNAD ABBASOV",
             heroTitle: 'Bir düşün.<br>Əgər o uşaq <em>sənin övladın</em> olsaydı?',
             heroSubtitle: "İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.",
             treatmentLabel: "Hazırki status",
@@ -1945,14 +1944,10 @@
             doc1: "Medical Park müalicə planı",
             doc2: "Bank rekvizitləri + möhür",
             doc3: "Milli Hematologiya epikrizi",
-            badge1: "Rəsmi Medical Park sənədi",
-            badge2: "Prof. Dr. Akif Yeşilipek",
-            badge3: "68.000 USD dəqiq məbləğ",
-            badge4: "Bank rekvizitləri yoxlanılıb",
             climaxLabel: "İndi Kömək Et",
             donationTitle: "Bank Kartları",
             donationSubtitle: "Aşağıdakı kartlardan istənilən birinə birbaşa köçürmə edə bilərsiniz. Hər kart Abbasov Fariz (İnadın atası) adınadır.",
-            copyBtn: "Kart nömrəsini kopyala",
+            copyBtn: "Kopyala",
             copiedBtn: "Kopyalandı",
             cardHolderLabel: "Kart sahibi:",
             cardHolderRole: "İnadın atası",
@@ -1960,9 +1955,8 @@
             phoneCta: "+994 77 305 95 65",
             shareTitle: "Yardım paylaşımla başlayır",
             shareSubtitle: "Hər paylaşım İnadın yaşama şansını artırır",
-            footerQuote: '"Allah xatirinə..."',
-            footerAddress: "Ağstafa rayonu, Qırlı kəndi",
-            footerBottom: "© 2026 İnad Abbasov Ailəsi — Bütün hüquqlar qorunur",
+            footerMessage: "İnad üçün dua, dəstək, dua.",
+            footerBottom: "© 2026 İnad Abbasov üçün toplanan dəstək · WhatsApp: +994 77 305 95 65",
             mobileCta: "İnada Kömək Et",
             floatingCardBtn: "Kart hesabları",
             toastCopied: "Kart nömrəsi kopyalandı",
@@ -1974,7 +1968,7 @@
             skipLink: "Перейти к содержимому",
             navCta: "Помочь",
             statusChip: "Лечение продолжается · Medical Park · Анталия",
-            heroEyebrow: "БЛАГОТВОРИТЕЛЬНОСТЬ · ИНАД АББАСОВ",
+            heroEyebrow: "ИНАД АББАСОВ",
             heroTitle: 'Подумайте.<br>Что, если бы это был <em>ваш ребёнок</em>?',
             heroSubtitle: "Инаду 16 лет. 3 года он борется с раком крови. Его семья отдала 2 сыновей за Родину. Теперь они просят вашей помощи, чтобы спасти 3-го ребёнка.",
             treatmentLabel: "Текущий статус",
@@ -2004,14 +1998,10 @@
             doc1: "План лечения Medical Park",
             doc2: "Банковские реквизиты + печать",
             doc3: "Эпикриз Национальной гематологии",
-            badge1: "Официальный документ Medical Park",
-            badge2: "Проф. Др. Акиф Йешилипек",
-            badge3: "Точная сумма 68 000 USD",
-            badge4: "Банковские реквизиты проверены",
             climaxLabel: "Помочь Сейчас",
             donationTitle: "Банковские карты",
             donationSubtitle: "Вы можете перевести напрямую на любую из карт ниже. Все карты на имя Abbasov Fariz (отец Инада).",
-            copyBtn: "Скопировать номер карты",
+            copyBtn: "Копировать",
             copiedBtn: "Скопировано",
             cardHolderLabel: "Владелец карты:",
             cardHolderRole: "отец Инада",
@@ -2019,9 +2009,8 @@
             phoneCta: "+994 77 305 95 65",
             shareTitle: "Помощь начинается с распространения",
             shareSubtitle: "Каждый репост увеличивает шансы Инада на жизнь",
-            footerQuote: '"Ради Бога..."',
-            footerAddress: "Агстафинский район, село Гырлы",
-            footerBottom: "© 2026 Семья Инада Абасова — Все права защищены",
+            footerMessage: "Молитвы и поддержка для Инада.",
+            footerBottom: "© 2026 Поддержка для Инада Аббасова · WhatsApp: +994 77 305 95 65",
             mobileCta: "Помочь Инаду",
             floatingCardBtn: "Банковские карты",
             toastCopied: "Номер карты скопирован",
@@ -2033,7 +2022,7 @@
             skipLink: "Skip to content",
             navCta: "Donate",
             statusChip: "Treatment in progress · Medical Park · Antalya",
-            heroEyebrow: "CHARITY · İNAD ABBASOV",
+            heroEyebrow: "İNAD ABBASOV",
             heroTitle: 'Just imagine.<br>What if this child were <em>your own</em>?',
             heroSubtitle: "İnad is 16 years old. For 3 years he has been fighting blood cancer. His family has lost 2 sons for the Motherland. Now they ask for your help to save their 3rd child.",
             treatmentLabel: "Current status",
@@ -2063,14 +2052,10 @@
             doc1: "Medical Park treatment plan",
             doc2: "Bank details + official stamp",
             doc3: "National Hematology epicrisis",
-            badge1: "Official Medical Park document",
-            badge2: "Prof. Dr. Akif Yeşilipek",
-            badge3: "Exact amount: $68,000 USD",
-            badge4: "Bank details verified",
             climaxLabel: "Help Now",
             donationTitle: "Bank Cards",
             donationSubtitle: "You can transfer directly to any of the cards below. All cards are in the name of Abbasov Fariz (İnad's father).",
-            copyBtn: "Copy card number",
+            copyBtn: "Copy",
             copiedBtn: "Copied",
             cardHolderLabel: "Card holder:",
             cardHolderRole: "İnad's father",
@@ -2078,9 +2063,8 @@
             phoneCta: "+994 77 305 95 65",
             shareTitle: "Help begins with sharing",
             shareSubtitle: "Every share increases İnad's chance of survival",
-            footerQuote: '"For God\'s sake..."',
-            footerAddress: "Aghstafa district, Qırlı village",
-            footerBottom: "© 2026 İnad Abbasov Family — All rights reserved",
+            footerMessage: "Prayers and support for İnad.",
+            footerBottom: "© 2026 Support raised for İnad Abbasov · WhatsApp: +994 77 305 95 65",
             mobileCta: "Help İnad",
             floatingCardBtn: "Bank Cards",
             toastCopied: "Card number copied",
@@ -2137,12 +2121,16 @@
     }
 
     // ═══════════ COPY TO CLIPBOARD + META PIXEL ═══════════
+    const COPY_ICON_DEFAULT = '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>';
+    const COPY_ICON_CHECK = '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>';
+
     document.querySelectorAll('.copy-btn').forEach(btn => {
         btn.addEventListener('click', async () => {
             const cardNum = btn.dataset.card;
             const t = TRANSLATIONS[currentLang];
-            const textSpan = btn.querySelector('span');
-            const originalText = textSpan.textContent;
+            const iconSpan = btn.querySelector('.copy-btn-icon');
+            const labelSpan = btn.querySelector('.copy-btn-label');
+            const originalLabel = labelSpan.textContent;
 
             const success = await (async () => {
                 try {
@@ -2165,7 +2153,8 @@
 
             if (success) {
                 btn.classList.add('copied');
-                textSpan.textContent = t.copiedBtn;
+                if (iconSpan) iconSpan.innerHTML = COPY_ICON_CHECK;
+                labelSpan.textContent = t.copiedBtn;
                 showToast(t.toastCopied);
 
                 if (typeof fbq !== 'undefined') {
@@ -2180,8 +2169,9 @@
 
                 setTimeout(() => {
                     btn.classList.remove('copied');
-                    textSpan.textContent = originalText;
-                }, 2200);
+                    if (iconSpan) iconSpan.innerHTML = COPY_ICON_DEFAULT;
+                    labelSpan.textContent = originalLabel;
+                }, 2000);
             } else {
                 showToast(t.toastCopyError, true);
             }
