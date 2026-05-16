@@ -356,16 +356,17 @@
             background: var(--color-primary);
         }
 
-        /* ═══════════ HERO (Photo background + text overlay) ═══════════ */
+        /* ═══════════ HERO (Phase 4 polish — italic subtext, date badge, story link) ═══════════ */
         .hero {
             position: relative;
-            min-height: 90vh;
+            min-height: 92vh;
             padding: var(--s-24) var(--s-10) var(--s-16);
             overflow: hidden;
             color: var(--text-on-dark);
             background: var(--bg-dark);
             display: flex;
             align-items: center;
+            justify-content: center;
         }
         .hero::before {
             content: '';
@@ -383,7 +384,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(10, 37, 64, 0.55) 0%, rgba(10, 37, 64, 0.92) 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.60) 50%, rgba(10, 37, 64, 0.88) 100%);
             z-index: 1;
             pointer-events: none;
         }
@@ -392,13 +393,19 @@
         .hero-grid {
             max-width: 720px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--s-6);
-            align-items: center;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        .hero-left { max-width: 100%; }
+        .hero-left {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
         /* Hero eyebrow — small uppercase accent text above headline */
         .hero-eyebrow {
@@ -408,11 +415,31 @@
             letter-spacing: 0.2em;
             text-transform: uppercase;
             color: var(--accent);
-            margin-bottom: var(--s-4);
+            margin: 0 0 1rem 0;
             display: inline-block;
         }
 
-        /* Hero headline — Fraunces serif on dark */
+        /* Date badge — glassmorphism pill below eyebrow */
+        .hero-date-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 0.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            padding: 8px 16px;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 0.8125rem;
+            margin: 0 auto 1.5rem auto;
+            width: fit-content;
+        }
+        .hero-date-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .hero-date-label { font-weight: 400; }
+        .hero-date-value { font-weight: 500; }
+
+        /* Hero headline — Fraunces serif, centered */
         .hero .hero-title {
             font-family: var(--font-serif);
             font-weight: 500;
@@ -420,7 +447,8 @@
             letter-spacing: -0.02em;
             color: var(--text-on-dark);
             font-size: 2.5rem;
-            margin: 0 0 var(--s-5) 0;
+            margin: 0;
+            text-align: center;
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         }
         .hero .hero-title em {
@@ -430,13 +458,19 @@
             font-family: var(--font-serif);
             font-weight: 500;
         }
+
+        /* Hero subtext — italic Fraunces serif, centered */
         .hero .hero-subtitle {
-            color: rgba(255, 255, 255, 0.92);
-            font-size: 1rem;
-            line-height: 1.7;
-            max-width: 520px;
-            margin: 0;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.55;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 620px;
+            margin: 1.75rem auto 0 auto;
+            text-align: center;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         }
 
         /* Trust pill at top-right of hero */
@@ -453,34 +487,58 @@
         }
         .hero > .photo-trust-pill svg { width: 14px; height: 14px; }
 
-        /* Scroll indicator at bottom of hero */
-        .scroll-indicator {
-            position: absolute;
-            bottom: var(--s-6);
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            color: rgba(255, 255, 255, 0.6);
+        /* Hero story link — animated chevrons */
+        .hero-story-link {
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: scrollBounce 2s ease-in-out infinite;
+            gap: 1rem;
+            margin-top: 3rem;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.85);
+            transition: color 0.2s ease;
         }
-        .scroll-indicator svg { width: 24px; height: 24px; }
-        @keyframes scrollBounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50%      { transform: translateX(-50%) translateY(6px); }
+        .hero-story-link:hover { color: #FFFFFF; }
+        .hero-story-text {
+            font-family: var(--font);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        .hero-chevrons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 0.6;
+        }
+        .hero-chevrons svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+            animation: chevron-bounce 2s ease-in-out infinite;
+        }
+        .hero-chevrons svg:nth-child(2) {
+            animation-delay: 0.2s;
+            opacity: 0.4;
+            margin-top: -8px;
+        }
+        @keyframes chevron-bounce {
+            0%, 100% { transform: translateY(0); opacity: 0.5; }
+            50%      { transform: translateY(4px); opacity: 1; }
         }
         @media (prefers-reduced-motion: reduce) {
-            .scroll-indicator { animation: none; }
+            .hero-chevrons svg { animation: none; opacity: 0.7; }
         }
 
         @media (max-width: 768px) {
-            .hero { min-height: 80vh; padding: var(--s-16) var(--s-5) var(--s-12); }
+            .hero { min-height: 88vh; padding: var(--s-16) var(--s-5) var(--s-12); }
             .hero .hero-title { font-size: 1.75rem; }
-            .hero .hero-subtitle { font-size: 0.95rem; }
+            .hero .hero-subtitle { font-size: 1rem; margin-top: 1.25rem; }
             .hero-eyebrow { font-size: 0.65rem; }
-            .scroll-indicator { bottom: var(--s-4); }
+            .hero-date-badge { font-size: 0.75rem; padding: 6px 14px; margin-bottom: 1.25rem; }
+            .hero-story-link { margin-top: 2.25rem; gap: 0.75rem; }
+            .hero-story-text { font-size: 0.75rem; }
         }
 
         .status-chip {
@@ -1441,7 +1499,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            gap: 12px;
+            gap: 14px;
         }
         .float-donate {
             background: var(--accent);
@@ -1471,8 +1529,8 @@
         }
 
         .float-whatsapp {
-            width: 52px;
-            height: 52px;
+            width: 64px;
+            height: 64px;
             background: var(--whatsapp);
             color: var(--text-on-dark);
             border-radius: 50%;
@@ -1489,12 +1547,12 @@
             background: var(--whatsapp-hover);
         }
         .float-whatsapp:active { transform: translateY(0); }
-        .float-whatsapp svg { width: 24px; height: 24px; }
+        .float-whatsapp svg { width: 28px; height: 28px; }
 
         @media (max-width: 767px) {
-            .floating-ctas { bottom: 16px; right: 16px; gap: 10px; }
-            .float-whatsapp { width: 48px; height: 48px; }
-            .float-whatsapp svg { width: 22px; height: 22px; }
+            .floating-ctas { bottom: 16px; right: 16px; gap: 12px; }
+            .float-whatsapp { width: 56px; height: 56px; }
+            .float-whatsapp svg { width: 24px; height: 24px; }
             .float-donate { padding: 10px 16px; font-size: 0.8125rem; }
             .float-donate svg { width: 16px; height: 16px; }
         }
@@ -1690,6 +1748,13 @@
             <div class="hero-grid">
                 <div class="hero-left">
                     <span class="hero-eyebrow" data-i18n="heroEyebrow">İNAD ABBASOV</span>
+                    <div class="hero-date-badge">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span class="hero-date-label" data-i18n="lastUpdatedLabel">Son yenilənmə:</span>
+                        <span class="hero-date-value" id="lastUpdated">17 May 2026</span>
+                    </div>
                     <h1 id="hero-title" class="hero-title" data-i18n="heroTitle">
                         Bir düşün.<br>Əgər o uşaq <em>sənin övladın</em> olsaydı?
                     </h1>
@@ -1697,17 +1762,19 @@
                         İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır.
                         Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.
                     </p>
+                    <a href="#story" class="hero-story-link">
+                        <span class="hero-story-text" data-i18n="heroStoryLink">İnadın hekayəsini oxu</span>
+                        <span class="hero-chevrons" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                        </span>
+                    </a>
                 </div>
             </div>
-            <a href="#story-section" class="scroll-indicator" aria-label="Aşağı sürüşdür">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
-                </svg>
-            </a>
         </section>
 
         <!-- ═══════════ UNIFIED STORY (stats + quote + narrative) ═══════════ -->
-        <section class="story-unified" id="story-section">
+        <section class="story-unified" id="story">
             <div class="unified-inner">
                 <div class="unified-header">
                     <h2 class="section-title" data-i18n="storyTitle">İnadın Hekayəsi</h2>
@@ -2004,6 +2071,8 @@
             navCta: "Kömək Et",
             statusChip: "Müalicə davam edir · Medical Park · Antalya",
             heroEyebrow: "İNAD ABBASOV",
+            lastUpdatedLabel: "Son yenilənmə:",
+            heroStoryLink: "İnadın hekayəsini oxu",
             heroTitle: 'Bir düşün.<br>Əgər o uşaq <em>sənin övladın</em> olsaydı?',
             heroSubtitle: "İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.",
             treatmentLabel: "Hazırki status",
@@ -2064,6 +2133,8 @@
             navCta: "Помочь",
             statusChip: "Лечение продолжается · Medical Park · Анталия",
             heroEyebrow: "ИНАД АББАСОВ",
+            lastUpdatedLabel: "Последнее обновление:",
+            heroStoryLink: "Читать историю Инада",
             heroTitle: 'Подумайте.<br>Что, если бы это был <em>ваш ребёнок</em>?',
             heroSubtitle: "Инаду 16 лет. 3 года он борется с раком крови. Его семья отдала 2 сыновей за Родину. Теперь они просят вашей помощи, чтобы спасти 3-го ребёнка.",
             treatmentLabel: "Текущий статус",
@@ -2124,6 +2195,8 @@
             navCta: "Donate",
             statusChip: "Treatment in progress · Medical Park · Antalya",
             heroEyebrow: "İNAD ABBASOV",
+            lastUpdatedLabel: "Last updated:",
+            heroStoryLink: "Read İnad's story",
             heroTitle: 'Just imagine.<br>What if this child were <em>your own</em>?',
             heroSubtitle: "İnad is 16 years old. For 3 years he has been fighting blood cancer. His family has lost 2 sons for the Motherland. Now they ask for your help to save their 3rd child.",
             treatmentLabel: "Current status",
@@ -2183,6 +2256,20 @@
 
     let currentLang = 'az';
 
+    // ═══════════ Localized date formatter ═══════════
+    const LAST_UPDATED_DATE = "2026-05-17";
+    const MONTH_NAMES = {
+        az: ["Yanvar", "Fevral", "Mart", "Aprel", "May", "İyun", "İyul", "Avqust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"],
+        ru: ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"],
+        en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    };
+    function formatLocalizedDate(isoDate, lang) {
+        const [year, month, day] = isoDate.split('-').map(Number);
+        const monthName = (MONTH_NAMES[lang] || MONTH_NAMES.az)[month - 1];
+        if (lang === 'en') return `${monthName} ${day}, ${year}`;
+        return `${day} ${monthName} ${year}`;
+    }
+
     function setLanguage(lang) {
         if (!TRANSLATIONS[lang]) return;
         currentLang = lang;
@@ -2204,6 +2291,10 @@
         const storyEl2 = document.getElementById('storyText2');
         if (storyEl1 && t.storyHtml1) storyEl1.innerHTML = t.storyHtml1;
         if (storyEl2 && t.storyHtml2) storyEl2.innerHTML = t.storyHtml2;
+
+        // Localized "Last updated" date
+        const dateEl = document.getElementById('lastUpdated');
+        if (dateEl) dateEl.textContent = formatLocalizedDate(LAST_UPDATED_DATE, lang);
 
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
