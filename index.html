@@ -2255,6 +2255,85 @@
 
     let currentLang = 'az';
 
+    // ═══════════ Stat counter (count-up animation when scrolled into view) ═══════════
+    const STAT_TARGETS = [3, 16, 68000, 2];
+    let statsAnimated = false;
+
+    function formatStatNumber(value, lang) {
+        if (value < 1000) return value.toString();
+        try {
+            const locale = lang === 'az' ? 'de-DE' : lang === 'ru' ? 'ru-RU' : 'en-US';
+            return new Intl.NumberFormat(locale).format(value);
+        } catch (e) {
+            return value.toString();
+        }
+    }
+
+    function applyStatValue(el, value) {
+        const unitSpan = el.querySelector('.u-stat-unit');
+        const formatted = formatStatNumber(value, currentLang);
+        if (!unitSpan) {
+            el.textContent = formatted;
+        } else {
+            const isPrefix = el.firstChild === unitSpan;
+            const unitHTML = unitSpan.outerHTML;
+            el.innerHTML = isPrefix ? unitHTML + formatted : formatted + unitHTML;
+        }
+    }
+
+    function syncStats() {
+        document.querySelectorAll('.u-stat-num').forEach((el, i) => {
+            const target = STAT_TARGETS[i];
+            if (target === undefined) return;
+            applyStatValue(el, statsAnimated ? target : 0);
+        });
+    }
+
+    function animateStats() {
+        if (statsAnimated) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            statsAnimated = true;
+            syncStats();
+            return;
+        }
+        statsAnimated = true;
+        const duration = 1800;
+        const startTime = performance.now();
+        const easeOutQuart = t => 1 - Math.pow(1 - t, 4);
+        const stats = document.querySelectorAll('.u-stat-num');
+        function tick(now) {
+            const elapsed = now - startTime;
+            const t = Math.min(elapsed / duration, 1);
+            const eased = easeOutQuart(t);
+            stats.forEach((el, i) => {
+                const target = STAT_TARGETS[i];
+                if (target === undefined) return;
+                applyStatValue(el, Math.round(target * eased));
+            });
+            if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+
+    function setupStatsObserver() {
+        const target = document.querySelector('.unified-stats');
+        if (!target) return;
+        if (!('IntersectionObserver' in window)) {
+            statsAnimated = true;
+            syncStats();
+            return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.4 });
+        observer.observe(target);
+    }
+
     // ═══════════ Localized date formatter ═══════════
     const LAST_UPDATED_DATE = "2026-05-17";
     const MONTH_NAMES = {
@@ -2294,6 +2373,9 @@
         // Localized "Last updated" date
         const dateEl = document.getElementById('lastUpdated');
         if (dateEl) dateEl.textContent = formatLocalizedDate(LAST_UPDATED_DATE, lang);
+
+        // Reconcile stat counters with the new language (preserves animation state)
+        syncStats();
 
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -2480,6 +2562,7 @@
         let savedLang = 'az';
         try { savedLang = localStorage.getItem('inad-lang') || 'az'; } catch (e) {}
         setLanguage(savedLang);
+        setupStatsObserver();
     })();
     </script>
 </body>
