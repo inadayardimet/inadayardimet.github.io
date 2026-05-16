@@ -224,27 +224,6 @@
             box-shadow: var(--shadow-sm);
         }
 
-        .nav-cta {
-            min-height: var(--touch-min);
-            background: var(--color-accent);
-            color: var(--color-on-primary);
-            padding: 0 var(--s-5);
-            font-size: var(--fs-sm);
-            font-weight: 600;
-            border-radius: var(--radius);
-            display: inline-flex;
-            align-items: center;
-            gap: var(--s-2);
-            transition: all var(--transition);
-            box-shadow: var(--shadow-sm);
-        }
-        .nav-cta:hover {
-            background: var(--color-accent-hover);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-1px);
-        }
-        .nav-cta svg { width: 16px; height: 16px; }
-
         /* ─── BUTTON SYSTEM ─── */
         .btn {
             min-height: var(--touch-min);
@@ -1471,7 +1450,6 @@
 
         @media (max-width: 480px) {
             .nav { padding: var(--s-3) var(--s-4); }
-            .nav-cta span { display: none; }
             .nav-actions { gap: var(--s-2); }
 
             .hero { padding: var(--s-8) var(--s-4) var(--s-10); }
@@ -1511,13 +1489,6 @@
                 <button class="lang-btn" data-lang="ru">RU</button>
                 <button class="lang-btn" data-lang="en">EN</button>
             </div>
-            <a href="#donation" class="nav-cta">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"/>
-                </svg>
-                <span data-i18n="navCta">Kömək Et</span>
-            </a>
         </div>
     </header>
 
