@@ -200,6 +200,25 @@
             h3 { font-size: 1.25rem; }
         }
 
+        /* ─── SCROLL ANIMATIONS (IntersectionObserver) ─── */
+        [data-animate] {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+            will-change: opacity, transform;
+        }
+        [data-animate].in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            [data-animate] {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
         /* ─── ACCESSIBILITY ─── */
         :focus { outline: none; }
         :focus-visible {
@@ -531,68 +550,6 @@
             margin-bottom: var(--s-10);
             max-width: 580px;
         }
-
-        .treatment-card {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            padding: var(--s-5) var(--s-6);
-            margin-bottom: var(--s-8);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: var(--s-6);
-            box-shadow: var(--shadow-sm);
-            max-width: 560px;
-        }
-        .treatment-card-left { display: flex; align-items: center; gap: var(--s-4); }
-        .treatment-card-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--color-muted);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            flex-shrink: 0;
-        }
-        .treatment-card-icon svg { width: 22px; height: 22px; }
-        .treatment-card-label {
-            font-size: var(--fs-xs);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: var(--color-muted-foreground);
-            margin-bottom: 2px;
-        }
-        .treatment-card-value {
-            font-size: var(--fs-base);
-            font-weight: 600;
-            color: var(--color-foreground);
-        }
-        .treatment-card-right {
-            text-align: right;
-            border-left: 1px solid var(--color-border);
-            padding-left: var(--s-6);
-        }
-        .treatment-card-counter {
-            font-size: var(--fs-3xl);
-            font-weight: 800;
-            line-height: 1;
-            color: var(--color-primary);
-            letter-spacing: -1px;
-        }
-        .treatment-card-counter-label {
-            font-size: var(--fs-xs);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: var(--color-muted-foreground);
-            margin-top: var(--s-1);
-        }
-
-        .hero-ctas { display: flex; gap: var(--s-3); flex-wrap: wrap; }
 
         .hero-right { position: relative; }
         .hero-photo {
@@ -946,11 +903,11 @@
         .u-stat.highlight .u-stat-unit { color: var(--accent); }
         .u-stat.highlight .u-stat-label { color: var(--accent-text); }
 
-        /* Story body — no drop cap, comfortable reading */
+        /* Story body — no drop cap, comfortable reading, slightly bolder */
         .unified-story .story-paragraphs p {
             font-family: var(--font);
             font-size: 1.0625rem;
-            font-weight: 400;
+            font-weight: 500;
             line-height: 1.8;
             color: var(--text-body);
             margin-bottom: 1.5rem;
@@ -1159,6 +1116,75 @@
         }
         .badge-check svg { width: 16px; height: 16px; }
 
+        /* ═══════════ DONATION IMPACT (text-only amount cards) ═══════════ */
+        .donation-impact {
+            padding: 4rem 1.5rem;
+            background: var(--bg-primary);
+        }
+        .container-narrow {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .impact-title {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            font-size: 2rem;
+            color: var(--text-primary);
+            text-align: center;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.02em;
+        }
+        .impact-subtitle {
+            font-family: var(--font);
+            font-size: 1rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin: 0 auto 2.5rem auto;
+            line-height: 1.6;
+            max-width: 560px;
+        }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .impact-card {
+            background: var(--bg-surface);
+            border: 0.5px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .impact-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-accent);
+            box-shadow: 0 8px 24px rgba(232, 93, 44, 0.08);
+        }
+        .impact-amount {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            font-size: 1.75rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+        .impact-desc {
+            font-family: var(--font);
+            font-size: 0.875rem;
+            color: var(--text-body);
+            line-height: 1.5;
+        }
+        @media (max-width: 1023px) {
+            .impact-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .donation-impact { padding: 2.5rem 1rem; }
+            .impact-title { font-size: 1.5rem; }
+            .impact-grid { grid-template-columns: 1fr; }
+            .impact-amount { font-size: 1.5rem; }
+        }
+
         /* ═══════════ CHAPTER 5 — DONATION (Climax CTA) ═══════════ */
         .donation {
             padding: var(--s-16) var(--s-10);
@@ -1202,78 +1228,104 @@
             gap: var(--s-4);
             margin-bottom: var(--s-8);
         }
+        /* Bank card — Phase 3 structure */
         .bank-card {
             background: var(--bg-surface);
-            border: 0.5px solid var(--border-subtle);
             border-radius: 12px;
-            padding: 1.25rem;
+            padding: 1.5rem;
             text-align: left;
+            position: relative;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
-            transition: border-color 0.2s ease, transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .bank-card:hover {
-            border-color: var(--border-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(10, 37, 64, 0.08);
+        }
+        .bank-card-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 12px 12px 0 0;
         }
         .bank-name {
-            font-family: var(--font);
-            font-size: 1rem;
+            font-family: var(--font-serif);
             font-weight: 500;
+            font-size: 1.25rem;
             color: var(--text-primary);
-            text-transform: none;
-            letter-spacing: 0;
-            margin: 0;
+            letter-spacing: -0.01em;
+            margin: 0 0 1rem 0;
         }
-        .card-holder {
-            font-family: var(--font);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin: -0.5rem 0 0 0;
+        .card-number-box {
+            background: var(--bg-warm);
+            border-radius: 8px;
+            padding: 0.875rem 1rem;
+            text-align: center;
+            margin-bottom: 0.875rem;
         }
         .card-number {
-            font-family: 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+            font-family: 'JetBrains Mono', 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
             font-feature-settings: 'tnum';
             font-size: 1.125rem;
             font-weight: 500;
             color: var(--text-primary);
             letter-spacing: 0.05em;
-            word-break: break-all;
             margin: 0;
+            word-break: keep-all;
+            white-space: nowrap;
         }
-        .copy-btn {
-            align-self: flex-start;
-            min-height: auto;
-            width: auto;
-            background: transparent;
-            color: var(--accent);
-            border: 0.5px solid var(--accent);
-            padding: 6px 14px;
-            font-family: var(--font);
-            font-size: 0.875rem;
-            font-weight: 500;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            transform: scale(1);
-        }
-        .copy-btn:hover {
-            background: rgba(232, 93, 44, 0.06);
-        }
-        .copy-btn.copied {
+        .copy-btn-full {
+            width: 100%;
             background: var(--accent);
             color: var(--text-on-dark);
-            border-color: var(--accent);
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-family: var(--font);
+            font-size: 0.9375rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        .copy-btn-full:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+        .copy-btn-full:active { transform: translateY(0); }
+        .copy-btn-full.copied {
+            background: #1A9550;
+            color: var(--text-on-dark);
             animation: copyMorph 0.4s ease;
         }
         @keyframes copyMorph {
             0%   { transform: scale(0.97); }
             100% { transform: scale(1); }
         }
-        .copy-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .copy-btn-full svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+        .card-holder {
+            margin-top: 0.875rem;
+            text-align: center;
+        }
+        .card-holder-label {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .card-holder-name {
+            font-size: 0.8125rem;
+            color: var(--text-body);
+            margin-left: 4px;
+        }
 
         .card-holder {
             font-size: var(--fs-sm);
@@ -1380,16 +1432,44 @@
             margin: 0 auto;
         }
 
-        /* ─── FLOATING CTAs (Yusif-style, all viewports, bottom-right) ─── */
+        /* ─── FLOATING CTAs (stacked vertically, Kart hesabları with pulse) ─── */
         .floating-ctas {
             position: fixed;
             bottom: 24px;
             right: 24px;
             z-index: 60;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-end;
             gap: 12px;
         }
+        .float-donate {
+            background: var(--accent);
+            color: var(--text-on-dark);
+            padding: 12px 20px;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font);
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1;
+            box-shadow: 0 4px 16px rgba(232, 93, 44, 0.3);
+            transition: background 0.2s ease, transform 0.2s ease;
+            animation: soft-pulse 2s ease-in-out infinite;
+        }
+        .float-donate:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+        .float-donate:active { transform: translateY(0); }
+        .float-donate svg { width: 18px; height: 18px; flex-shrink: 0; }
+        @keyframes soft-pulse {
+            0%, 100% { box-shadow: 0 4px 16px rgba(232, 93, 44, 0.3), 0 0 0 0 rgba(232, 93, 44, 0.4); }
+            50%      { box-shadow: 0 4px 20px rgba(232, 93, 44, 0.4), 0 0 0 8px rgba(232, 93, 44, 0); }
+        }
+
         .float-whatsapp {
             width: 52px;
             height: 52px;
@@ -1411,35 +1491,16 @@
         .float-whatsapp:active { transform: translateY(0); }
         .float-whatsapp svg { width: 24px; height: 24px; }
 
-        .float-donate {
-            background: var(--accent);
-            color: var(--text-on-dark);
-            padding: 12px 20px;
-            border-radius: 100px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-family: var(--font);
-            font-size: 0.875rem;
-            font-weight: 600;
-            line-height: 1;
-            box-shadow: 0 4px 16px rgba(232, 93, 44, 0.3);
-            transition: all 0.2s ease;
-        }
-        .float-donate:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(232, 93, 44, 0.45);
-            background: var(--accent-hover);
-        }
-        .float-donate:active { transform: translateY(0); }
-        .float-donate svg { width: 18px; height: 18px; flex-shrink: 0; }
-
         @media (max-width: 767px) {
-            .floating-ctas { bottom: 16px; right: 16px; gap: 8px; }
+            .floating-ctas { bottom: 16px; right: 16px; gap: 10px; }
             .float-whatsapp { width: 48px; height: 48px; }
             .float-whatsapp svg { width: 22px; height: 22px; }
             .float-donate { padding: 10px 16px; font-size: 0.8125rem; }
             .float-donate svg { width: 16px; height: 16px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .float-donate { animation: none; }
         }
 
         /* Micro-interactions baseline */
@@ -1555,7 +1616,6 @@
             .hero-grid { gap: var(--s-10); }
             .hero-photo { aspect-ratio: 16 / 11; }
             .hero-photo img { object-position: center 25%; }
-            .treatment-card { max-width: 100%; }
 
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-3); }
             .stat { padding: var(--s-5) var(--s-3); }
@@ -1595,21 +1655,6 @@
             .hero { padding: var(--s-8) var(--s-4) var(--s-10); }
             .hero-subtitle { font-size: var(--fs-base); margin-bottom: var(--s-6); }
 
-            .treatment-card { flex-direction: column; align-items: stretch; gap: var(--s-3); }
-            .treatment-card-right {
-                border-left: none;
-                border-top: 1px solid var(--color-border);
-                padding-left: 0;
-                padding-top: var(--s-3);
-                text-align: left;
-                display: flex;
-                align-items: baseline;
-                gap: var(--s-3);
-            }
-            .treatment-card-counter { font-size: var(--fs-2xl); }
-
-            .hero-ctas { flex-direction: column; width: 100%; }
-            .hero-ctas .btn { width: 100%; }
             .donation-actions { flex-direction: column; width: 100%; }
             .donation-actions .btn { width: 100%; }
 
@@ -1689,12 +1734,12 @@
                 </div>
 
                 <article class="unified-story">
-                    <div id="storyText1" class="story-paragraphs">
+                    <div id="storyText1" class="story-paragraphs" data-animate>
                         <p>İnad Abbasov 3 ildir kəskin leykoz (qan xərçəngi) ilə mübarizə aparır. Bu 3 il ərzində ailə nəyi var idisə satdı — evini, əşyasını, ümidlərini belə.</p>
                         <p>Borcla, göz yaşıyla, dua ilə bu günə qədər gətirdilər. Amma artıq gücləri qalmayıb.</p>
                     </div>
 
-                    <blockquote class="pull-quote">
+                    <blockquote class="pull-quote" data-animate>
                         <svg class="pq-mark" viewBox="0 0 80 80" fill="currentColor" aria-hidden="true">
                             <path d="M22 18C13.2 18 6 25.2 6 34v18c0 5.5 4.5 10 10 10h14V40H18c0-4.4 3.6-8 8-8V18zM58 18c-8.8 0-16 7.2-16 16v18c0 5.5 4.5 10 10 10h14V40H54c0-4.4 3.6-8 8-8V18z"/>
                         </svg>
@@ -1714,7 +1759,7 @@
                         </cite>
                     </blockquote>
 
-                    <div id="storyText2" class="story-paragraphs">
+                    <div id="storyText2" class="story-paragraphs" data-animate>
                         <p>İnad atası gündəlik fəhləliklə (şofer işləyir) ailəni dolandırmağa çalışır. Ana evlərə təmizliyə gedir.</p>
                         <p>İnad hazırda Türkiyədə Medical Park xəstəxanasında müalicə alır. Onun yaşaması üçün təcili ilik nəql (transplantasiya) olunmalıdır.</p>
                     </div>
@@ -1728,19 +1773,19 @@
                 <h2 class="section-title" data-i18n="galleryTitle">İnadın gözündən</h2>
                 <span class="section-title-underline" aria-hidden="true"></span>
                 <div class="gallery-grid">
-                    <div class="gallery-item" data-img="inad1.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt">
+                    <div class="gallery-item" data-img="inad1.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt" data-animate style="transition-delay: 0ms">
                         <img src="inad1.jpg" alt="İnad" loading="lazy">
                         <div class="gallery-item-zoom" aria-hidden="true">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
                         </div>
                     </div>
-                    <div class="gallery-item" data-img="inad2.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt">
+                    <div class="gallery-item" data-img="inad2.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt" data-animate style="transition-delay: 100ms">
                         <img src="inad2.jpg" alt="İnad" loading="lazy">
                         <div class="gallery-item-zoom" aria-hidden="true">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
                         </div>
                     </div>
-                    <div class="gallery-item" data-img="inad3.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt">
+                    <div class="gallery-item" data-img="inad3.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt" data-animate style="transition-delay: 200ms">
                         <img src="inad3.jpg" alt="İnad" loading="lazy">
                         <div class="gallery-item-zoom" aria-hidden="true">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
@@ -1773,6 +1818,32 @@
             </div>
         </section>
 
+        <!-- ═══════════ DONATION IMPACT (text-only amounts, before bank cards) ═══════════ -->
+        <section class="donation-impact" data-animate>
+            <div class="container-narrow">
+                <h2 class="impact-title" data-i18n="impactTitle">Bir bağışın həqiqi gücü</h2>
+                <p class="impact-subtitle" data-i18n="impactSubtitle">Hər manat İnadın müalicəsinə birbaşa təsir edir</p>
+                <div class="impact-grid">
+                    <div class="impact-card" data-animate style="transition-delay: 0ms">
+                        <div class="impact-amount">10 AZN</div>
+                        <div class="impact-desc" data-i18n="impactDesc1">1 dərman dozası</div>
+                    </div>
+                    <div class="impact-card" data-animate style="transition-delay: 100ms">
+                        <div class="impact-amount">50 AZN</div>
+                        <div class="impact-desc" data-i18n="impactDesc2">Bir analiz və ya müayinə</div>
+                    </div>
+                    <div class="impact-card" data-animate style="transition-delay: 200ms">
+                        <div class="impact-amount">100 AZN</div>
+                        <div class="impact-desc" data-i18n="impactDesc3">Xəstəxana xərclərinin bir hissəsi</div>
+                    </div>
+                    <div class="impact-card" data-animate style="transition-delay: 300ms">
+                        <div class="impact-amount">500 AZN</div>
+                        <div class="impact-desc" data-i18n="impactDesc4">Bir həftəlik müalicə paketi</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ═══════════ CHAPTER 5 — DONATION (Climax CTA) ═══════════ -->
         <section class="donation" data-chapter="5" id="donation">
             <div class="donation-inner">
@@ -1784,38 +1855,56 @@
                 <p class="donation-subtitle" data-i18n="donationSubtitle">Aşağıdakı kartlardan istənilən birinə birbaşa köçürmə edə bilərsiniz. Hər kart Abbasov Fariz (İnadın atası) adınadır.</p>
 
                 <div class="cards-grid">
-                    <div class="bank-card">
-                        <div class="bank-name">Kapital Bank</div>
-                        <div class="card-holder">Abbasov Fariz</div>
-                        <div class="card-number">4169 7388 0191 1817</div>
-                        <button class="copy-btn" data-card="4169738801911817" aria-label="Kart nömrəsini kopyala">
+                    <div class="bank-card" data-animate style="transition-delay: 0ms">
+                        <div class="bank-card-accent" aria-hidden="true"></div>
+                        <h3 class="bank-name">Kapital Bank</h3>
+                        <div class="card-number-box">
+                            <span class="card-number">4169 7388 0191 1817</span>
+                        </div>
+                        <button class="copy-btn-full" data-card="4169738801911817" aria-label="Kart nömrəsini kopyala">
                             <span class="copy-btn-icon" aria-hidden="true">
                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                             </span>
                             <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
                         </button>
+                        <div class="card-holder">
+                            <span class="card-holder-label" data-i18n="cardHolderLabel">Kart sahibi:</span>
+                            <span class="card-holder-name" data-i18n="cardHolderName">Abbasov Fariz (Atası)</span>
+                        </div>
                     </div>
-                    <div class="bank-card">
-                        <div class="bank-name">LeoBank</div>
-                        <div class="card-holder">Abbasov Fariz</div>
-                        <div class="card-number">4098 5844 9826 8356</div>
-                        <button class="copy-btn" data-card="4098584498268356" aria-label="Kart nömrəsini kopyala">
+                    <div class="bank-card" data-animate style="transition-delay: 100ms">
+                        <div class="bank-card-accent" aria-hidden="true"></div>
+                        <h3 class="bank-name">LeoBank</h3>
+                        <div class="card-number-box">
+                            <span class="card-number">4098 5844 9826 8356</span>
+                        </div>
+                        <button class="copy-btn-full" data-card="4098584498268356" aria-label="Kart nömrəsini kopyala">
                             <span class="copy-btn-icon" aria-hidden="true">
                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                             </span>
                             <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
                         </button>
+                        <div class="card-holder">
+                            <span class="card-holder-label" data-i18n="cardHolderLabel">Kart sahibi:</span>
+                            <span class="card-holder-name" data-i18n="cardHolderName">Abbasov Fariz (Atası)</span>
+                        </div>
                     </div>
-                    <div class="bank-card">
-                        <div class="bank-name">ABB Bank</div>
-                        <div class="card-holder">Abbasov Fariz</div>
-                        <div class="card-number">5522 0993 7747 1388</div>
-                        <button class="copy-btn" data-card="5522099377471388" aria-label="Kart nömrəsini kopyala">
+                    <div class="bank-card" data-animate style="transition-delay: 200ms">
+                        <div class="bank-card-accent" aria-hidden="true"></div>
+                        <h3 class="bank-name">ABB Bank</h3>
+                        <div class="card-number-box">
+                            <span class="card-number">5522 0993 7747 1388</span>
+                        </div>
+                        <button class="copy-btn-full" data-card="5522099377471388" aria-label="Kart nömrəsini kopyala">
                             <span class="copy-btn-icon" aria-hidden="true">
                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                             </span>
                             <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
                         </button>
+                        <div class="card-holder">
+                            <span class="card-holder-label" data-i18n="cardHolderLabel">Kart sahibi:</span>
+                            <span class="card-holder-name" data-i18n="cardHolderName">Abbasov Fariz (Atası)</span>
+                        </div>
                     </div>
                 </div>
 
@@ -1856,7 +1945,7 @@
     </main>
 
     <!-- ═══════════ FOOTER ═══════════ -->
-    <footer>
+    <footer data-animate>
         <p class="footer-message" data-i18n="footerMessage">İnad üçün dua, dəstək, dua.</p>
         <div class="footer-social" aria-label="Sosial şəbəkələr">
             <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -1872,16 +1961,16 @@
         <div class="footer-bottom" data-i18n="footerBottom">© 2026 İnad Abbasov üçün toplanan dəstək · WhatsApp: +994 77 305 95 65</div>
     </footer>
 
-    <!-- Floating CTAs (Yusif-style, all viewports, bottom-right) -->
+    <!-- Floating CTAs (stacked, Kart hesabları on top with pulse, WhatsApp below) -->
     <div class="floating-ctas" role="region" aria-label="Sürətli kömək">
-        <a href="https://wa.me/994773059565" class="float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </a>
         <a href="#donation" class="float-donate">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h.01M11 15h2M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
             <span data-i18n="floatingCardBtn">Kart hesabları</span>
+        </a>
+        <a href="https://wa.me/994773059565" class="float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </a>
     </div>
 
@@ -1950,7 +2039,13 @@
             copyBtn: "Kopyala",
             copiedBtn: "Kopyalandı",
             cardHolderLabel: "Kart sahibi:",
-            cardHolderRole: "İnadın atası",
+            cardHolderName: "Abbasov Fariz (Atası)",
+            impactTitle: "Bir bağışın həqiqi gücü",
+            impactSubtitle: "Hər manat İnadın müalicəsinə birbaşa təsir edir",
+            impactDesc1: "1 dərman dozası",
+            impactDesc2: "Bir analiz və ya müayinə",
+            impactDesc3: "Xəstəxana xərclərinin bir hissəsi",
+            impactDesc4: "Bir həftəlik müalicə paketi",
             whatsappCta: "Anaya birbaşa yaz",
             phoneCta: "+994 77 305 95 65",
             shareTitle: "Yardım paylaşımla başlayır",
@@ -2004,7 +2099,13 @@
             copyBtn: "Копировать",
             copiedBtn: "Скопировано",
             cardHolderLabel: "Владелец карты:",
-            cardHolderRole: "отец Инада",
+            cardHolderName: "Abbasov Fariz (отец)",
+            impactTitle: "Истинная сила одного пожертвования",
+            impactSubtitle: "Каждый манат напрямую влияет на лечение Инада",
+            impactDesc1: "1 доза лекарства",
+            impactDesc2: "Один анализ или обследование",
+            impactDesc3: "Часть больничных расходов",
+            impactDesc4: "Недельный курс лечения",
             whatsappCta: "Написать маме напрямую",
             phoneCta: "+994 77 305 95 65",
             shareTitle: "Помощь начинается с распространения",
@@ -2058,7 +2159,13 @@
             copyBtn: "Copy",
             copiedBtn: "Copied",
             cardHolderLabel: "Card holder:",
-            cardHolderRole: "İnad's father",
+            cardHolderName: "Abbasov Fariz (Father)",
+            impactTitle: "The true power of a single donation",
+            impactSubtitle: "Every manat directly impacts İnad's treatment",
+            impactDesc1: "1 dose of medication",
+            impactDesc2: "One lab test or examination",
+            impactDesc3: "Part of hospital expenses",
+            impactDesc4: "One week of treatment",
             whatsappCta: "Message mom directly",
             phoneCta: "+994 77 305 95 65",
             shareTitle: "Help begins with sharing",
@@ -2124,7 +2231,7 @@
     const COPY_ICON_DEFAULT = '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>';
     const COPY_ICON_CHECK = '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>';
 
-    document.querySelectorAll('.copy-btn').forEach(btn => {
+    document.querySelectorAll('.copy-btn-full').forEach(btn => {
         btn.addEventListener('click', async () => {
             const cardNum = btn.dataset.card;
             const t = TRANSLATIONS[currentLang];
@@ -2256,6 +2363,27 @@
             window.open('https://www.instagram.com/', '_blank');
         }
     });
+
+    // ═══════════ SCROLL ANIMATIONS (IntersectionObserver) ═══════════
+    (function scrollAnimations() {
+        if (!('IntersectionObserver' in window)) {
+            // Fallback: reveal everything immediately on older browsers
+            document.querySelectorAll('[data-animate]').forEach(el => el.classList.add('in-view'));
+            return;
+        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    })();
 
     // ═══════════ INIT ═══════════
     (function init() {
