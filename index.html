@@ -419,25 +419,30 @@
             display: inline-block;
         }
 
-        /* Date badge — glassmorphism pill below eyebrow */
+        /* Date badge — white pill, navy text, emoji calendar icon */
         .hero-date-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 0.5px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.95);
+            border: 0.5px solid rgba(255, 255, 255, 0.6);
             border-radius: 100px;
             padding: 8px 16px;
-            color: rgba(255, 255, 255, 0.92);
+            color: var(--text-primary);
             font-size: 0.8125rem;
             margin: 0 auto 1.5rem auto;
             width: fit-content;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
-        .hero-date-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
-        .hero-date-label { font-weight: 400; }
-        .hero-date-value { font-weight: 500; }
+        .hero-date-icon {
+            font-size: 14px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .hero-date-label { font-weight: 500; color: var(--text-primary); }
+        .hero-date-value { font-weight: 600; color: var(--text-primary); }
 
         /* Hero headline — Fraunces serif, centered */
         .hero .hero-title {
@@ -1749,9 +1754,7 @@
                 <div class="hero-left">
                     <span class="hero-eyebrow" data-i18n="heroEyebrow">İNAD ABBASOV</span>
                     <div class="hero-date-badge">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                        </svg>
+                        <span class="hero-date-icon" aria-hidden="true">📅</span>
                         <span class="hero-date-label" data-i18n="lastUpdatedLabel">Son yenilənmə:</span>
                         <span class="hero-date-value" id="lastUpdated">17 May 2026</span>
                     </div>
