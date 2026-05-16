@@ -576,121 +576,192 @@
         }
         .photo-trust-pill svg { width: 14px; height: 14px; }
 
-        /* ═══════════ STATS STRIP (card-style, matches treatment card) ═══════════ */
+        /* ═══════════ STATS STRIP (premium cards) ═══════════ */
         .stats {
-            background: var(--color-muted);
+            background: linear-gradient(180deg, var(--color-background) 0%, var(--color-muted) 100%);
             border-top: 1px solid var(--color-border);
             border-bottom: 1px solid var(--color-border);
-            padding: var(--s-12) var(--s-6);
+            padding: var(--s-20) var(--s-6);
         }
         .stats-grid {
             max-width: 1100px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: var(--s-4);
+            gap: var(--s-5);
         }
         .stat {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            padding: var(--s-6) var(--s-4);
-            box-shadow: var(--shadow-sm);
+            border-radius: var(--radius-xl);
+            padding: var(--s-8) var(--s-5);
+            box-shadow: 0 1px 3px rgba(22, 78, 99, 0.04);
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: var(--s-3);
-            transition: all var(--transition);
+            gap: var(--s-4);
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
         }
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 50%;
+            height: 3px;
+            background: var(--color-primary);
+            border-radius: 0 0 4px 4px;
+            transition: transform 300ms ease;
+        }
+        .stat:hover::before { transform: translateX(-50%) scaleX(1); }
         .stat:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--color-primary);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(22, 78, 99, 0.08);
+            border-color: var(--color-border-strong);
         }
         .stat-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--color-muted);
-            border-radius: var(--radius);
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--color-muted) 0%, var(--color-background) 100%);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--color-primary);
             flex-shrink: 0;
         }
-        .stat-icon svg { width: 22px; height: 22px; }
+        .stat-icon svg { width: 26px; height: 26px; stroke-width: 1.75; }
         .stat-number {
-            font-size: var(--fs-3xl);
+            font-size: var(--fs-4xl);
             font-weight: 800;
             line-height: 1;
-            color: var(--color-primary);
-            letter-spacing: -1.5px;
+            color: var(--color-foreground);
+            letter-spacing: -2px;
+            font-feature-settings: 'tnum';
         }
         .stat-label {
             font-size: var(--fs-xs);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.5px;
             color: var(--color-muted-foreground);
         }
-        .stat:nth-child(3) .stat-icon { background: var(--color-accent-soft); color: var(--color-accent); }
+        .stat:nth-child(3) .stat-icon {
+            background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(234, 88, 12, 0.04) 100%);
+            border-color: var(--color-border-warm);
+            color: var(--color-accent);
+        }
         .stat:nth-child(3) .stat-number { color: var(--color-accent); }
+        .stat:nth-child(3)::before { background: var(--color-accent); }
 
-        /* ═══════════ CHAPTER 2 — MOTHER'S QUOTE (Problem) ═══════════ */
+        /* ═══════════ CHAPTER 2 — MOTHER'S QUOTE (premium) ═══════════ */
         .mother-quote {
-            padding: var(--s-20) var(--s-10);
+            padding: var(--s-24) var(--s-10);
             background: var(--color-surface);
+            position: relative;
+            overflow: hidden;
+        }
+        .mother-quote::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(8, 145, 178, 0.04) 0%, transparent 70%);
+            pointer-events: none;
         }
         .mother-quote-inner {
-            max-width: 820px;
+            max-width: 880px;
             margin: 0 auto;
+            position: relative;
         }
         .mother-quote-card {
-            background: var(--color-muted);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
             border-radius: var(--radius-xl);
             padding: var(--s-12) var(--s-10);
-            border-left: 4px solid var(--color-accent);
+            box-shadow: 0 24px 60px rgba(22, 78, 99, 0.06), 0 4px 12px rgba(22, 78, 99, 0.04);
             position: relative;
+            overflow: hidden;
+        }
+        .mother-quote-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-accent) 100%);
         }
         .mother-quote-mark {
             position: absolute;
             top: var(--s-6);
             right: var(--s-8);
-            font-size: 96px;
-            line-height: 1;
+            width: 88px;
+            height: 88px;
             color: var(--color-primary);
-            opacity: 0.15;
-            font-weight: 800;
+            opacity: 0.1;
+            pointer-events: none;
         }
         .mother-quote-text {
-            font-size: clamp(var(--fs-lg), 3vw, var(--fs-2xl));
+            font-size: clamp(var(--fs-lg), 2.6vw, var(--fs-2xl));
             font-weight: 500;
-            line-height: 1.5;
+            font-style: italic;
+            line-height: 1.55;
             color: var(--color-foreground);
-            margin-bottom: var(--s-6);
+            margin-bottom: var(--s-10);
             letter-spacing: -0.3px;
+            position: relative;
+            padding-right: var(--s-12);
         }
         .mother-quote-author {
             display: flex;
             align-items: center;
-            gap: var(--s-3);
+            gap: var(--s-4);
+            padding-top: var(--s-6);
+            border-top: 1px solid var(--color-border);
+            flex-wrap: wrap;
         }
         .author-avatar {
-            width: 44px;
-            height: 44px;
-            background: var(--color-primary);
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
             color: var(--color-on-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: var(--fs-md);
+            font-size: var(--fs-xl);
+            box-shadow: 0 6px 16px rgba(8, 145, 178, 0.25);
+            flex-shrink: 0;
+            border: 3px solid var(--color-surface);
+            outline: 1px solid var(--color-border);
         }
-        .author-info { display: flex; flex-direction: column; }
-        .author-name { font-size: var(--fs-base); font-weight: 600; color: var(--color-foreground); }
+        .author-info { display: flex; flex-direction: column; gap: 2px; }
+        .author-name { font-size: var(--fs-md); font-weight: 700; color: var(--color-foreground); letter-spacing: -0.2px; }
         .author-role { font-size: var(--fs-sm); color: var(--color-muted-foreground); }
+        .author-verified {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--s-1);
+            color: var(--color-primary);
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            background: var(--color-primary-soft);
+            padding: var(--s-2) var(--s-3);
+            border-radius: 100px;
+            border: 1px solid rgba(8, 145, 178, 0.15);
+        }
+        .author-verified svg { width: 14px; height: 14px; }
 
         /* ═══════════ CHAPTER 3 — STORY (Journey) ═══════════ */
         .story {
@@ -1200,8 +1271,11 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-3); }
             .stat { padding: var(--s-5) var(--s-3); }
 
+            .mother-quote { padding: var(--s-16) var(--s-5); }
             .mother-quote-card { padding: var(--s-8) var(--s-6); }
-            .mother-quote-mark { font-size: 64px; top: var(--s-4); right: var(--s-4); }
+            .mother-quote-mark { width: 56px; height: 56px; top: var(--s-4); right: var(--s-4); }
+            .mother-quote-text { padding-right: var(--s-4); }
+            .author-verified { margin-left: 0; }
 
             .story-text { column-count: 1; }
             .story-text p:first-child::first-letter { font-size: 48px; }
@@ -1370,13 +1444,21 @@
             <div class="mother-quote-inner">
                 <div class="chapter-label" data-i18n="chapter2Label">Bölmə 2 · Ananın səsi</div>
                 <div class="mother-quote-card">
-                    <div class="mother-quote-mark" aria-hidden="true">"</div>
+                    <svg class="mother-quote-mark" viewBox="0 0 80 80" fill="currentColor" aria-hidden="true">
+                        <path d="M22 18C13.2 18 6 25.2 6 34v18c0 5.5 4.5 10 10 10h14V40H18c0-4.4 3.6-8 8-8V18zM58 18c-8.8 0-16 7.2-16 16v18c0 5.5 4.5 10 10 10h14V40H54c0-4.4 3.6-8 8-8V18z"/>
+                    </svg>
                     <p class="mother-quote-text" data-i18n="motherQuote">Bu ailə Vətən üçün 2 can verib. İndi övladımızı yaşatmaq üçün insanların mərhəmətinə sığınırıq...</p>
                     <div class="mother-quote-author">
                         <div class="author-avatar" aria-hidden="true">Ə</div>
                         <div class="author-info">
                             <div class="author-name">Abbasova Əfsanə</div>
                             <div class="author-role" data-i18n="motherRole">İnadın anası</div>
+                        </div>
+                        <div class="author-verified">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="verified">Doğrulanıb</span>
                         </div>
                     </div>
                 </div>
