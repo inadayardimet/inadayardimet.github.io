@@ -1516,13 +1516,13 @@
         .float-donate {
             background: var(--accent);
             color: var(--text-on-dark);
-            padding: 12px 20px;
+            padding: 14px 24px;
             border-radius: 100px;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             font-family: var(--font);
-            font-size: 0.875rem;
+            font-size: 1rem;
             font-weight: 600;
             line-height: 1;
             box-shadow: 0 4px 16px rgba(232, 93, 44, 0.3);
@@ -1534,15 +1534,15 @@
             transform: translateY(-1px);
         }
         .float-donate:active { transform: translateY(0); }
-        .float-donate svg { width: 18px; height: 18px; flex-shrink: 0; }
+        .float-donate svg { width: 20px; height: 20px; flex-shrink: 0; }
         @keyframes soft-pulse {
             0%, 100% { box-shadow: 0 4px 16px rgba(232, 93, 44, 0.3), 0 0 0 0 rgba(232, 93, 44, 0.4); }
             50%      { box-shadow: 0 4px 20px rgba(232, 93, 44, 0.4), 0 0 0 8px rgba(232, 93, 44, 0); }
         }
 
         .float-whatsapp {
-            width: 64px;
-            height: 64px;
+            width: 72px;
+            height: 72px;
             background: var(--whatsapp);
             color: var(--text-on-dark);
             border-radius: 50%;
@@ -1559,14 +1559,14 @@
             background: var(--whatsapp-hover);
         }
         .float-whatsapp:active { transform: translateY(0); }
-        .float-whatsapp svg { width: 28px; height: 28px; }
+        .float-whatsapp svg { width: 32px; height: 32px; }
 
         @media (max-width: 767px) {
             .floating-ctas { bottom: 16px; right: 16px; gap: 12px; }
-            .float-whatsapp { width: 56px; height: 56px; }
-            .float-whatsapp svg { width: 24px; height: 24px; }
-            .float-donate { padding: 10px 16px; font-size: 0.8125rem; }
-            .float-donate svg { width: 16px; height: 16px; }
+            .float-whatsapp { width: 64px; height: 64px; }
+            .float-whatsapp svg { width: 28px; height: 28px; }
+            .float-donate { padding: 12px 20px; font-size: 0.9375rem; }
+            .float-donate svg { width: 18px; height: 18px; }
         }
 
         @media (prefers-reduced-motion: reduce) {
