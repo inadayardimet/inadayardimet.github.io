@@ -948,15 +948,16 @@
             margin-bottom: var(--s-12);
         }
         .u-stat {
-            background: #F5F2EA;
+            background: linear-gradient(180deg, #F8F5EE 0%, #F2EFE5 100%);
             border: 0.5px solid var(--border-subtle);
             border-radius: 12px;
             padding: 1.25rem 1rem;
             display: flex;
             flex-direction: column;
             text-align: left;
-            transition: border-color 0.2s ease;
+            transition: border-color 0.2s ease, transform 0.2s ease;
         }
+        .u-stat:not(.highlight):hover { transform: translateY(-1px); }
         .u-stat:hover { border-color: var(--border-accent); }
         .u-stat-num {
             font-family: var(--font);
@@ -986,7 +987,7 @@
             margin-top: 8px;
         }
         .u-stat.highlight {
-            background: var(--accent-bg);
+            background: linear-gradient(180deg, #FFF9F2 0%, #FEF1E5 100%);
             border-color: var(--border-accent);
         }
         .u-stat.highlight .u-stat-num { color: var(--accent); }
@@ -1239,7 +1240,7 @@
             gap: 1rem;
         }
         .impact-card {
-            background: var(--bg-surface);
+            background: linear-gradient(180deg, #FFFFFF 0%, #FBFAF6 100%);
             border: 0.5px solid var(--border-subtle);
             border-radius: 12px;
             padding: 1.5rem 1rem;
@@ -1306,7 +1307,7 @@
         }
         /* Bank card — Phase 3 structure */
         .bank-card {
-            background: var(--bg-surface);
+            background: linear-gradient(180deg, #FFFFFF 0%, #FBFAF6 100%);
             border-radius: 12px;
             padding: 1.5rem;
             text-align: left;
