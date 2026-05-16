@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0891B2">
+    <meta name="theme-color" content="#0A2540">
     <title>İnada Kömək Et — Qan Xərçəngi ilə Mübarizə | Şəhid Ailəsinin Övladı</title>
     <meta name="description" content="16 yaşlı İnad Abbasov 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 şəhid verib. Türkiyədə ilik transplantasiyası üçün təcili 68.000 USD lazımdır.">
     <meta name="keywords" content="İnad Abbasov, qan xərçəngi, leykoz, ilik transplantasiyası, yardım, kömək, şəhid ailəsi, Medical Park, Ağstafa">
@@ -28,15 +28,15 @@
     <meta name="twitter:image" content="https://inadayardimet.github.io/inad-main.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%23F8FAFC'/%3E%3Ctext x='50' y='72' font-family='Inter,sans-serif' font-weight='800' font-size='62' fill='%230891B2' text-anchor='middle'%3Eİ%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%23FAF8F5'/%3E%3Ctext x='50' y='74' font-family='Georgia,serif' font-weight='500' font-size='66' fill='%230A2540' text-anchor='middle'%3Ei%3Ctspan fill='%23E85D2C'%3Enad%3C/tspan%3E%3C/text%3E%3C/svg%3E">
 
     <!-- Preload hero image -->
     <link rel="preload" as="image" href="inad-main.jpg">
 
-    <!-- Google Fonts: Inter only (per UI UX Pro Max recommendation) -->
+    <!-- Google Fonts: Fraunces (serif headings) + Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -64,30 +64,59 @@
            ════════════════════════════════════════════════════════════ */
 
         :root {
-            /* Colors */
-            --color-primary: #0891B2;
-            --color-primary-hover: #0E7490;
-            --color-primary-soft: rgba(8, 145, 178, 0.08);
-            --color-on-primary: #FFFFFF;
-            --color-secondary: #22D3EE;
-            --color-accent: #EA580C;
-            --color-accent-hover: #C2410C;
-            --color-accent-soft: rgba(234, 88, 12, 0.1);
-            --color-background: #F8FAFC;        /* Slate 50 — modern cool gray */
-            --color-surface: #FFFFFF;
-            --color-surface-warm: #FAFAF9;      /* Very subtle warm white */
-            --color-surface-urgent: #FFF7ED;    /* Keep warm for donation urgency */
-            --color-foreground: #0F172A;        /* Slate 900 — premium near-black */
-            --color-foreground-soft: #334155;   /* Slate 700 */
-            --color-muted: #F1F5F9;             /* Slate 100 */
-            --color-muted-foreground: #64748B;  /* Slate 500 */
-            --color-border: #E2E8F0;            /* Slate 200 */
-            --color-border-strong: #CBD5E1;     /* Slate 300 */
-            --color-border-warm: #FED7AA;
-            --color-success: #16A34A;
-            --color-destructive: #DC2626;
-            --color-whatsapp: #25D366;
-            --color-whatsapp-hover: #1FAE5C;
+            /* ─── Phase 1 Design System ─── */
+            /* Backgrounds */
+            --bg-primary: #FAF8F5;              /* warm cream, main bg */
+            --bg-surface: #FFFFFF;              /* card surface */
+            --bg-dark: #0A2540;                 /* navy, hero overlay + CTA blocks */
+            --bg-warm: #FFF7F2;                 /* warm cream for accent cards */
+
+            /* Text */
+            --text-primary: #0A2540;            /* navy, headings */
+            --text-body: #1F2937;               /* near-black body */
+            --text-muted: #6B7280;              /* labels, meta */
+            --text-on-dark: #FFFFFF;
+            --text-on-dark-muted: rgba(255, 255, 255, 0.7);
+
+            /* Accent */
+            --accent: #E85D2C;                  /* primary CTA orange */
+            --accent-hover: #C84A1F;
+            --accent-soft: #FFB088;             /* hero highlight */
+            --accent-bg: #FFF7F2;               /* tinted bg for urgent stat */
+            --accent-text: #993C1D;             /* text on accent-bg */
+
+            /* Borders */
+            --border-subtle: rgba(0, 0, 0, 0.08);
+            --border-accent: rgba(232, 93, 44, 0.2);
+
+            /* WhatsApp */
+            --whatsapp: #25D366;
+            --whatsapp-hover: #1FAE5C;
+
+            /* ─── Legacy aliases (sections out of Phase 1 scope still reference these) ─── */
+            --color-primary: var(--text-primary);
+            --color-primary-hover: var(--accent-hover);
+            --color-primary-soft: rgba(10, 37, 64, 0.06);
+            --color-on-primary: var(--text-on-dark);
+            --color-secondary: var(--accent-soft);
+            --color-accent: var(--accent);
+            --color-accent-hover: var(--accent-hover);
+            --color-accent-soft: var(--accent-bg);
+            --color-background: var(--bg-primary);
+            --color-surface: var(--bg-surface);
+            --color-surface-warm: var(--bg-warm);
+            --color-surface-urgent: var(--accent-bg);
+            --color-foreground: var(--text-primary);
+            --color-foreground-soft: var(--text-body);
+            --color-muted: var(--bg-warm);
+            --color-muted-foreground: var(--text-muted);
+            --color-border: var(--border-subtle);
+            --color-border-strong: var(--border-accent);
+            --color-border-warm: var(--border-accent);
+            --color-success: var(--whatsapp);
+            --color-destructive: var(--accent);
+            --color-whatsapp: var(--whatsapp);
+            --color-whatsapp-hover: var(--whatsapp-hover);
             --color-facebook: #1877F2;
 
             /* Spacing scale (4px base) */
@@ -96,7 +125,8 @@
             --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-24: 96px;
 
             /* Typography */
-            --font: 'Inter', system-ui, -apple-system, sans-serif;
+            --font: 'Inter', -apple-system, system-ui, sans-serif;
+            --font-serif: 'Fraunces', Georgia, serif;
             --fs-xs: 12px;
             --fs-sm: 14px;
             --fs-base: 16px;
@@ -127,21 +157,48 @@
         body {
             font-family: var(--font);
             font-size: var(--fs-base);
-            line-height: 1.6;
-            color: var(--color-foreground);
-            background: var(--color-background);
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--text-body);
+            background: var(--bg-primary);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
-            font-feature-settings: 'cv01', 'cv11', 'ss01';
             overflow-x: hidden;
         }
 
         img { display: block; max-width: 100%; }
         button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
         a { color: inherit; text-decoration: none; }
-        h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -0.5px; color: var(--color-foreground); }
         p { line-height: 1.7; }
+
+        /* Headings — Fraunces serif */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.875rem; }
+        h3 { font-size: 1.5rem; }
+
+        /* Labels — uppercase meta text */
+        .eyebrow, .label-meta {
+            font-family: var(--font);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.25rem; }
+        }
 
         /* ─── ACCESSIBILITY ─── */
         :focus { outline: none; }
@@ -189,12 +246,13 @@
             min-height: 64px;
         }
         .logo {
-            font-size: var(--fs-xl);
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: var(--color-foreground);
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: var(--text-primary);
         }
-        .logo span { color: var(--color-primary); }
+        .logo span { color: var(--accent); }
 
         .nav-actions { display: flex; align-items: center; gap: var(--s-3); }
 
@@ -270,15 +328,17 @@
             background: var(--color-primary);
         }
 
-        /* ═══════════ CHAPTER 1 — HERO (Photo background + text overlay) ═══════════ */
+        /* ═══════════ HERO (Photo background + text overlay) ═══════════ */
         .hero {
             position: relative;
-            padding: var(--s-20) var(--s-10) var(--s-24);
+            min-height: 90vh;
+            padding: var(--s-24) var(--s-10) var(--s-16);
             overflow: hidden;
-            color: white;
-            background: #1a1a1a;
+            color: var(--text-on-dark);
+            background: var(--bg-dark);
+            display: flex;
+            align-items: center;
         }
-        /* Photo layer with subtle filter to make İnad's face pop */
         .hero::before {
             content: '';
             position: absolute;
@@ -287,85 +347,110 @@
             background-size: cover;
             background-position: center 18%;
             background-repeat: no-repeat;
-            filter: contrast(1.08) saturate(1.1) brightness(1.05);
+            filter: contrast(1.06) saturate(1.05) brightness(1.02);
             z-index: 0;
             pointer-events: none;
         }
-        /* Dark gradient overlay — light at top (face visible), heavy at bottom (text readable) */
         .hero::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg,
-                rgba(0, 0, 0, 0.22) 0%,
-                rgba(0, 0, 0, 0.35) 38%,
-                rgba(0, 0, 0, 0.72) 100%
-            );
+            background: linear-gradient(180deg, rgba(10, 37, 64, 0.4) 0%, rgba(10, 37, 64, 0.85) 100%);
             z-index: 1;
             pointer-events: none;
         }
-        /* Lift all hero children above the gradient layers */
         .hero > * { position: relative; z-index: 2; }
+
         .hero-grid {
             max-width: 720px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--s-12);
+            gap: var(--s-6);
             align-items: center;
+            width: 100%;
         }
         .hero-left { max-width: 100%; }
 
-        /* Hero text — white on photo (stronger shadows since overlay is lighter at top) */
-        .hero .hero-title { color: white; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.4); }
-        .hero .hero-subtitle { color: rgba(255, 255, 255, 0.96); text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55); }
-
-        /* Status chip — glass on dark */
-        .hero .status-chip {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
-            color: white;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        /* Hero eyebrow — small uppercase accent text above headline */
+        .hero-eyebrow {
+            font-family: var(--font);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: var(--s-4);
+            display: inline-block;
         }
 
-        /* Treatment card — glass on dark */
-        .hero .treatment-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        /* Hero headline — Fraunces serif on dark */
+        .hero .hero-title {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--text-on-dark);
+            font-size: 2.5rem;
+            margin: 0 0 var(--s-5) 0;
         }
-        .hero .treatment-card-icon {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
+        .hero .hero-title em {
+            color: var(--accent-soft);
+            font-style: italic;
+            text-decoration: none;
+            font-family: var(--font-serif);
+            font-weight: 500;
         }
-        .hero .treatment-card-label { color: rgba(255, 255, 255, 0.75); }
-        .hero .treatment-card-value { color: white; }
-        .hero .treatment-card-counter { color: #FED7AA; }
-        .hero .treatment-card-counter-label { color: rgba(255, 255, 255, 0.75); }
-        .hero .treatment-card-right { border-left-color: rgba(255, 255, 255, 0.2); }
-
-        /* Secondary button — white outline on dark */
-        .hero .btn-secondary {
-            background: rgba(255, 255, 255, 0.12);
-            color: white;
-            border-color: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-        .hero .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.22);
-            border-color: white;
-            color: white;
+        .hero .hero-subtitle {
+            color: var(--text-on-dark-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0;
         }
 
         /* Trust pill at top-right of hero */
         .hero > .photo-trust-pill {
             top: var(--s-5);
             right: var(--s-5);
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--accent-text);
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        .hero > .photo-trust-pill svg { width: 14px; height: 14px; }
+
+        /* Scroll indicator at bottom of hero */
+        .scroll-indicator {
+            position: absolute;
+            bottom: var(--s-6);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: scrollBounce 2s ease-in-out infinite;
+        }
+        .scroll-indicator svg { width: 24px; height: 24px; }
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50%      { transform: translateX(-50%) translateY(6px); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-indicator { animation: none; }
+        }
+
+        @media (max-width: 768px) {
+            .hero { min-height: 80vh; padding: var(--s-16) var(--s-5) var(--s-12); }
+            .hero .hero-title { font-size: 1.75rem; }
+            .hero .hero-subtitle { font-size: 0.9rem; }
+            .hero-eyebrow { font-size: 0.65rem; }
+            .scroll-indicator { bottom: var(--s-4); }
         }
 
         .status-chip {
@@ -797,57 +882,58 @@
         }
         .unified-header { text-align: center; margin-bottom: var(--s-12); }
 
-        /* Compact stats card */
+        /* Stats cards — no icons, clean cards, urgent stat highlighted */
         .unified-stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-            margin-bottom: var(--s-16);
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-xl);
-            padding: var(--s-4);
-            box-shadow: 0 4px 24px rgba(15, 23, 42, 0.04);
+            gap: 12px;
+            margin-bottom: var(--s-12);
         }
         .u-stat {
-            text-align: center;
-            padding: var(--s-4) var(--s-3);
-            border-right: 1px solid var(--color-border);
+            background: var(--bg-surface);
+            border: 0.5px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.25rem 1rem;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: var(--s-2);
+            text-align: left;
+            transition: border-color 0.2s ease;
         }
-        .u-stat:last-child { border-right: none; }
-        .u-stat-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--color-muted);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-primary);
-            flex-shrink: 0;
-        }
-        .u-stat-icon svg { width: 18px; height: 18px; stroke-width: 1.75; }
+        .u-stat:hover { border-color: var(--border-accent); }
         .u-stat-num {
-            font-size: var(--fs-xl);
-            font-weight: 800;
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 500;
             line-height: 1;
-            color: var(--color-foreground);
-            letter-spacing: -1px;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
             font-feature-settings: 'tnum';
         }
-        .u-stat-label {
-            font-size: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: var(--color-muted-foreground);
+        .u-stat-unit {
+            font-family: var(--font);
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-left: 4px;
+            letter-spacing: 0;
         }
-        .u-stat.highlight .u-stat-icon { background: var(--color-accent-soft); color: var(--color-accent); }
-        .u-stat.highlight .u-stat-num { color: var(--color-accent); }
+        .u-stat-unit:first-child { margin-left: 0; margin-right: 4px; }
+        .u-stat-label {
+            font-family: var(--font);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        .u-stat.highlight {
+            background: var(--accent-bg);
+            border-color: var(--border-accent);
+        }
+        .u-stat.highlight .u-stat-num { color: var(--accent); }
+        .u-stat.highlight .u-stat-unit { color: var(--accent); }
+        .u-stat.highlight .u-stat-label { color: var(--accent-text); }
 
         /* Story body */
         .unified-story .story-paragraphs p {
@@ -1270,50 +1356,91 @@
         }
 
         /* ─── FLOATING ELEMENTS ─── */
+        /* Desktop: WhatsApp floating bottom-right */
         .whatsapp-float {
             position: fixed;
             bottom: 24px;
             right: 24px;
             width: 56px;
             height: 56px;
-            background: var(--color-whatsapp);
-            color: var(--color-on-primary);
+            background: var(--whatsapp);
+            color: var(--text-on-dark);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
             z-index: 90;
-            transition: all var(--transition);
+            transition: all 0.2s ease;
         }
-        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5); }
+        .whatsapp-float:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5); }
+        .whatsapp-float:active { transform: translateY(0); }
         .whatsapp-float svg { width: 28px; height: 28px; }
 
-        .donation-float {
+        /* Mobile sticky bar (hidden on desktop ≥768px) */
+        .sticky-cta-bar {
+            display: none;
             position: fixed;
-            bottom: 92px;
-            right: 24px;
-            background: var(--color-accent);
-            color: var(--color-on-primary);
-            padding: 12px 20px;
-            border-radius: 100px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-dark);
+            padding: 12px 16px;
+            gap: 12px;
+            align-items: center;
+            z-index: 50;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .sticky-cta-bar .cta-primary {
+            flex: 1;
+            min-height: 44px;
+            background: var(--accent);
+            color: var(--text-on-dark);
+            border-radius: 8px;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
+            font-family: var(--font);
+            font-size: 0.875rem;
             font-weight: 600;
-            font-size: var(--fs-sm);
-            text-decoration: none;
-            box-shadow: 0 8px 24px rgba(234, 88, 12, 0.4);
-            z-index: 90;
-            transition: all var(--transition);
-            min-height: var(--touch-min);
+            transition: all 0.2s ease;
         }
-        .donation-float:hover {
-            background: var(--color-accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(234, 88, 12, 0.5);
+        .sticky-cta-bar .cta-primary:hover { background: var(--accent-hover); }
+        .sticky-cta-bar .cta-primary svg { width: 18px; height: 18px; }
+        .sticky-cta-bar .cta-whatsapp {
+            width: 40px;
+            height: 40px;
+            background: var(--whatsapp);
+            color: var(--text-on-dark);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background 0.2s ease;
         }
-        .donation-float svg { width: 18px; height: 18px; flex-shrink: 0; }
+        .sticky-cta-bar .cta-whatsapp:hover { background: var(--whatsapp-hover); }
+        .sticky-cta-bar .cta-whatsapp svg { width: 22px; height: 22px; }
+
+        @media (max-width: 767px) {
+            .whatsapp-float { display: none; }
+            .sticky-cta-bar { display: flex; }
+            body { padding-bottom: 76px; }
+        }
+
+        /* ─── Phase 1 Micro-interactions ─── */
+        .cta-primary:active,
+        .cta-whatsapp:active,
+        .whatsapp-float:active,
+        .btn:active,
+        .copy-btn:active,
+        .scroll-indicator:active {
+            transform: translateY(0);
+        }
+        .scroll-indicator:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
 
 
         /* ─── TOAST ─── */
@@ -1419,12 +1546,9 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-3); }
             .stat { padding: var(--s-5) var(--s-3); }
             .story-unified { padding: var(--s-16) var(--s-5); }
-            .unified-stats { grid-template-columns: repeat(2, 1fr); padding: var(--s-3); }
-            .u-stat { border-right: none; padding: var(--s-3); }
-            .u-stat:nth-child(1), .u-stat:nth-child(2) {
-                border-bottom: 1px solid var(--color-border);
-                padding-bottom: var(--s-5);
-            }
+            .unified-stats { grid-template-columns: repeat(2, 1fr); }
+            .u-stat { padding: 1rem 0.875rem; }
+            .u-stat-num { font-size: 1.625rem; }
             .pull-quote { padding: var(--s-6) var(--s-5); margin: var(--s-8) 0; }
             .pq-text { padding-right: 0; font-size: var(--fs-md); }
             .pq-mark { width: 48px; height: 48px; }
@@ -1504,41 +1628,21 @@
             </div>
             <div class="hero-grid">
                 <div class="hero-left">
+                    <span class="hero-eyebrow" data-i18n="heroEyebrow">XEYRİYYƏ · İNAD ABBASOV</span>
                     <h1 id="hero-title" class="hero-title" data-i18n="heroTitle">
-                        Bir düşün.<br>Əgər o uşaq <span class="accent">sənin övladın</span> olsaydı?
+                        Bir düşün.<br>Əgər o uşaq <em>sənin övladın</em> olsaydı?
                     </h1>
                     <p class="hero-subtitle" data-i18n="heroSubtitle">
                         İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır.
                         Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.
                     </p>
-
-                    <div class="treatment-card">
-                        <div class="treatment-card-left">
-                            <div class="treatment-card-icon" aria-hidden="true">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="treatment-card-label" data-i18n="treatmentLabel">Hazırki status</div>
-                                <div class="treatment-card-value">Medical Park · Antalya</div>
-                            </div>
-                        </div>
-                        <div class="treatment-card-right">
-                            <div class="treatment-card-counter">75</div>
-                            <div class="treatment-card-counter-label" data-i18n="counterLabel">Gündür müalicədə</div>
-                        </div>
-                    </div>
-
-                    <div class="hero-ctas">
-                        <a href="#story-section" class="btn btn-secondary">
-                            <span data-i18n="heroCtaSecondary">Hekayəni Oxu</span>
-                        </a>
-                    </div>
                 </div>
-
             </div>
+            <a href="#story-section" class="scroll-indicator" aria-label="Aşağı sürüşdür">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                </svg>
+            </a>
         </section>
 
         <!-- ═══════════ UNIFIED STORY (stats + quote + narrative) ═══════════ -->
@@ -1551,40 +1655,20 @@
 
                 <div class="unified-stats" role="region" aria-label="Statistika">
                     <div class="u-stat">
-                        <div class="u-stat-icon" aria-hidden="true">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div class="u-stat-num" data-i18n="stat1Num">3 il</div>
-                        <div class="u-stat-label" data-i18n="stat1Label">Mübarizə</div>
+                        <span class="u-stat-num" data-i18n="stat1Num">3<span class="u-stat-unit">il</span></span>
+                        <span class="u-stat-label" data-i18n="stat1Label">Mübarizə</span>
                     </div>
                     <div class="u-stat">
-                        <div class="u-stat-icon" aria-hidden="true">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                        </div>
-                        <div class="u-stat-num" data-i18n="stat2Num">16</div>
-                        <div class="u-stat-label" data-i18n="stat2Label">İnadın yaşı</div>
+                        <span class="u-stat-num" data-i18n="stat2Num">16</span>
+                        <span class="u-stat-label" data-i18n="stat2Label">İnadın yaşı</span>
                     </div>
                     <div class="u-stat highlight">
-                        <div class="u-stat-icon" aria-hidden="true">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <div class="u-stat-num" data-i18n="stat3Num">68.000$</div>
-                        <div class="u-stat-label" data-i18n="stat3Label">Təcili lazım</div>
+                        <span class="u-stat-num" data-i18n="stat3Num">68.000<span class="u-stat-unit">$</span></span>
+                        <span class="u-stat-label" data-i18n="stat3Label">Təcili lazım</span>
                     </div>
                     <div class="u-stat">
-                        <div class="u-stat-icon" aria-hidden="true">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                        </div>
-                        <div class="u-stat-num" data-i18n="stat4Num">2</div>
-                        <div class="u-stat-label" data-i18n="stat4Label">Şəhid qardaş</div>
+                        <span class="u-stat-num" data-i18n="stat4Num">2</span>
+                        <span class="u-stat-label" data-i18n="stat4Label">Şəhid qardaş</span>
                     </div>
                 </div>
 
@@ -1784,18 +1868,23 @@
         <div class="footer-bottom" data-i18n="footerBottom">© 2026 İnad Abbasov Ailəsi — Bütün hüquqlar qorunur</div>
     </footer>
 
-    <!-- Floating donation button (above WhatsApp) -->
-    <a href="#donation" class="donation-float" aria-label="Kart hesabları">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h.01M11 15h2M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-        </svg>
-        <span data-i18n="floatingCardBtn">Kart hesabları</span>
-    </a>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/994773059565" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp ilə əlaqə">
+    <!-- Floating WhatsApp (desktop only) -->
+    <a href="https://wa.me/994773059565" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
+
+    <!-- Mobile sticky CTA bar (mobile only) -->
+    <div class="sticky-cta-bar" role="region" aria-label="Sürətli kömək">
+        <a href="#donation" class="cta-primary">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h.01M11 15h2M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span data-i18n="floatingCardBtn">Kart hesabları</span>
+        </a>
+        <a href="https://wa.me/994773059565" class="cta-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+    </div>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Şəkil görüntüləyici">
@@ -1826,7 +1915,8 @@
             skipLink: "İçəriyə keç",
             navCta: "Kömək Et",
             statusChip: "Müalicə davam edir · Medical Park · Antalya",
-            heroTitle: 'Bir düşün.<br>Əgər o uşaq <span class="accent">sənin övladın</span> olsaydı?',
+            heroEyebrow: "XEYRİYYƏ · İNAD ABBASOV",
+            heroTitle: 'Bir düşün.<br>Əgər o uşaq <em>sənin övladın</em> olsaydı?',
             heroSubtitle: "İnad 16 yaşındadır. 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 oğul qurban verib. İndi 3-cü övladını qorumaq üçün sizdən kömək istəyir.",
             treatmentLabel: "Hazırki status",
             counterLabel: "Gündür müalicədə",
@@ -1836,9 +1926,9 @@
             verified: "Doğrulanıb",
             captionAge: "16 yaş",
             captionFamily: "Şəhid ailəsindən",
-            stat1Num: "3 il", stat1Label: "Mübarizə",
+            stat1Num: '3<span class="u-stat-unit">il</span>', stat1Label: "Mübarizə",
             stat2Num: "16", stat2Label: "İnadın yaşı",
-            stat3Num: "68.000$", stat3Label: "Təcili lazım",
+            stat3Num: '68.000<span class="u-stat-unit">$</span>', stat3Label: "Təcili lazım",
             stat4Num: "2", stat4Label: "Şəhid qardaş",
             chapter1: "Giriş",
             chapter2Label: "Bölmə 2 · Ananın səsi",
@@ -1884,7 +1974,8 @@
             skipLink: "Перейти к содержимому",
             navCta: "Помочь",
             statusChip: "Лечение продолжается · Medical Park · Анталия",
-            heroTitle: 'Подумайте.<br>Что, если бы это был <span class="accent">ваш ребёнок</span>?',
+            heroEyebrow: "БЛАГОТВОРИТЕЛЬНОСТЬ · ИНАД АББАСОВ",
+            heroTitle: 'Подумайте.<br>Что, если бы это был <em>ваш ребёнок</em>?',
             heroSubtitle: "Инаду 16 лет. 3 года он борется с раком крови. Его семья отдала 2 сыновей за Родину. Теперь они просят вашей помощи, чтобы спасти 3-го ребёнка.",
             treatmentLabel: "Текущий статус",
             counterLabel: "Дней лечения",
@@ -1894,9 +1985,9 @@
             verified: "Подтверждено",
             captionAge: "16 лет",
             captionFamily: "Из семьи шехидов",
-            stat1Num: "3 года", stat1Label: "Борьбы",
+            stat1Num: '3<span class="u-stat-unit">года</span>', stat1Label: "Борьбы",
             stat2Num: "16", stat2Label: "Возраст Инада",
-            stat3Num: "68 000$", stat3Label: "Срочно нужно",
+            stat3Num: '68&nbsp;000<span class="u-stat-unit">$</span>', stat3Label: "Срочно нужно",
             stat4Num: "2", stat4Label: "Брата-шехида",
             chapter1: "Введение",
             chapter2Label: "Глава 2 · Голос матери",
@@ -1942,7 +2033,8 @@
             skipLink: "Skip to content",
             navCta: "Donate",
             statusChip: "Treatment in progress · Medical Park · Antalya",
-            heroTitle: 'Just imagine.<br>What if this child were <span class="accent">your own</span>?',
+            heroEyebrow: "CHARITY · İNAD ABBASOV",
+            heroTitle: 'Just imagine.<br>What if this child were <em>your own</em>?',
             heroSubtitle: "İnad is 16 years old. For 3 years he has been fighting blood cancer. His family has lost 2 sons for the Motherland. Now they ask for your help to save their 3rd child.",
             treatmentLabel: "Current status",
             counterLabel: "Days in treatment",
@@ -1952,9 +2044,9 @@
             verified: "Verified",
             captionAge: "age 16",
             captionFamily: "Martyr's family",
-            stat1Num: "3 yrs", stat1Label: "Fighting",
+            stat1Num: '3<span class="u-stat-unit">yrs</span>', stat1Label: "Fighting",
             stat2Num: "16", stat2Label: "İnad's age",
-            stat3Num: "$68,000", stat3Label: "Urgently needed",
+            stat3Num: '<span class="u-stat-unit">$</span>68,000', stat3Label: "Urgently needed",
             stat4Num: "2", stat4Label: "Martyr brothers",
             chapter1: "Intro",
             chapter2Label: "Chapter 2 · Mother's voice",
@@ -2006,10 +2098,11 @@
         document.documentElement.lang = lang;
         const t = TRANSLATIONS[lang];
 
+        const HTML_KEYS = new Set(['heroTitle', 'storyHtml', 'storyHtml1', 'storyHtml2', 'stat1Num', 'stat3Num']);
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (t[key] === undefined) return;
-            if (key === 'heroTitle' || key === 'storyHtml') {
+            if (HTML_KEYS.has(key)) {
                 el.innerHTML = t[key];
             } else {
                 el.textContent = t[key];
