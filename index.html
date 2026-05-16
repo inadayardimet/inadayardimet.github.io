@@ -419,30 +419,37 @@
             display: inline-block;
         }
 
-        /* Date badge — white pill, navy text, emoji calendar icon */
+        /* Date badge — glass pill, positioned below trust pill (top-right of hero) */
         .hero-date-badge {
+            position: absolute;
+            top: calc(var(--s-5) + 38px);
+            right: var(--s-5);
+            z-index: 2;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.95);
-            border: 0.5px solid rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 0.5px solid rgba(255, 255, 255, 0.2);
             border-radius: 100px;
             padding: 8px 16px;
-            color: var(--text-primary);
+            color: rgba(255, 255, 255, 0.92);
             font-size: 0.8125rem;
-            margin: 0 auto 1.5rem auto;
             width: fit-content;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
         }
-        .hero-date-icon {
-            font-size: 14px;
-            line-height: 1;
-            flex-shrink: 0;
+        .hero-date-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .hero-date-label { font-weight: 400; }
+        .hero-date-value { font-weight: 500; }
+        @media (max-width: 768px) {
+            .hero-date-badge {
+                top: calc(var(--s-4) + 34px);
+                right: var(--s-4);
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+            .hero-date-badge svg { width: 12px; height: 12px; }
         }
-        .hero-date-label { font-weight: 500; color: var(--text-primary); }
-        .hero-date-value { font-weight: 600; color: var(--text-primary); }
 
         /* Hero headline — Fraunces serif, centered */
         .hero .hero-title {
@@ -1750,14 +1757,16 @@
                 </svg>
                 <span data-i18n="verified">Doğrulanıb</span>
             </div>
+            <div class="hero-date-badge">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <span class="hero-date-label" data-i18n="lastUpdatedLabel">Son yenilənmə:</span>
+                <span class="hero-date-value" id="lastUpdated">17 May 2026</span>
+            </div>
             <div class="hero-grid">
                 <div class="hero-left">
                     <span class="hero-eyebrow" data-i18n="heroEyebrow">İNAD ABBASOV</span>
-                    <div class="hero-date-badge">
-                        <span class="hero-date-icon" aria-hidden="true">📅</span>
-                        <span class="hero-date-label" data-i18n="lastUpdatedLabel">Son yenilənmə:</span>
-                        <span class="hero-date-value" id="lastUpdated">17 May 2026</span>
-                    </div>
                     <h1 id="hero-title" class="hero-title" data-i18n="heroTitle">
                         Bir düşün.<br>Əgər o uşaq <em>sənin övladın</em> olsaydı?
                     </h1>
