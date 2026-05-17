@@ -45,44 +45,47 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%23FAF8F5'/%3E%3Ctext x='50' y='74' font-family='Georgia,serif' font-weight='500' font-size='66' fill='%230A2540' text-anchor='middle'%3Ei%3Ctspan fill='%23E85D2C'%3Enad%3C/tspan%3E%3C/text%3E%3C/svg%3E">
 
-    <!-- Preload hero image -->
-    <link rel="preload" as="image" href="inad-main.jpg">
+    <!-- Preload hero image with high priority for LCP -->
+    <link rel="preload" as="image" href="inad-main.jpg" fetchpriority="high">
 
     <!-- Google Fonts: Fraunces (serif headings) + Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID_HERE');
-    fbq('track', 'PageView');
-    </script>
+    <!-- DNS-prefetch + preconnect for tracking domains (warm up connections for deferred pixels below) -->
+    <link rel="dns-prefetch" href="https://analytics.tiktok.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+
+    <!-- Meta Pixel noscript fallback (JS-disabled visitors) -->
     <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
     </noscript>
 
-    <!-- TikTok Pixel Code Start -->
+    <!-- TRACKING PIXELS — deferred to after window.load so they don't block initial render.
+         Tracking accuracy is preserved: PageView fires within ~500ms of full page load. -->
     <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    (function() {
+        function loadPixels() {
+            // Meta Pixel
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', 'YOUR_PIXEL_ID_HERE');
+            fbq('track', 'PageView');
 
-
-      ttq.load('D84Q4V3C77U73K7PGLE0');
-      ttq.page();
-    }(window, document, 'ttq');
+            // TikTok Pixel
+            !function (w, d, t) {
+                w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+                ttq.load('D84Q4V3C77U73K7PGLE0');
+                ttq.page();
+            }(window, document, 'ttq');
+        }
+        if (document.readyState === 'complete') {
+            setTimeout(loadPixels, 500);
+        } else {
+            window.addEventListener('load', function() { setTimeout(loadPixels, 500); });
+        }
+    })();
     </script>
-    <!-- TikTok Pixel Code End -->
 
     <style>
         /* ════════════════════════════════════════════════════════════
@@ -1977,19 +1980,19 @@
                 <span class="section-title-underline" aria-hidden="true"></span>
                 <div class="gallery-grid">
                     <div class="gallery-item" data-img="inad1.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt" data-animate style="transition-delay: 0ms">
-                        <img src="inad1.jpg" alt="İnad" loading="lazy">
+                        <img src="inad1.jpg" alt="İnad" loading="lazy" width="561" height="748" decoding="async">
                         <div class="gallery-item-zoom" aria-hidden="true">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
                         </div>
                     </div>
                     <div class="gallery-item" data-img="inad2.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt" data-animate style="transition-delay: 100ms">
-                        <img src="inad2.jpg" alt="İnad" loading="lazy">
+                        <img src="inad2.jpg" alt="İnad" loading="lazy" width="567" height="754" decoding="async">
                         <div class="gallery-item-zoom" aria-hidden="true">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
                         </div>
                     </div>
                     <div class="gallery-item" data-img="inad3.jpg" role="button" tabindex="0" aria-label="Şəkili böyüt" data-animate style="transition-delay: 200ms">
-                        <img src="inad3.jpg" alt="İnad" loading="lazy">
+                        <img src="inad3.jpg" alt="İnad" loading="lazy" width="568" height="756" decoding="async">
                         <div class="gallery-item-zoom" aria-hidden="true">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
                         </div>
@@ -2006,15 +2009,15 @@
                 <span class="section-title-underline" aria-hidden="true"></span>
                 <div class="docs-grid">
                     <div class="doc-card" data-img="document1.jpg" role="button" tabindex="0" aria-label="Sənədi böyüt">
-                        <div class="doc-thumb"><img src="document1.jpg" alt="Medical Park müalicə planı" loading="lazy"></div>
+                        <div class="doc-thumb"><img src="document1.jpg" alt="Medical Park müalicə planı" loading="lazy" width="848" height="1200" decoding="async"></div>
                         <div class="doc-title" data-i18n="doc1">Medical Park müalicə planı</div>
                     </div>
                     <div class="doc-card" data-img="document2.jpg" role="button" tabindex="0" aria-label="Sənədi böyüt">
-                        <div class="doc-thumb"><img src="document2.jpg" alt="Bank rekvizitləri" loading="lazy"></div>
+                        <div class="doc-thumb"><img src="document2.jpg" alt="Bank rekvizitləri" loading="lazy" width="848" height="1200" decoding="async"></div>
                         <div class="doc-title" data-i18n="doc2">Bank rekvizitləri + möhür</div>
                     </div>
                     <div class="doc-card" data-img="document3.jpg" role="button" tabindex="0" aria-label="Sənədi böyüt">
-                        <div class="doc-thumb"><img src="document3.jpg" alt="Milli Hematologiya epikrizi" loading="lazy"></div>
+                        <div class="doc-thumb"><img src="document3.jpg" alt="Milli Hematologiya epikrizi" loading="lazy" width="601" height="795" decoding="async"></div>
                         <div class="doc-title" data-i18n="doc3">Milli Hematologiya epikrizi</div>
                     </div>
                 </div>
