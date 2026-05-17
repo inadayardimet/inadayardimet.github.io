@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-    <!-- Fail-safe: mark html as JS-capable. If this script never runs (no JS, in-app browser bug, blocker),
-         the `html.js` scoped opacity:0 rules never apply, so [data-animate] content stays visible. -->
-    <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0A2540">
+
+    <!-- Fail-safe: mark html as JS-capable + tag in-app browsers (TikTok/Instagram/Facebook/Snapchat)
+         so CSS can apply a "lite mode" that disables animations and viewport-unit-based sizing,
+         which are unreliable in those WebViews and cause blank/flickering screens. -->
+    <script>
+    (function() {
+        var html = document.documentElement;
+        html.classList.add('js');
+        var ua = navigator.userAgent || '';
+        // TikTok: "musical_ly", "BytedanceWebview", "TikTok", "ByteLocale" / Instagram: "Instagram" / Facebook: "FBAN", "FBAV", "FB_IAB" / Snapchat: "Snapchat"
+        if (/musical_ly|Bytedance|TikTok|ByteLocale|Instagram|FBAN|FBAV|FB_IAB|Snapchat/i.test(ua)) {
+            html.classList.add('in-app');
+        }
+    })();
+    </script>
     <title>İnada Kömək Et — Qan Xərçəngi ilə Mübarizə | Şəhid Ailəsinin Övladı</title>
     <meta name="description" content="16 yaşlı İnad Abbasov 3 ildir qan xərçəngi ilə mübarizə aparır. Ailəsi Vətən üçün 2 şəhid verib. Türkiyədə ilik transplantasiyası üçün təcili 68.000 USD lazımdır.">
     <meta name="keywords" content="İnad Abbasov, qan xərçəngi, leykoz, ilik transplantasiyası, yardım, kömək, şəhid ailəsi, Medical Park, Ağstafa">
@@ -1810,6 +1822,33 @@
             .donation-actions .btn { width: 100%; }
 
             .gallery-grid, .docs-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ═══════════ IN-APP BROWSER LITE MODE ═══════════
+           TikTok/Instagram/Facebook/Snapchat WebViews are buggy with viewport units (vh changes
+           when address bar shows/hides), heavy CSS transitions, and IntersectionObserver. This
+           "lite mode" disables those features so the page renders reliably in those WebViews.
+           Detection: html.in-app is added by the early <script> in <head> based on User-Agent. */
+        html.in-app [data-animate] {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+            will-change: auto !important;
+        }
+        html.in-app .hero {
+            min-height: 600px;
+            min-height: 88svh;
+        }
+        html.in-app .hero-chevrons svg {
+            animation: none;
+            opacity: 0.7;
+        }
+        html.in-app *,
+        html.in-app *::before,
+        html.in-app *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
         }
     </style>
 </head>
