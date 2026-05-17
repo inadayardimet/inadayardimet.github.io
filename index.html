@@ -1102,6 +1102,29 @@
         }
         .pq-verified svg { width: 14px; height: 14px; color: var(--accent); flex-shrink: 0; }
 
+        /* Story-end attribution — feels like a letter signature */
+        .story-end-attribution {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(232, 93, 44, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            flex-wrap: wrap;
+        }
+        .story-end-attribution .pq-avatar { width: 48px; height: 48px; font-size: 1.25rem; }
+        .story-end-attribution .pq-info strong { font-size: 1rem; font-weight: 600; }
+        .story-end-attribution .pq-info span { font-size: 0.85rem; }
+        @media (max-width: 768px) {
+            .story-end-attribution {
+                margin-top: 2rem;
+                padding-top: 1.25rem;
+                gap: 0.75rem;
+            }
+            .story-end-attribution .pq-avatar { width: 44px; height: 44px; font-size: 1.125rem; }
+            .story-end-attribution .pq-verified { margin-left: 0; }
+        }
+
         /* ═══════════ GALLERY ═══════════ */
         .gallery {
             padding: var(--s-16) var(--s-10);
@@ -1854,25 +1877,26 @@
                             <path d="M22 18C13.2 18 6 25.2 6 34v18c0 5.5 4.5 10 10 10h14V40H18c0-4.4 3.6-8 8-8V18zM58 18c-8.8 0-16 7.2-16 16v18c0 5.5 4.5 10 10 10h14V40H54c0-4.4 3.6-8 8-8V18z"/>
                         </svg>
                         <p class="pq-text" data-i18n="motherQuote">Bu ailə Vətən üçün 2 can verib. İndi övladımızı yaşatmaq üçün insanların mərhəmətinə sığınırıq...</p>
-                        <cite class="pq-author">
-                            <div class="pq-avatar" aria-hidden="true">Ə</div>
-                            <div class="pq-info">
-                                <strong>Abbasova Əfsanə</strong>
-                                <span data-i18n="motherRole">İnadın anası</span>
-                            </div>
-                            <div class="pq-verified">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span data-i18n="verified">Doğrulanıb</span>
-                            </div>
-                        </cite>
                     </blockquote>
 
                     <div id="storyText2" class="story-paragraphs" data-animate>
                         <p>İnad atası gündəlik fəhləliklə (şofer işləyir) ailəni dolandırmağa çalışır. Ana evlərə təmizliyə gedir.</p>
                         <p>İnad hazırda Türkiyədə Medical Park xəstəxanasında müalicə alır. Onun yaşaması üçün təcili ilik nəql (transplantasiya) olunmalıdır.</p>
                     </div>
+
+                    <cite class="pq-author story-end-attribution" data-animate>
+                        <div class="pq-avatar" aria-hidden="true">Ə</div>
+                        <div class="pq-info">
+                            <strong>Abbasova Əfsanə</strong>
+                            <span data-i18n="motherRole">İnadın anası</span>
+                        </div>
+                        <div class="pq-verified">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span data-i18n="verified">Doğrulanıb</span>
+                        </div>
+                    </cite>
                 </article>
             </div>
         </section>
