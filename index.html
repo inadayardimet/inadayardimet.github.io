@@ -2492,6 +2492,7 @@
     const lightboxImg = document.getElementById('lightboxImg');
     let lightboxImages = [];
     let lightboxIndex = 0;
+    let lightboxHistoryPushed = false;
 
     function openLightbox(images, index) {
         lightboxImages = images;
@@ -2499,15 +2500,53 @@
         lightboxImg.src = images[index];
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
+        // Push history state so the device back button closes the lightbox (not the site)
+        try {
+            history.pushState({ inadLightbox: true }, '');
+            lightboxHistoryPushed = true;
+        } catch (e) { /* ignore (private mode etc) */ }
     }
-    function closeLightbox() {
+    function closeLightbox(fromPopstate) {
+        if (!lightbox.classList.contains('active')) return;
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
+        // If we pushed history state and this close wasn't triggered by popstate, pop it now
+        if (lightboxHistoryPushed && !fromPopstate) {
+            try { history.back(); } catch (e) {}
+        }
+        lightboxHistoryPushed = false;
     }
     function navLightbox(dir) {
         lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
         lightboxImg.src = lightboxImages[lightboxIndex];
     }
+
+    // Browser/device back button closes lightbox without leaving the site
+    window.addEventListener('popstate', () => {
+        if (lightbox.classList.contains('active')) {
+            closeLightbox(true);
+        }
+    });
+
+    // Swipe left-to-right on lightbox closes it (mobile gesture)
+    let lbTouchStartX = null;
+    let lbTouchStartY = null;
+    lightbox.addEventListener('touchstart', (e) => {
+        if (e.touches.length !== 1) return;
+        lbTouchStartX = e.touches[0].clientX;
+        lbTouchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => {
+        if (lbTouchStartX === null) return;
+        const dx = e.changedTouches[0].clientX - lbTouchStartX;
+        const dy = e.changedTouches[0].clientY - lbTouchStartY;
+        // Right-swipe with >80px horizontal and <60px vertical drift
+        if (dx > 80 && Math.abs(dy) < 60) {
+            closeLightbox();
+        }
+        lbTouchStartX = null;
+        lbTouchStartY = null;
+    }, { passive: true });
 
     const galleryImages = Array.from(document.querySelectorAll('.gallery-item')).map(el => el.dataset.img);
     document.querySelectorAll('.gallery-item').forEach((el, i) => {
