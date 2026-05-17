@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
+    <!-- Fail-safe: mark html as JS-capable. If this script never runs (no JS, in-app browser bug, blocker),
+         the `html.js` scoped opacity:0 rules never apply, so [data-animate] content stays visible. -->
+    <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0A2540">
@@ -238,7 +241,8 @@
         }
 
         /* ─── SCROLL ANIMATIONS (IntersectionObserver) ─── */
-        [data-animate] {
+        /* Scoped to html.js — if JS never runs, [data-animate] stays visible (opacity:1 default). */
+        html.js [data-animate] {
             opacity: 0;
             transform: translateY(24px);
             transition: opacity 0.7s ease-out, transform 0.7s ease-out;
@@ -249,7 +253,7 @@
             transform: translateY(0);
         }
         @media (prefers-reduced-motion: reduce) {
-            [data-animate] {
+            html.js [data-animate] {
                 opacity: 1;
                 transform: none;
                 transition: none;
@@ -2724,14 +2728,15 @@
         }
     });
 
-    // ═══════════ SCROLL ANIMATIONS (IntersectionObserver) ═══════════
+    // ═══════════ SCROLL ANIMATIONS + IN-APP BROWSER FAIL-SAFES ═══════════
+    // Four-layer fail-safe so TikTok/Instagram/Facebook in-app WebViews never show blank content:
+    //   Layer 1: html.js CSS scoping (in <head>) — if JS never runs, content stays visible
+    //   Layer 2: IntersectionObserver feature detection — older / quirky browsers fall back to immediate reveal
+    //   Layer 3: 2s timeout — anything still hidden after 2s gets revealed unconditionally
+    //   Layer 4: first-scroll catch-all — any scroll reveals everything not yet visible
     (function scrollAnimations() {
-        if (!('IntersectionObserver' in window)) {
-            // Fallback: reveal everything immediately on older browsers
-            document.querySelectorAll('[data-animate]').forEach(el => el.classList.add('in-view'));
-            return;
-        }
-        const observer = new IntersectionObserver((entries) => {
+        const supportsIO = ('IntersectionObserver' in window);
+        const observer = supportsIO ? new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
@@ -2741,8 +2746,28 @@
         }, {
             threshold: 0.15,
             rootMargin: '0px 0px -50px 0px'
-        });
-        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+        }) : null;
+
+        // Layer 2: helper — observe if IO supported, else reveal immediately.
+        function reveal(el) {
+            if (observer) observer.observe(el);
+            else el.classList.add('in-view');
+        }
+        document.querySelectorAll('[data-animate]').forEach(reveal);
+
+        // Layer 3: 2-second safety net for in-app WebViews where IO can be unreliable.
+        setTimeout(() => {
+            document.querySelectorAll('[data-animate]:not(.in-view)').forEach(el => {
+                el.classList.add('in-view');
+            });
+        }, 2000);
+
+        // Layer 4: any scroll reveals everything still hidden (cheap insurance, fires once).
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('[data-animate]:not(.in-view)').forEach(el => {
+                el.classList.add('in-view');
+            });
+        }, { passive: true, once: true });
     })();
 
     // ═══════════ SCROLL PROGRESS BAR ═══════════
