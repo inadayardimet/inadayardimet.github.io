@@ -256,14 +256,16 @@
         }
 
         /* ─── SCROLL ANIMATIONS (IntersectionObserver) ─── */
-        /* Scoped to html.js — if JS never runs, [data-animate] stays visible (opacity:1 default). */
+        /* Scoped to html.js — if JS never runs, [data-animate] stays visible (opacity:1 default).
+           Both hidden + visible rules use `html.js` prefix so specificity matches — otherwise the
+           hidden rule (higher specificity) would beat the visible one and content would never appear. */
         html.js [data-animate] {
             opacity: 0;
             transform: translateY(24px);
             transition: opacity 0.7s ease-out, transform 0.7s ease-out;
             will-change: opacity, transform;
         }
-        [data-animate].in-view {
+        html.js [data-animate].in-view {
             opacity: 1;
             transform: translateY(0);
         }
