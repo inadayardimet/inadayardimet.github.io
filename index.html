@@ -378,7 +378,7 @@ html.anim .reveal.in { opacity: 1; transform: none; }
 .donate .eyebrow { color: #FFB088; }
 .donate .section-title { color: #fff; }
 .donate .section-sub { color: rgba(255,255,255,.65); }
-.bank-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.bank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 350px)); justify-content: center; gap: 20px; }
 .bank {
     background: rgba(255,255,255,.07);
     border: 1px solid rgba(255,255,255,.14);
@@ -680,6 +680,8 @@ footer {
             <p class="section-sub">Hər kart Abbasov Fariz (İnadın atası) adınadır. Nömrəni kopyalayıb köçürmə edə bilərsiniz.</p>
         </div>
         <div class="bank-grid">
+            <!-- MÜVƏQQƏTİ GİZLƏDİLİB: Kapital Bank kartı bloklanıb (2026-07-10).
+                 Blok açılanda bu şərhi silib kartı geri qaytar.
             <div class="bank reveal">
                 <div class="bank-name"><span class="bank-logo kapital" aria-hidden="true">KB</span>Kapital Bank</div>
                 <div class="bank-number">4169 7388 0191 1817</div>
@@ -689,6 +691,7 @@ footer {
                 </button>
                 <div class="bank-holder">Kart sahibi: Abbasov Fariz (Atası)</div>
             </div>
+            -->
             <div class="bank reveal">
                 <div class="bank-name"><span class="bank-logo abb" aria-hidden="true">ABB</span>ABB Bank</div>
                 <div class="bank-number">5522 0993 7747 1388</div>
