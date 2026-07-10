@@ -146,10 +146,11 @@ html.anim .reveal.in { opacity: 1; transform: none; }
 .btn:active { transform: scale(.97); }
 .btn svg { width: 19px; height: 19px; flex-shrink: 0; }
 .btn-primary {
-    background: var(--accent); color: #fff;
+    background: linear-gradient(135deg, #FF7A45 0%, var(--accent) 55%, var(--accent-dark) 100%);
+    color: #fff;
     box-shadow: 0 6px 20px rgba(232, 93, 44, 0.32);
 }
-.btn-primary:hover { background: var(--accent-dark); box-shadow: 0 8px 26px rgba(232, 93, 44, 0.42); }
+.btn-primary:hover { filter: brightness(.94); box-shadow: 0 8px 26px rgba(232, 93, 44, 0.42); }
 .btn-white {
     background: var(--surface); color: var(--ink);
     box-shadow: var(--shadow-sm); border: 1px solid var(--line);
@@ -370,16 +371,27 @@ html.anim .reveal.in { opacity: 1; transform: none; }
 .copy-btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
     width: 100%;
-    background: rgba(255,255,255,.12);
-    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.2);
     color: #fff; cursor: pointer;
-    font-family: var(--sans); font-size: 14.5px; font-weight: 600;
-    padding: 12px; border-radius: 12px;
+    font-family: var(--sans); font-size: 16px; font-weight: 600;
+    padding: 15px; border-radius: 14px;
     transition: background .2s;
 }
+.copy-btn svg { width: 18px; height: 18px; }
+.bank-logo {
+    display: inline-grid; place-items: center;
+    width: 30px; height: 30px; border-radius: 8px;
+    font-size: 12px; font-weight: 800;
+    margin-right: 10px; vertical-align: middle;
+    flex-shrink: 0;
+}
+.bank-name { display: flex; align-items: center; }
+.bank-logo.kapital { background: #E30613; color: #fff; }
+.bank-logo.abb { background: #0057B8; color: #fff; }
+.bank-logo.leo { background: #FFDD00; color: #1a1a1a; }
 .copy-btn:hover { background: rgba(255,255,255,.2); }
 .copy-btn.copied { background: var(--green-dark); border-color: transparent; }
-.copy-btn svg { width: 15px; height: 15px; }
 .donate-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 44px; }
 .btn-wa { background: var(--green); color: #06250F; }
 .btn-wa:hover { background: #1FC25C; }
@@ -401,15 +413,24 @@ footer {
 
 /* ═══════ FLOATING WA + STICKY BAR ═══════ */
 .float-wa {
-    position: fixed; right: 22px; bottom: 22px; z-index: 150;
-    width: 58px; height: 58px; border-radius: 50%;
+    position: fixed; right: 20px; bottom: 22px; z-index: 150;
+    width: 64px; height: 64px; border-radius: 50%;
     background: var(--green);
     display: grid; place-items: center;
     box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
     transition: transform .2s;
 }
+.float-wa::before {
+    content: ''; position: absolute; inset: 0; border-radius: 50%;
+    background: var(--green); z-index: -1;
+    animation: wa-pulse 2s ease-out infinite;
+}
+@keyframes wa-pulse {
+    0% { transform: scale(1); opacity: .45; }
+    80%, 100% { transform: scale(1.7); opacity: 0; }
+}
 .float-wa:hover { transform: scale(1.08); }
-.float-wa svg { width: 28px; height: 28px; color: #fff; }
+.float-wa svg { width: 31px; height: 31px; color: #fff; }
 .sticky-bar {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 140;
     display: none; gap: 10px;
@@ -442,12 +463,13 @@ footer {
     .nav-links, .btn-nav, .lang { display: none; }
     .section { padding: 64px 0; }
     .sticky-bar { display: flex; }
-    .float-wa { display: none; }
-    footer { padding-bottom: 150px; }
+    .float-wa { bottom: calc(92px + env(safe-area-inset-bottom)); right: 16px; }
+    footer { padding-bottom: 180px; }
     .donate { margin: 0 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
     html.anim .reveal { opacity: 1; transform: none; transition: none; }
+    .float-wa::before { animation: none; }
 }
 </style>
 </head>
@@ -631,7 +653,7 @@ footer {
         </div>
         <div class="bank-grid">
             <div class="bank reveal">
-                <div class="bank-name">Kapital Bank</div>
+                <div class="bank-name"><span class="bank-logo kapital" aria-hidden="true">KB</span>Kapital Bank</div>
                 <div class="bank-number">4169 7388 0191 1817</div>
                 <button class="copy-btn" data-card="4169738801911817">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -640,7 +662,7 @@ footer {
                 <div class="bank-holder">Kart sahibi: Abbasov Fariz (Atası)</div>
             </div>
             <div class="bank reveal">
-                <div class="bank-name">ABB Bank</div>
+                <div class="bank-name"><span class="bank-logo abb" aria-hidden="true">ABB</span>ABB Bank</div>
                 <div class="bank-number">5522 0993 7747 1388</div>
                 <button class="copy-btn" data-card="5522099377471388">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -649,7 +671,7 @@ footer {
                 <div class="bank-holder">Kart sahibi: Abbasov Fariz (Atası)</div>
             </div>
             <div class="bank reveal">
-                <div class="bank-name">LeoBank</div>
+                <div class="bank-name"><span class="bank-logo leo" aria-hidden="true">leo</span>LeoBank</div>
                 <div class="bank-number">4098 5844 9826 8356</div>
                 <button class="copy-btn" data-card="4098584498268356">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -699,9 +721,6 @@ footer {
 
 <div class="sticky-bar">
     <a href="#donation" class="btn btn-primary">Kart nömrələri</a>
-    <a href="https://wa.me/994773059565" target="_blank" rel="noopener" class="btn btn-wa" style="flex: 0 0 auto;">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
 </div>
 
 <script>
